@@ -1,15 +1,16 @@
 <script>
-import AppBanner from "../components/shared/AppBanner.vue";
+// import AppBanner from "../components/shared/AppBanner.vue";
 import Button from "../components/reusable/Button.vue";
 export default {
   scrollToTop: true,
-  components: { AppBanner, Button },
+  components: { Button },
+  // components: { AppBanner, Button },
 };
 </script>
 
 <template>
   <div class="container mx-auto">
-    <AppBanner />
+    <!-- <AppBanner /> -->
 
     <ProjectsGrid />
 

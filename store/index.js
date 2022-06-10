@@ -756,30 +756,25 @@ export const state = () => ({
   ],
   copyrightDate: new Date().getFullYear(),
   socialProfiles: [
-    {
-      id: uuidv4(),
-      name: "GitHub",
-      icon: "github",
-      url: "https://github.com/realstoman",
-    },
-    {
-      id: uuidv4(),
-      name: "Twitter",
-      icon: "twitter",
-      url: "https://twitter.com/realstoman",
-    },
-    {
-      id: uuidv4(),
-      name: "Medium",
-      icon: "book",
-      url: "https://stoman.medium.com",
-    },
-    {
-      id: uuidv4(),
-      name: "Instagram",
-      icon: "instagram",
-      url: "https://instagram.com/realstoman",
-    },
+      // The first profile url is used in the copyright section
+      {
+        id: uuidv4(),
+        name: "LinkedIn",
+        icon: "linkedin",
+        url: "https://linkedin.com/in/alanquaino",
+      },
+      {
+        id: uuidv4(),
+        name: "Instagram",
+        icon: "instagram",
+        url: "https://instagram.com/alan_quaino",
+      },
+      {
+        id: uuidv4(),
+        name: "Facebook",
+        icon: "facebook",
+        url: "https://facebook.com/alan.quaino.7",
+      },
   ],
   categories: [
     {

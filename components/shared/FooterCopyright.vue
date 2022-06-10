@@ -4,12 +4,12 @@ import { mapState } from "vuex";
 export default {
   data: () => {
     return {
-      projectName: "Nuxt.js & Tailwind CSS Portfolio",
-      author: "Stoman",
+      author: "Alan Quaino",
+      starterTheme: "Nuxt.js & Tailwind CSS Portfolio",
     };
   },
   computed: {
-    ...mapState(["copyrightDate"]),
+    ...mapState(["copyrightDate", "socialProfiles"]),
   },
 };
 </script>
@@ -23,32 +23,32 @@ export default {
         dark:text-ternary-light
       "
     >
-      &copy; {{ copyrightDate }}.
+      Copyright &copy; {{ copyrightDate }}
       <a
-        href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio"
+        :key="socialProfiles[0].id"
+        :href="socialProfiles[0].url"
         target="__blank"
         class="
           font-general-medium
-          hover:underline hover:text-indigo-600
-          dark:hover:text-indigo-300
-          duration-500
-        "
-        >{{ projectName }}</a
-      >
-      . Developed by
-      <a
-        href="https://stoman.me"
-        target="__blank"
-        class="
-          font-general-medium
-          text-secondary-dark
-          dark:text-secondary-light
-          uppercase
           hover:underline hover:text-indigo-600
           dark:hover:text-indigo-300
           duration-500
         "
         >{{ author }}</a
+      >
+      | Made from
+      <a
+        href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio"
+        target="__blank"
+        class="
+          font-general-medium
+          text-secondary-dark
+          dark:text-secondary-light
+          hover:underline hover:text-indigo-600
+          dark:hover:text-indigo-300
+          duration-500
+        "
+        >{{ starterTheme }}</a
       >
     </div>
   </div>
