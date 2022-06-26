@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex justify-center items-center text-center">
+  <div class="justify-center items-center text-center">
     <div
       class="
         font-general-regular
@@ -30,26 +30,35 @@ export default {
         target="__blank"
         class="
           font-general-medium
-          hover:underline hover:text-indigo-600
-          dark:hover:text-indigo-300
+          hover:underline hover:text-my-blue
+          dark:hover:text-my-blue-50
           duration-500
         "
         >{{ author }}</a
       >
-      | Made from
-      <a
-        href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio"
-        target="__blank"
-        class="
-          font-general-medium
-          text-secondary-dark
-          dark:text-secondary-light
-          hover:underline hover:text-indigo-600
-          dark:hover:text-indigo-300
-          duration-500
-        "
-        >{{ starterTheme }}</a
-      >
+    </div>
+    <div
+      class="
+        font-general-regular
+        text-xs text-gray-400
+        dark:text-gray-500
+        mt-2
+      "
+    >
+      Sviluppato con
+        <a
+          href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio"
+          target="__blank"
+          class="
+            font-general-medium
+            text-gray-500
+            dark:text-gray-400
+            hover:underline hover:text-my-blue
+            dark:hover:text-my-blue-50
+            duration-500
+          "
+          >{{ starterTheme }}</a
+        >
     </div>
   </div>
 </template>

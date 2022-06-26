@@ -193,10 +193,10 @@ export default {
                         py-2
                         sm:py-2.5
                         text-white
-                        bg-indigo-500
-                        hover:bg-indigo-600
+                        bg-my-blue
+                        hover:bg-my-blue
                         rounded-md
-                        focus:ring-1 focus:ring-indigo-900
+                        focus:ring-1 focus:ring-my-blue
                         duration-500
                       "
                       type="submit"
@@ -221,7 +221,7 @@ export default {
                     dark:text-secondary-dark
                     dark:hover:bg-primary-light
                     rounded-md
-                    focus:ring-1 focus:ring-indigo-900
+                    focus:ring-1 focus:ring-my-blue
                     duration-500
                   "
                   @click="showModal()"

@@ -744,37 +744,45 @@ export const state = () => ({
       img: "../brands/puma_gray.png",
     },
   ],
+  aboutHeading: "Qualche parola su di me",
   aboutMe: [
     {
       id: uuidv4(),
-      bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+      bio: "Ciao, sono Alan Quaino! Lavoro come sviluppatore Web in un'azienda \
+        che si occupa di ottimizzazione e gestione dei flussi logistici di \
+        magazzino.",
     },
     {
       id: uuidv4(),
-      bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+      bio: "Sono un grande appassionato di auto, soprattutto di \
+        <i>youngtimer</i>, e nel tempo libero mi piace stare all'aperto e \
+        immergermi nella natura.",
     },
   ],
   copyrightDate: new Date().getFullYear(),
   socialProfiles: [
-      // The first profile url is used in the copyright section
-      {
-        id: uuidv4(),
-        name: "LinkedIn",
-        icon: "linkedin",
-        url: "https://linkedin.com/in/alanquaino",
-      },
-      {
-        id: uuidv4(),
-        name: "Instagram",
-        icon: "instagram",
-        url: "https://instagram.com/alan_quaino",
-      },
-      {
-        id: uuidv4(),
-        name: "Facebook",
-        icon: "facebook",
-        url: "https://facebook.com/alan.quaino.7",
-      },
+    // The first profile url is used in the copyright section
+    {
+      id: uuidv4(),
+      name: "LinkedIn",
+      profile_name: "alanquaino",
+      icon: "linkedin",
+      url: "https://linkedin.com/in/alanquaino",
+    },
+    {
+      id: uuidv4(),
+      name: "Instagram",
+      profile_name: "alan_quaino",
+      icon: "instagram",
+      url: "https://instagram.com/alan_quaino",
+    },
+    {
+      id: uuidv4(),
+      name: "Facebook",
+      profile_name: "alan.quaino.7",
+      icon: "facebook",
+      url: "https://facebook.com/alan.quaino.7",
+    },
   ],
   categories: [
     {

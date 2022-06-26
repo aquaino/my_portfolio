@@ -74,16 +74,16 @@ export default {
             mb-6
             sm:mb-0
             text-lg
-            border border-indigo-200
+            border border-my-blue
             dark:border-ternary-dark
             py-2.5
             sm:py-3
             shadow-lg
             rounded-lg
-            bg-indigo-50
-            focus:ring-1 focus:ring-indigo-900
-            hover:bg-indigo-500
-            text-gray-500
+            bg-my-blue
+            focus:ring-1 focus:ring-my-blue
+            hover:bg-my-blue-50
+            text-white
             hover:text-white
             duration-500
           "

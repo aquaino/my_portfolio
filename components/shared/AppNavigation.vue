@@ -1,6 +1,7 @@
 <script>
 export default {
-  props: ["isOpen", "showModal", "modal", "categories"],
+  // props: ["isOpen", "showModal", "modal", "categories"],
+  props: ["isOpen", "categories"],
 };
 </script>
 
@@ -23,21 +24,6 @@ export default {
     "
   >
     <NuxtLink
-      to="/projects"
-      class="
-        block
-        text-left text-lg text-primary-dark
-        dark:text-ternary-light
-        hover:text-secondary-dark
-        dark:hover:text-secondary-light
-        sm:mx-4
-        mb-2
-        sm:py-2
-      "
-      aria-label="Projects"
-      >Projects</NuxtLink
-    >
-    <NuxtLink
       to="/about"
       class="
         block
@@ -55,7 +41,22 @@ export default {
         dark:border-secondary-dark
       "
       aria-label="About Me"
-      >About Me</NuxtLink
+      >Chi sono</NuxtLink
+    >
+    <NuxtLink
+      to="/projects"
+      class="
+        block
+        text-left text-lg text-primary-dark
+        dark:text-ternary-light
+        hover:text-secondary-dark
+        dark:hover:text-secondary-light
+        sm:mx-4
+        mb-2
+        sm:py-2
+      "
+      aria-label="Projects"
+      >Progetti</NuxtLink
     >
     <NuxtLink
       to="/contact"
@@ -75,9 +76,9 @@ export default {
         dark:border-secondary-dark
       "
       aria-label="Contact"
-      >Contact</NuxtLink
+      >Contatti</NuxtLink
     >
-    <div
+    <!-- <div
       class="
         font-general-regular
         border-t-2
@@ -92,8 +93,8 @@ export default {
           sm:hidden
           block
           text-left text-md
-          bg-indigo-500
-          hover:bg-indigo-600
+          bg-my-blue
+          hover:bg-my-blue-50
           text-white
           shadow-sm
           rounded-md
@@ -106,13 +107,13 @@ export default {
       >
         Hire Me
       </button>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style>
 #nav .nuxt-link-exact-active,
 #nav .nuxt-link-active {
-  @apply text-indigo-700 dark:text-indigo-400;
+  @apply text-my-blue dark:text-my-blue;
 }
 </style>

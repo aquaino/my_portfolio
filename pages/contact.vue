@@ -8,18 +8,21 @@ export default {
       contacts: [
         {
           id: 1,
-          name: "Your Address, Your City, Your Country",
+          name: "Udine e dintorni",
           icon: "map-pin",
+          url: "",
         },
         {
           id: 2,
-          name: "email@domain.com",
+          name: "alanquaino@gmail.com",
           icon: "mail",
+          url: "mailto:alanquaino@gmail.com",
         },
         {
           id: 3,
-          name: "555 8888 888",
+          name: "346 270 9363",
           icon: "phone",
+          url: "tel:+393462709363",
         },
       ],
     };

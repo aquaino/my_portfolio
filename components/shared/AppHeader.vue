@@ -1,17 +1,17 @@
 <script>
 import { mapState } from "vuex";
-import HireMeModal from "../HireMeModal.vue";
+// import HireMeModal from "../HireMeModal.vue";
 import AppNavigation from "./AppNavigation.vue";
 
 export default {
   components: {
-    HireMeModal,
+    // HireMeModal,
     AppNavigation,
   },
   data: () => {
     return {
       isOpen: false,
-      modal: false,
+      // modal: false,
     };
   },
 
@@ -23,20 +23,20 @@ export default {
       this.$colorMode.preference =
         this.$colorMode.value == "light" ? "dark" : "light";
     },
-    showModal() {
-      if (this.modal) {
-        // Stop screen scrolling
-        document
-          .getElementsByTagName("html")[0]
-          .classList.remove("overflow-y-hidden");
-        this.modal = false;
-      } else {
-        document
-          .getElementsByTagName("html")[0]
-          .classList.add("overflow-y-hidden");
-        this.modal = true;
-      }
-    },
+    // showModal() {
+    //   if (this.modal) {
+    //     // Stop screen scrolling
+    //     document
+    //       .getElementsByTagName("html")[0]
+    //       .classList.remove("overflow-y-hidden");
+    //     this.modal = false;
+    //   } else {
+    //     document
+    //       .getElementsByTagName("html")[0]
+    //       .classList.add("overflow-y-hidden");
+    //     this.modal = true;
+    //   }
+    // },
   },
 };
 </script>
@@ -62,7 +62,7 @@ export default {
             <img
               v-if="this.$colorMode.value == 'dark'"
               src="~/static/logo-light.svg"
-              class="w-36"
+              class="w-16 md:w-20"
               alt="Light Logo"
             />
 
@@ -70,7 +70,7 @@ export default {
               v-else
               src="~/static/logo-dark.svg"
               alt="Color Logo"
-              class="w-36"
+              class="w-16 md:w-20"
             />
           </NuxtLink>
         </div>
@@ -80,7 +80,7 @@ export default {
           @click="themeSwitcher"
           class="
             sm:hidden
-            ml-8
+            sm:ml-8
             bg-primary-light
             dark:bg-ternary-dark
             px-2
@@ -172,21 +172,26 @@ export default {
       <AppNavigation
         :isOpen="isOpen"
         :showModal="showModal"
-        :modal="modal"
         :categories="categories"
       />
+      <!-- <AppNavigation
+        :isOpen="isOpen"
+        :showModal="showModal"
+        :modal="modal"
+        :categories="categories"
+      /> -->
 
       <!-- Header right section buttons -->
       <div
         class="hidden sm:flex justify-between items-center flex-col md:flex-row"
       >
         <!-- Hire me button -->
-        <div class="font-general-medium hidden md:block">
+        <!-- <div class="font-general-medium hidden md:block">
           <button
             class="
               text-md
-              bg-indigo-500
-              hover:bg-indigo-600
+              bg-blue-800
+              hover:bg-blue-900
               text-white
               shadow-sm
               rounded-md
@@ -198,6 +203,27 @@ export default {
           >
             Hire Me
           </button>
+        </div> -->
+
+        <!-- CV button -->
+        <div class="font-general-medium hidden md:block">
+          <a
+            href="/Stoman-Resume.pdf"
+            download
+            class="
+              text-md
+              bg-my-blue
+              hover:bg-my-blue-50
+              text-white
+              shadow-sm
+              rounded-md
+              px-5
+              py-2.5
+            "
+            aria-label="Download Curriculum Vitae"
+          >
+            <span>Download CV</span>
+          </a>
         </div>
 
         <!-- Theme switcher large screen -->
@@ -258,11 +284,11 @@ export default {
     </div>
 
     <!-- Hire me modal -->
-    <HireMeModal
+    <!-- <HireMeModal
       :showModal="showModal"
       :modal="modal"
       :categories="categories"
       aria-modal="Hire Me Modal"
-    />
+    /> -->
   </nav>
 </template>

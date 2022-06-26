@@ -2,7 +2,6 @@
 import feather from "feather-icons";
 
 export default {
-  name: "About",
   scrollToTop: true,
   mounted() {
     feather.replace();
@@ -16,9 +15,7 @@ export default {
 <template>
   <div>
     <AboutMe class="container mx-auto" />
-
     <AboutCounter />
-
     <AboutClients class="container mx-auto" />
   </div>
 </template>

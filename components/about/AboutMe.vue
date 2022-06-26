@@ -8,20 +8,26 @@ export default {
     };
   },
   computed: {
-    ...mapState(["aboutMe"]),
+    ...mapState(["aboutHeading", "aboutMe"]),
   },
 };
 </script>
 
 <template>
-  <div class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
-    <!-- About profile image -->
-    <div class="w-full sm:w-1/4 mb-7 sm:mb-0">
-      <img src="~/static/profile.jpeg" class="rounded-lg w-96" alt="" />
-    </div>
-
+  <div class="block mt-10 sm:mt-20">
+    <p
+      class="
+        font-general-medium
+        text-2xl text-center
+        sm:text-3xl
+        text-primary-dark
+        dark:text-primary-light
+      "
+    >
+      {{ aboutHeading }}
+    </p>
     <!-- About details -->
-    <div class="w-full sm:w-3/4 text-left">
+    <div class="text-left mt-6 sm:mt-8">
       <p
         v-for="bio in aboutMe"
         :key="bio.id"
@@ -32,8 +38,8 @@ export default {
           dark:text-ternary-light
           text-lg
         "
+        v-html="bio.bio"
       >
-        {{ bio.bio }}
       </p>
     </div>
   </div>

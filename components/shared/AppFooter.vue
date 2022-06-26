@@ -4,11 +4,6 @@ import feather from "feather-icons";
 import FooterCopyright from "./FooterCopyright.vue";
 export default {
   components: { FooterCopyright },
-  data: () => {
-    return {
-      // Todo
-    };
-  },
   computed: {
     ...mapState(["copyrightDate", "socialProfiles"]),
   },
@@ -45,7 +40,7 @@ export default {
             mb-5
           "
         >
-          Follow me
+          Seguimi
         </p>
         <ul class="flex gap-4 sm:gap-8">
           <a
@@ -55,8 +50,8 @@ export default {
             target="__blank"
             class="
               text-gray-400
-              hover:text-indigo-500
-              dark:hover:text-indigo-400
+              hover:text-my-blue
+              dark:hover:text-my-blue-50
               cursor-pointer
               rounded-lg
               bg-gray-50

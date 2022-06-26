@@ -1,16 +1,15 @@
 <script>
-// import AppBanner from "../components/shared/AppBanner.vue";
+import AppBanner from "../components/shared/AppBanner.vue";
 import Button from "../components/reusable/Button.vue";
 export default {
   scrollToTop: true,
-  components: { Button },
-  // components: { AppBanner, Button },
+  components: { AppBanner, Button },
 };
 </script>
 
 <template>
   <div class="container mx-auto">
-    <!-- <AppBanner /> -->
+    <AppBanner />
 
     <ProjectsGrid />
 
@@ -27,9 +26,9 @@ export default {
           rounded-lg
           shadow-lg
           hover:shadow-xl
-          bg-indigo-500
-          hover:bg-indigo-600
-          focus:ring-1 focus:ring-indigo-900
+          bg-my-blue
+          hover:bg-my-blue-50
+          focus:ring-1 focus:ring-my-blue
           text-white text-lg
           sm:text-xl
           duration-300

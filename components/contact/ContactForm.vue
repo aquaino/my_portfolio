@@ -12,11 +12,10 @@ export default {
 
 <template>
   <!-- Contact form -->
-  <div class="w-full md:w-1/2">
+  <div class="w-full md:w-2/3">
     <div
       class="
         leading-loose
-        max-w-xl
         m-4
         p-7
         bg-secondary-light
@@ -32,11 +31,19 @@ export default {
           text-primary-dark
           dark:text-primary-light
           text-2xl
-          mb-8
+          mb-4
         "
       >
-        Contact Form
+        Scrivimi
       </p>
+      <p
+        class="
+          font-general-regular
+          text-primary-dark
+          dark:text-primary-light
+          mb-8
+        "
+      >Qualche idea? Scrivimi una email compilando il form sottostante!</p>
       <form
         @submit="
           (e) => {
@@ -46,11 +53,11 @@ export default {
         class="font-general-regular space-y-7"
       >
         <div class="">
-          <label
+          <!-- <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"
             for="name"
-            >Full Name</label
-          >
+            >Il tuo nome</label
+          > -->
           <input
             class="
               w-full
@@ -70,17 +77,17 @@ export default {
             id="name"
             name="name"
             type="text"
-            required=""
-            placeholder="Your Name"
+            required
+            placeholder="Il tuo nome"
             aria-label="Name"
           />
         </div>
         <div class="mt-6">
-          <label
+          <!-- <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"
             for="email"
-            >Email</label
-          >
+            >La tua e-mail</label
+          > -->
           <input
             class="
               w-full
@@ -100,17 +107,17 @@ export default {
             id="email"
             name="email"
             type="text"
-            required=""
-            placeholder="Your Email"
+            required
+            placeholder="La tua email"
             aria-label="Email"
           />
         </div>
         <div class="mt-6">
-          <label
+          <!-- <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"
             for="subject"
-            >Subject</label
-          >
+            >Oggetto</label
+          > -->
           <input
             class="
               w-full
@@ -130,18 +137,18 @@ export default {
             id="subject"
             name="subject"
             type="text"
-            required=""
-            placeholder="Subject"
+            required
+            placeholder="La tua richiesta"
             aria-label="Subject"
           />
         </div>
 
         <div class="mt-6">
-          <label
+          <!-- <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"
             for="message"
-            >Message</label
-          >
+            >Messaggio</label
+          > -->
           <textarea
             class="
               w-full
@@ -163,25 +170,27 @@ export default {
             cols="14"
             rows="6"
             aria-label="Message"
+            required
+            placeholder="Il tuo messaggio"
           ></textarea>
         </div>
 
         <div class="mt-6">
           <Button
-            title="Send Message"
+            title="Invia"
             class="
               px-4
               py-2.5
               text-white
               tracking-wider
-              bg-indigo-500
-              hover:bg-indigo-600
-              focus:ring-1 focus:ring-indigo-900
+              bg-my-blue
+              hover:bg-my-blue-50
+              focus:ring-1 focus:ring-my-blue
               rounded-lg
               duration-500
             "
             type="submit"
-            aria-label="Send Message"
+            aria-label="Invia"
           />
         </div>
       </form>

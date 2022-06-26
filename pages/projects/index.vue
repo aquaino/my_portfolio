@@ -1,14 +1,6 @@
 <script>
 export default {
   scrollToTop: true,
-  data: () => {
-    return {
-      // @todo
-    };
-  },
-  computed: {
-    // @todo
-  },
 };
 </script>
 
@@ -17,5 +9,3 @@ export default {
     <ProjectsGrid />
   </div>
 </template>
-
-<style lang="scss" scoped></style>
