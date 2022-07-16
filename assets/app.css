@@ -3,6 +3,18 @@
  * Powered by: @realstoman
 */
 
+/* Heading decoration */
+.heading-decoration::after {
+  content: "";
+  width: 32px;
+  height: 3px;
+  background-color: #DE1C24;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .66rem;
+}
+
 /* Fonts */
 @font-face {
   font-family: "GeneralSans-Variable";

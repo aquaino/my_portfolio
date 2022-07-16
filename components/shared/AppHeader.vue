@@ -45,14 +45,7 @@ export default {
   <nav id="nav" class="sm:container sm:mx-auto">
     <!-- Header -->
     <div
-      class="
-        z-10
-        max-w-screen-lg
-        xl:max-w-screen-xl
-        block
-        sm:flex sm:justify-between sm:items-center
-        py-6
-      "
+      class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6"
     >
       <!-- Header menu links and small screen hamburger menu -->
       <div class="flex justify-between items-center px-6 sm:px-0">
@@ -78,31 +71,13 @@ export default {
         <!-- Theme switcher small screen -->
         <button
           @click="themeSwitcher"
-          class="
-            sm:hidden
-            sm:ml-8
-            bg-primary-light
-            dark:bg-ternary-dark
-            px-2
-            py-1.5
-            sm:px-3 sm:py-2
-            shadow-sm
-            rounded-xl
-            cursor-pointer
-          "
+          class="sm:hidden sm:ml-8 bg-primary-light dark:bg-ternary-dark px-2 py-1.5 sm:px-3 sm:py-2 shadow-sm rounded-xl cursor-pointer"
         >
           <!-- Dark mode icon -->
           <svg
             v-if="$colorMode.value == 'light'"
             xmlns="http://www.w3.org/2000/svg"
-            class="
-              text-liText-ternary-dark
-              hover:text-gray-400
-              dark:text-liText-ternary-light
-              dark:hover:text-liBorder-primary-light
-              w-6
-              h-6
-            "
+            class="text-liText-ternary-dark hover:text-gray-400 dark:text-liText-ternary-light dark:hover:text-li border-primary-light w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -143,14 +118,7 @@ export default {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              class="
-                h-7
-                w-7
-                mt-1
-                fill-current
-                text-secondary-dark
-                dark:text-ternary-light
-              "
+              class="h-7 w-7 mt-1 fill-current text-secondary-dark dark:text-ternary-light"
             >
               <path
                 v-if="isOpen"
@@ -169,9 +137,13 @@ export default {
       </div>
 
       <!-- Header links -->
-      <AppNavigation
+      <!-- <AppNavigation
         :isOpen="isOpen"
         :showModal="showModal"
+        :categories="categories"
+      /> -->
+      <AppNavigation
+        :isOpen="isOpen"
         :categories="categories"
       />
       <!-- <AppNavigation
@@ -210,16 +182,7 @@ export default {
           <a
             href="/Stoman-Resume.pdf"
             download
-            class="
-              text-md
-              bg-my-blue
-              hover:bg-my-blue-50
-              text-white
-              shadow-sm
-              rounded-md
-              px-5
-              py-2.5
-            "
+            class="text-md bg-my-blue hover:bg-my-blue-50 text-white shadow-sm rounded-md px-5 py-2.5"
             aria-label="Download Curriculum Vitae"
           >
             <span>Download CV</span>
@@ -229,29 +192,13 @@ export default {
         <!-- Theme switcher large screen -->
         <button
           @click="themeSwitcher"
-          class="
-            sm:ml-6
-            bg-primary-light
-            dark:bg-ternary-dark
-            px-2
-            py-2
-            shadow-sm
-            rounded-lg
-            cursor-pointer
-          "
+          class="sm:ml-3 bg-primary-light dark:bg-ternary-dark px-2 py-2 shadow-sm rounded-lg cursor-pointer"
         >
           <!-- Dark mode icon -->
           <svg
             v-if="$colorMode.value == 'light'"
             xmlns="http://www.w3.org/2000/svg"
-            class="
-              text-liText-ternary-dark
-              hover:text-gray-400
-              dark:text-liText-ternary-light
-              dark:hover:text-liBorder-primary-light
-              w-6
-              h-6
-            "
+            class="text-liText-ternary-dark hover:text-gray-400 dark:text-liText-ternary-light dark:hover:text-li  border-primary-light w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

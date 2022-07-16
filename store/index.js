@@ -1,8 +1,62 @@
 import { v4 as uuidv4 } from "uuid";
 
 export const state = () => ({
-  projectsHeading: "Projects Portfolio",
-  projectsDescription: "Some of the projects I have successfully completed",
+  copyrightDate: new Date().getFullYear(),
+  contacts: [
+    {
+      id: "location",
+      name: "Udine e dintorni",
+      icon: "map-pin",
+      url: "",
+    },
+    {
+      id: "email",
+      name: "alanquaino@gmail.com",
+      icon: "mail",
+      url: "mailto:alanquaino@gmail.com",
+    },
+    {
+      id: "phone",
+      name: "346 270 9363",
+      icon: "phone",
+      url: "tel:+393462709363",
+    },
+  ],
+  socialProfiles: [
+    // The first profile url is used in the copyright section
+    {
+      id: uuidv4(),
+      name: "LinkedIn",
+      profile_name: "alanquaino",
+      icon: "linkedin",
+      url: "https://linkedin.com/in/alanquaino",
+    },
+    {
+      id: uuidv4(),
+      name: "Instagram",
+      profile_name: "alan_quaino",
+      icon: "instagram",
+      url: "https://instagram.com/alan_quaino",
+    },
+    {
+      id: uuidv4(),
+      name: "Facebook",
+      profile_name: "alan.quaino.7",
+      icon: "facebook",
+      url: "https://facebook.com/alan.quaino.7",
+    },
+  ],
+
+
+
+
+
+
+
+
+
+
+  // TO DELETE
   projects: [
     {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdb",
@@ -750,40 +804,12 @@ export const state = () => ({
       id: uuidv4(),
       bio: "Ciao, sono Alan Quaino! Lavoro come sviluppatore Web in un'azienda \
         che si occupa di ottimizzazione e gestione dei flussi logistici di \
-        magazzino.",
-    },
-    {
-      id: uuidv4(),
-      bio: "Sono un grande appassionato di auto, soprattutto di \
+        magazzino. Sono un grande appassionato di auto, soprattutto di \
         <i>youngtimer</i>, e nel tempo libero mi piace stare all'aperto e \
         immergermi nella natura.",
     },
   ],
-  copyrightDate: new Date().getFullYear(),
-  socialProfiles: [
-    // The first profile url is used in the copyright section
-    {
-      id: uuidv4(),
-      name: "LinkedIn",
-      profile_name: "alanquaino",
-      icon: "linkedin",
-      url: "https://linkedin.com/in/alanquaino",
-    },
-    {
-      id: uuidv4(),
-      name: "Instagram",
-      profile_name: "alan_quaino",
-      icon: "instagram",
-      url: "https://instagram.com/alan_quaino",
-    },
-    {
-      id: uuidv4(),
-      name: "Facebook",
-      profile_name: "alan.quaino.7",
-      icon: "facebook",
-      url: "https://facebook.com/alan.quaino.7",
-    },
-  ],
+
   categories: [
     {
       id: uuidv4(),

@@ -1,5 +1,3 @@
-const colors = require("tailwindcss/colors");
-
 module.exports = {
   purge: [
     "./components/**/*.{vue,js}",
@@ -14,6 +12,8 @@ module.exports = {
       colors: {
         "my-blue": "#196A9B",
         "my-blue-50": "#155984",
+        "my-red": "#DE1C24",
+        "my-red-50": "#B5161C",
 
         "primary-light": "#F7F8FC",
         "secondary-light": "#FFFFFF",

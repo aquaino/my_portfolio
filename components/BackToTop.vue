@@ -42,24 +42,7 @@ export default {
   <transition name="fade">
     <div
       v-show="isScrolled"
-      class="
-        transition
-        duration-500
-        transform
-        hover:scale-110
-        rounded-full
-        cursor-pointer
-        flex
-        p-2
-        bg-my-blue
-        hover:bg-blue-50
-        text-white
-        items-center
-        hover:shadow-sm
-        border-none
-        ring-none
-        outline-none
-      "
+      class="transition duration-500 transform hover:scale-110 rounded-full cursor-pointer flex p-2 bg-my-red text-white items-center hover:shadow-sm border-none ring-none outline-none"
       @click="backToTop"
     >
       <i data-feather="chevron-up"></i>
