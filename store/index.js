@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export const state = () => ({
   copyrightDate: new Date().getFullYear(),
+
   contacts: [
     {
       id: "location",
@@ -22,6 +23,7 @@ export const state = () => ({
       url: "tel:+393462709363",
     },
   ],
+
   socialProfiles: [
     // The first profile url is used in the copyright section
     {
@@ -47,714 +49,611 @@ export const state = () => ({
     },
   ],
 
-
-
-
-
-
-
-
-
-
-  // TO DELETE
   projects: [
     {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdb",
-      title: "Google Health Platform",
-      category: "Web Application",
-      img: "images/web-project-2.jpg",
-      publishDate: "Nov 04, 2021",
-      tag: "UI / Frontend",
-      clientTitle: "About Client",
-      objectivesTitle: "Objective",
+      id: "biglietto-da-visita-fotografia",
+      title: "Biglietto da visita - Fotografia",
+      category: "Grafica",
+      img: "images/biglietto-fotografa.jpg",
+      date: "2 agosto 2022",
+      tag: "biglietti-da-visita / fotografia",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Tools & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Share This",
+        "Design di un biglietto da visita con informazioni di contatto e social",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/ui-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Uber Project Management UI",
-          img: "../images/web-project-2.jpg",
+          title: "Biglietto da visita fotografia",
+          img: "../images/biglietto-fotografa.jpg",
         },
       ],
       companyInfos: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
+          title: "Nome",
+          details: "Gaurika Fratticci",
         },
         {
           id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
+          title: "Settore",
+          details: "Fotografia",
         },
         {
           id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Telefono",
+          details: "-",
         },
       ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-      ],
-      socialSharings: [
-        {
-          id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
-        },
-      ],
+      technologies: ["Canva", "Adobe Photoshop"],
+      description:
+        "Partendo dai requisiti del cliente ho progettato il biglietto da visita su Canva per poi ultimarlo su Photoshop. Il QR code rimanda direttamente al profilo Facebook per visualizzare gli album e i lavori.",
     },
     {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdc",
-      title: "Phoenix Digital Agency",
-      category: "Mobile Application",
-      img: "images/mobile-project-2.jpg",
-      publishDate: "Nov 04, 2021",
-      tag: "UI / Frontend",
-      clientTitle: "About Client",
-      objectivesTitle: "Objective",
+      id: "buono-natalizio-fotografia",
+      title: "Buono natalizio - Fotografia",
+      category: "Grafica",
+      img: "images/buono-natale-fotografa.jpg",
+      date: "2 agosto 2022",
+      tag: "buoni-natalizi / fotografia",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Tools & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Share This",
+        "Design di un buono natalizio da donare digitalmente o in formato cartaceo ai clienti",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Phoenix Digital Agency",
-          img: "../images/mobile-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Phoenix Digital Agency",
-          img: "../images/web-project-2.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Phoenix Digital Agency",
-          img: "../images/mobile-project-2.jpg",
+          title: "Buono natalizio in stile macchina fotografica",
+          img: "../images/buono-natale-fotografa.jpg",
         },
       ],
       companyInfos: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
+          title: "Nome",
+          details: "Gaurika Fratticci",
         },
         {
           id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
+          title: "Settore",
+          details: "Fotografia",
         },
         {
           id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Telefono",
+          details: "-",
         },
       ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-      ],
-      socialSharings: [
-        {
-          id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
-        },
-      ],
+      technologies: ["Canva", "Adobe Photoshop"],
+      description:
+        "Ho progettato il buono natalizio su Canva per poi ultimarlo su Photoshop. In particolare l'ho reso componibile con diverse fotografie fornite dal cliente, in modo che ogni buono sia unico e originale.",
     },
     {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdy",
-      title: "Project Management UI",
-      category: "UI/UX Design",
-      img: "images/ui-project-1.jpg",
-      publishDate: "Nov 04, 2021",
-      tag: "UI / Frontend",
-      clientTitle: "About Client",
-      objectivesTitle: "Objective",
+      id: "evento-gastronomico-musicale",
+      title: "Evento gastronomico e musicale",
+      category: "Grafica",
+      img: "images/evento-gastronomico-musicale.jpg",
+      date: "2 agosto 2022",
+      tag: "eventi / musica / social",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Tools & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Share This",
+        "Design della locandina cartacea riguardante un evento gastronomico e musicale locale",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/mobile-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/web-project-2.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/mobile-project-2.jpg",
+          title: "Locandina e post evento musicale",
+          img: "../images/evento-gastronomico-musicale.jpg",
         },
       ],
       companyInfos: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
+          title: "Nome",
+          details: "Azienda Agricola Milocco",
         },
         {
           id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
+          title: "Settore",
+          details: "Enogastronomia",
         },
         {
           id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Telefono",
+          details: "-",
         },
       ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-      ],
-      socialSharings: [
-        {
-          id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
-        },
-      ],
+      technologies: ["Canva", "Adobe Photoshop"],
+      description:
+        "Ho progettato la locandina e l'immagine per il post su Canva per poi ultimarli su Photoshop. L'evento è stato sponsorizzato, con molto successo, su Facebook e Instagram.",
     },
     {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8ccc99",
-      title: "Cloud Storage Platform",
-      category: "UI/UX Design",
-      img: "images/ui-project-2.jpg",
-      publishDate: "Nov 04, 2021",
-      tag: "Web / Frontend",
-      clientTitle: "About Client",
-      objectivesTitle: "Objective",
+      id: "logo-fotografia",
+      title: "Logo - Fotografia",
+      category: "Grafica",
+      img: "images/logo-fotografa.jpg",
+      date: "2 agosto 2022",
+      tag: "loghi / fotografia",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Tools & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Share This",
+        "Design di un logo per una fotografa professionista locale",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Cloud Storage Platform",
-          img: "../images/web-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Cloud Storage Platform",
-          img: "../images/web-project-2.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Cloud Storage Platform",
-          img: "../images/mobile-project-2.jpg",
+          title: "Logo fotografa",
+          img: "../images/logo-fotografa.jpg",
         },
       ],
       companyInfos: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
+          title: "Nome",
+          details: "Gaurika Fratticci",
         },
         {
           id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
+          title: "Settore",
+          details: "Fotografia",
         },
         {
           id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Telefono",
+          details: "-",
         },
       ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-      ],
-      socialSharings: [
-        {
-          id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
-        },
-      ],
+      technologies: ["Adobe Illustrator"],
+      description:
+        "Ho progettato il logo su Illustrator a partire dall'idea del cliente. In particolare ho reso vettoriale un'immagine che ho ricavato con Photoshop da uno schizzo a matita.",
     },
     {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdm",
-      title: "Uber Social App",
-      category: "Mobile Application",
-      img: "images/mobile-project-1.jpg",
-      publishDate: "Nov 04, 2021",
-      tag: "UI / Mobile",
-      clientTitle: "About Client",
-      objectivesTitle: "Objective",
+      id: "logo-giardinaggio",
+      title: "Logo giardinaggio",
+      category: "Grafica",
+      img: "images/logo-giardinaggio.jpg",
+      date: "2 agosto 2022",
+      tag: "loghi / giardinaggio",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Tools & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Share This",
+        "Design di un logo per un'agriturismo che offre anche servizi di giardinaggio",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Uber Social App",
-          img: "../images/web-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Uber Social App",
-          img: "../images/web-project-2.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Uber Social App",
-          img: "../images/mobile-project-2.jpg",
+          title: "Logo azienda giardinaggio",
+          img: "../images/logo-giardinaggio.jpg",
         },
       ],
       companyInfos: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
+          title: "Nome",
+          details: "Azienda Agricola Milocco",
         },
         {
           id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
+          title: "Settore",
+          details: "Giardinaggio",
         },
         {
           id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Telefono",
+          details: "-",
         },
       ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-      ],
-      socialSharings: [
-        {
-          id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
-        },
-      ],
+      technologies: ["Adobe Illustrator"],
+      description:
+        "Ho progettato il logo a partire da quello dell'azienda agricola, mantenendone colori e stile. Il logo è stato sviluppato vettorialmente con Illustrator.",
     },
     {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccbb",
-      title: "Apple Design System",
-      category: "Web Application",
-      img: "images/web-project-1.jpg",
-      publishDate: "Nov 04, 2021",
-      tag: "UI / Mobile",
-      clientTitle: "About Client",
-      objectivesTitle: "Objective",
+      id: "invito-matrimonio-elegante",
+      title: "Invito matrimonio - Stile elegante",
+      category: "Grafica",
+      img: "images/matrimonio-elegante.jpg",
+      date: "2 agosto 2022",
+      tag: "inviti / matrimoni",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Tools & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Share This",
+        "Design di un invito per un matrimonio dallo stile semplice ma elegante",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
       projectImages: [
         {
           id: uuidv4(),
-          title: "Apple Design System",
-          img: "../images/web-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Apple Design System",
-          img: "../images/web-project-2.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Apple Design System",
-          img: "../images/mobile-project-2.jpg",
+          title: "Invito matrimonio elegante",
+          img: "../images/matrimonio-elegante.jpg",
         },
       ],
       companyInfos: [
         {
           id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
+          title: "Nome",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
+          title: "Settore",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          title: "Telefono",
+          details: "-",
         },
       ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
+      technologies: ["Canva"],
+      description:
+        "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, dai toni chiari ed eleganti.",
+    },
+    {
+      id: "invito-matrimonio-limoni",
+      title: "Invito matrimonio - Tema limoni",
+      category: "Grafica",
+      img: "images/matrimonio-limoni.jpg",
+      date: "2 agosto 2022",
+      tag: "inviti / matrimoni",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Design di un invito per un matrimonio dal tema estivo con decorazione limoni",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
         {
           id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          title: "Invito matrimonio limoni",
+          img: "../images/matrimonio-limoni.jpg",
         },
       ],
-      socialSharings: [
+      companyInfos: [
         {
           id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
+          title: "Nome",
+          details: "-",
         },
         {
           id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
+          title: "Settore",
+          details: "-",
         },
         {
           id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
+          title: "Sito web",
+          details: "-",
         },
         {
           id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
+          title: "Telefono",
+          details: "-",
         },
       ],
+      technologies: ["Canva"],
+      description:
+        "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, dallo stile estivo e in particolare a tema limoni.",
+    },
+    {
+      id: "invito-matrimonio-porcellane",
+      title: "Invito matrimonio - Tema porcellane",
+      category: "Grafica",
+      img: "images/matrimonio-porcellane.jpg",
+      date: "2 agosto 2022",
+      tag: "inviti / matrimoni",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Design di un invito per un matrimonio dal tema porcellane del Sud Italia",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Invito matrimonio porcellane",
+          img: "../images/matrimonio-porcellane.jpg",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nome",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Settore",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Sito web",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Telefono",
+          details: "-",
+        },
+      ],
+      technologies: ["Canva"],
+      description:
+        "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, in particolare a tema porcellane del Sud Italia.",
+    },
+    {
+      id: "portfolio-fotografia",
+      title: "Portfolio - Fotografia",
+      category: "Grafica",
+      img: "images/portfolio-fotografa.jpg",
+      date: "2 agosto 2022",
+      tag: "portfolio / fotografia",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails: "Design di un portfolio digitale e cartaceo",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Portfolio fotografa",
+          img: "../images/portfolio-fotografa.jpg",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nome",
+          details: "Gaurika Fratticci",
+        },
+        {
+          id: uuidv4(),
+          title: "Settore",
+          details: "Fotografia",
+        },
+        {
+          id: uuidv4(),
+          title: "Sito web",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Telefono",
+          details: "-",
+        },
+      ],
+      technologies: ["Adobe InDesign", "Adobe Photoshop"],
+      description:
+        "Ho progettato il portfolio in modo che potesse essere consultato sia digitalmente come PDF sia in formato cartaceo A5. Racchiude una selezione dei migliori scatti del cliente.",
+    },
+    {
+      id: "post-evento-enogastronomico",
+      title: "Post evento enogastronomico",
+      category: "Social",
+      img: "images/post-enogastronomico.jpg",
+      date: "2 agosto 2022",
+      tag: "post / enogastronomia",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Design di un post per un evento enogastronomico locale",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Post social enogastronomico",
+          img: "../images/post-enogastronomico.jpg",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nome",
+          details: "Azienda Agricola Milocco",
+        },
+        {
+          id: uuidv4(),
+          title: "Settore",
+          details: "Enogastronomia",
+        },
+        {
+          id: uuidv4(),
+          title: "Sito web",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Telefono",
+          details: "-",
+        },
+      ],
+      technologies: ["Canva"],
+      description:
+        "Ho creato il post su Canva utilizzando i loghi del cliente e dei collaboratori.",
+    },
+    {
+      id: "volantino-agriturismo-giardinaggio",
+      title: "Volantino agriturismo e giardinaggio",
+      category: "Grafica",
+      img: "images/volantino-agriturismo-giardinaggio.jpg",
+      date: "2 agosto 2022",
+      tag: "volantini / enogastronomia / giardinaggio",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Design di un volantino stampabile sui servizi offerti da una piccola azienda locale",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Volantino gastronomia e giardinaggio",
+          img: "../images/volantino-agriturismo-giardinaggio.jpg",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nome",
+          details: "Azienda Agricola Milocco",
+        },
+        {
+          id: uuidv4(),
+          title: "Settore",
+          details: "Enogastronomia / Giardinaggio",
+        },
+        {
+          id: uuidv4(),
+          title: "Sito web",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Telefono",
+          details: "-",
+        },
+      ],
+      technologies: ["Canva", "Adobe Photoshop"],
+      description:
+        "Ho creato il volantino con Canva e Photoshop racchiudendo in un formato fronte e retro i servizi enogastronomici e di giardinaggio offerti dal cliente.",
+    },
+    {
+      id: "sito-web-azienda-agricola",
+      title: "Sito web azienda agricola",
+      category: "Web",
+      img: "images/miloccowines/miloccowines.jpg",
+      date: "2 agosto 2022",
+      tag: "siti web / enogastronomia / giardinaggio",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Sviluppo di un sito web per un'azienda agricola locale",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Sito web azienda agricola",
+          img: "../images/miloccowines/miloccowines.jpg",
+        },
+        {
+          id: uuidv4(),
+          title: "Preview del sito",
+          img: "../images/miloccowines/website-preview.jpg",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nome",
+          details: "Azienda Agricola Milocco",
+        },
+        {
+          id: uuidv4(),
+          title: "Settore",
+          details: "Enogastronomia / Giardinaggio",
+        },
+        {
+          id: uuidv4(),
+          title: "Sito web",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Telefono",
+          details: "-",
+        },
+      ],
+      technologies: ["WordPress"],
+      description:
+        "Il sito, creato con WordPress, è una vetrina dei vini, dei prodotti e dei servizi di giardinaggio offerti dall’azienda agricola, nonchè un catalogo aggiornato dei prodotti disponibili nello shop e per la consegna a domicilio.",
+    },
+    {
+      id: "portale-gestione-volontari",
+      title: "Portale gestione volontari",
+      category: "Web",
+      img: "images/pgv/pgv-website-preview.jpg",
+      date: "2 agosto 2022",
+      tag: "app web / volontari / protezione civile",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Sviluppo di un portale di gestione dei membri e delle attività di volontariato",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Sito web azienda agricola",
+          img: "../images/pgv/pgv-website-preview.jpg",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nome",
+          details: "Portezione Civile Buttrio",
+        },
+        {
+          id: uuidv4(),
+          title: "Settore",
+          details: "Volontariato",
+        },
+        {
+          id: uuidv4(),
+          title: "Sito web",
+          details: "-",
+        },
+        {
+          id: uuidv4(),
+          title: "Telefono",
+          details: "-",
+        },
+      ],
+      technologies: ["Python", "Flask", "UIkit 3"],
+      description:
+        "Ho realizzato questa applicazione web per la Protezione Civile del mio paese. Per lo sviluppo ho utilizzato il framework Python Flask e la libreria CSS UIkit 3. Permette la gestione dei membri e delle attività di volontariato sul territorio comunale e non.",
     },
   ],
+
   clientsHeading: "Some of the brands I worked with",
   clients: [
     {
@@ -798,6 +697,7 @@ export const state = () => ({
       img: "../brands/puma_gray.png",
     },
   ],
+
   aboutHeading: "Qualche parola su di me",
   aboutMe: [
     {
@@ -813,23 +713,18 @@ export const state = () => ({
   categories: [
     {
       id: uuidv4(),
+      value: "graphics",
+      name: "Grafica",
+    },
+    {
+      id: uuidv4(),
+      value: "social",
+      name: "Social",
+    },
+    {
+      id: uuidv4(),
       value: "web",
-      name: "Web Application",
-    },
-    {
-      id: uuidv4(),
-      value: "mobile",
-      name: "Mobile Applicaiton",
-    },
-    {
-      id: uuidv4(),
-      value: "ui-ux",
-      name: "UI/UX Design",
-    },
-    {
-      id: uuidv4(),
-      value: "branding",
-      name: "Branding & Animations",
+      name: "Web",
     },
   ],
 });
@@ -838,12 +733,4 @@ export const getters = {
   getProjectById: (state) => (id) => {
     return state.projects.find((project) => project.id == id);
   },
-};
-
-export const mutations = {
-  // @todo
-};
-
-export const actions = {
-  // @todo
 };

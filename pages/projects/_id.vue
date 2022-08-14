@@ -3,10 +3,15 @@ import feather from "feather-icons";
 import ProjectRelatedProjects from "../../components/projects/ProjectRelatedProjects.vue";
 export default {
   scrollToTop: true,
-  data: () => {
+  data: function () {
     return {
-      // @todo
+      showModal: false,
     };
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
   },
   computed: {
     project() {
@@ -30,17 +35,7 @@ export default {
       <!-- Project heading and meta info -->
       <div>
         <p
-          class="
-            font-general-medium
-            text-left text-3xl
-            sm:text-4xl
-            font-bold
-            text-primary-dark
-            dark:text-primary-light
-            mt-14
-            sm:mt-20
-            mb-7
-          "
+          class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
         >
           {{ project.title }}
         </p>
@@ -51,14 +46,8 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="
-                font-general-medium
-                ml-2
-                leading-none
-                text-primary-dark
-                dark:text-primary-light
-              "
-              >{{ project.publishDate }}</span
+              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              >{{ project.date }}</span
             >
           </div>
           <div class="flex items-center">
@@ -67,13 +56,7 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="
-                font-general-medium
-                ml-2
-                leading-none
-                text-primary-dark
-                dark:text-primary-light
-              "
+              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
               >{{ project.tag }}</span
             >
           </div>
@@ -90,7 +73,23 @@ export default {
           <img
             :src="projectImage.img"
             class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+            @click="toggleModal()"
           />
+          <!-- Image modal -->
+          <div
+            class="fixed top-0 left-0 z-80 w-screen h-screen bg-my-blue flex justify-center items-center"
+            v-show="showModal"
+          >
+            <a
+              class="fixed text-white cursor-pointer z-90 top-6 right-8 text-5xl"
+              @click="toggleModal()"
+              ><i data-feather="x"></i
+            ></a>
+            <img
+              class="max-w-[800px] max-h-[600px] object-cover rounded-xl"
+              :src="projectImage.img"
+            />
+          </div>
         </div>
       </div>
 
@@ -101,12 +100,7 @@ export default {
           <!-- Single project client details -->
           <div class="mb-7">
             <p
-              class="
-                font-general-medium
-                text-2xl text-secondary-dark
-                dark:text-secondary-light
-                mb-2
-              "
+              class="font-general-medium text-2xl text-secondary-dark dark:text-secondary-light mb-2"
             >
               {{ project.clientTitle }}
             </p>
@@ -114,11 +108,7 @@ export default {
               <li
                 v-for="info in project.companyInfos"
                 :key="info.id"
-                class="
-                  font-general-regular
-                  text-ternary-dark
-                  dark:text-ternary-light
-                "
+                class="font-general-regular text-ternary-dark dark:text-ternary-light"
               >
                 <span>{{ info.title }}: </span>
                 <a
@@ -134,118 +124,47 @@ export default {
               </li>
             </ul>
           </div>
+        </div>
 
+        <div class="w-full sm:w-2/3 text-left">
           <!-- Single project objectives -->
           <div class="mb-7">
             <p
-              class="
-                font-general-medium
-                text-2xl text-ternary-dark
-                dark:text-ternary-light
-                mb-2
-              "
+              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
             >
               {{ project.objectivesTitle }}
             </p>
             <p
-              class="
-                font-general-regular
-                text-primary-dark
-                dark:text-ternary-light
-              "
+              class="font-general-regular text-primary-dark dark:text-ternary-light"
             >
               {{ project.objectivesDetails }}
             </p>
           </div>
-
           <!-- Single project technologies -->
           <div class="mb-7">
             <p
-              class="
-                font-general-medium
-                text-2xl text-ternary-dark
-                dark:text-ternary-light
-                mb-2
-              "
+              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
             >
               {{ project.techTitle }}
             </p>
             <p
-              class="
-                font-general-regular
-                text-primary-dark
-                dark:text-ternary-light
-              "
+              class="font-general-regular text-primary-dark dark:text-ternary-light"
             >
               {{ project.technologies.join(", ") }}
             </p>
           </div>
-
-          <!-- Single project social sharing -->
-          <div>
+          <div class="mb-7">
             <p
-              class="
-                font-general-medium
-                text-2xl text-ternary-dark
-                dark:text-ternary-light
-                mb-2
-              "
+              class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-2"
             >
-              {{ project.socialTitle }}
+              {{ project.detailsTitle }}
             </p>
-            <div class="flex items-center gap-3 mt-5">
-              <a
-                v-for="social in project.socialSharings"
-                :key="social.id"
-                :href="social.url"
-                target="__blank"
-                aria-label="Share Project"
-                class="
-                  bg-ternary-light
-                  dark:bg-ternary-dark
-                  text-gray-400
-                  hover:text-primary-dark
-                  dark:hover:text-primary-light
-                  p-2
-                  rounded-lg
-                  shadow-sm
-                  duration-500
-                "
-                ><i
-                  :data-feather="social.icon"
-                  class="w-4 lg:w-5 h-4 lg:h-5"
-                ></i
-              ></a>
-            </div>
+            <p
+              class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+            >
+              {{ project.description }}
+            </p>
           </div>
-        </div>
-
-        <!-- Single project right section details -->
-        <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-          <p
-            class="
-              font-general-medium
-              text-primary-dark
-              dark:text-primary-light
-              text-2xl
-              font-bold
-              mb-7
-            "
-          >
-            {{ project.detailsTitle }}
-          </p>
-          <p
-            v-for="projectDetail in project.projectDetails"
-            :key="projectDetail.id"
-            class="
-              font-general-regular
-              mb-5
-              text-lg text-ternary-dark
-              dark:text-ternary-light
-            "
-          >
-            {{ projectDetail.details }}
-          </p>
         </div>
       </div>
 
