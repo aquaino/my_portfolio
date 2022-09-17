@@ -31,5 +31,3 @@ export default {
     </option>
   </select>
 </template>
-
-<style lang="scss" scoped></style>

@@ -23,9 +23,7 @@ export default {
   methods: {
     filterProjectsByCategory() {
       return this.projects.filter((item) => {
-        let category =
-          item.category.charAt(0).toUpperCase() + item.category.slice(1);
-        return category.includes(this.selectedProject);
+        return item.categories.includes(this.selectedProject);
       });
     },
     filterProjectsBySearch() {
@@ -119,5 +117,3 @@ export default {
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

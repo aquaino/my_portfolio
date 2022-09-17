@@ -49,11 +49,44 @@ export const state = () => ({
     },
   ],
 
+  customers: {
+    empty: {
+      name: null,
+      sector: null,
+      website: null,
+      phone: null,
+    },
+    gaurika: {
+      name: "Gaurika Fratticci",
+      sector: "Fotografia",
+      website: null,
+      phone: null,
+    },
+    agriturismoMilocco: {
+      name: "Azienda Agricola milocco",
+      sector: "Enogastronomia",
+      website: null,
+      phone: null,
+    },
+    giardinaggioMilocco: {
+      name: "Azienda Agricola milocco",
+      sector: "Giardinaggio",
+      website: null,
+      phone: null,
+    },
+    protezioneCivileButtrio: {
+      name: "Protezione Civile Buttrio",
+      sector: "Volontariato",
+      website: null,
+      phone: null,
+    },
+  },
+
   projects: [
     {
       id: "biglietto-da-visita-fotografia",
       title: "Biglietto da visita - Fotografia",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/biglietto-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "biglietti-da-visita / fotografia",
@@ -70,28 +103,7 @@ export const state = () => ({
           img: "../images/biglietto-fotografa.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Gaurika Fratticci",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Fotografia",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "gaurika",
       technologies: ["Canva", "Adobe Photoshop"],
       description:
         "Partendo dai requisiti del cliente ho progettato il biglietto da visita su Canva per poi ultimarlo su Photoshop. Il QR code rimanda direttamente al profilo Facebook per visualizzare gli album e i lavori.",
@@ -99,7 +111,7 @@ export const state = () => ({
     {
       id: "buono-natalizio-fotografia",
       title: "Buono natalizio - Fotografia",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/buono-natale-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "buoni-natalizi / fotografia",
@@ -116,28 +128,7 @@ export const state = () => ({
           img: "../images/buono-natale-fotografa.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Gaurika Fratticci",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Fotografia",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "gaurika",
       technologies: ["Canva", "Adobe Photoshop"],
       description:
         "Ho progettato il buono natalizio su Canva per poi ultimarlo su Photoshop. In particolare l'ho reso componibile con diverse fotografie fornite dal cliente, in modo che ogni buono sia unico e originale.",
@@ -145,7 +136,7 @@ export const state = () => ({
     {
       id: "evento-gastronomico-musicale",
       title: "Evento gastronomico e musicale",
-      category: "Grafica",
+      categories: ["Grafica", "Social"],
       img: "images/evento-gastronomico-musicale.jpg",
       date: "2 agosto 2022",
       tag: "eventi / musica / social",
@@ -162,28 +153,7 @@ export const state = () => ({
           img: "../images/evento-gastronomico-musicale.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Azienda Agricola Milocco",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Enogastronomia",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "agriturismoMilocco",
       technologies: ["Canva", "Adobe Photoshop"],
       description:
         "Ho progettato la locandina e l'immagine per il post su Canva per poi ultimarli su Photoshop. L'evento è stato sponsorizzato, con molto successo, su Facebook e Instagram.",
@@ -191,7 +161,7 @@ export const state = () => ({
     {
       id: "logo-fotografia",
       title: "Logo - Fotografia",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/logo-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "loghi / fotografia",
@@ -208,28 +178,7 @@ export const state = () => ({
           img: "../images/logo-fotografa.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Gaurika Fratticci",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Fotografia",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "gaurika",
       technologies: ["Adobe Illustrator"],
       description:
         "Ho progettato il logo su Illustrator a partire dall'idea del cliente. In particolare ho reso vettoriale un'immagine che ho ricavato con Photoshop da uno schizzo a matita.",
@@ -237,7 +186,7 @@ export const state = () => ({
     {
       id: "logo-giardinaggio",
       title: "Logo giardinaggio",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/logo-giardinaggio.jpg",
       date: "2 agosto 2022",
       tag: "loghi / giardinaggio",
@@ -254,28 +203,7 @@ export const state = () => ({
           img: "../images/logo-giardinaggio.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Azienda Agricola Milocco",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Giardinaggio",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "giardinaggioMilocco",
       technologies: ["Adobe Illustrator"],
       description:
         "Ho progettato il logo a partire da quello dell'azienda agricola, mantenendone colori e stile. Il logo è stato sviluppato vettorialmente con Illustrator.",
@@ -283,7 +211,7 @@ export const state = () => ({
     {
       id: "invito-matrimonio-elegante",
       title: "Invito matrimonio - Stile elegante",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/matrimonio-elegante.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
@@ -300,28 +228,7 @@ export const state = () => ({
           img: "../images/matrimonio-elegante.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "empty",
       technologies: ["Canva"],
       description:
         "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, dai toni chiari ed eleganti.",
@@ -329,7 +236,7 @@ export const state = () => ({
     {
       id: "invito-matrimonio-limoni",
       title: "Invito matrimonio - Tema limoni",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/matrimonio-limoni.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
@@ -346,28 +253,7 @@ export const state = () => ({
           img: "../images/matrimonio-limoni.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "empty",
       technologies: ["Canva"],
       description:
         "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, dallo stile estivo e in particolare a tema limoni.",
@@ -375,7 +261,7 @@ export const state = () => ({
     {
       id: "invito-matrimonio-porcellane",
       title: "Invito matrimonio - Tema porcellane",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/matrimonio-porcellane.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
@@ -392,28 +278,7 @@ export const state = () => ({
           img: "../images/matrimonio-porcellane.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "empty",
       technologies: ["Canva"],
       description:
         "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, in particolare a tema porcellane del Sud Italia.",
@@ -421,7 +286,7 @@ export const state = () => ({
     {
       id: "portfolio-fotografia",
       title: "Portfolio - Fotografia",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/portfolio-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "portfolio / fotografia",
@@ -437,28 +302,7 @@ export const state = () => ({
           img: "../images/portfolio-fotografa.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Gaurika Fratticci",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Fotografia",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "gaurika",
       technologies: ["Adobe InDesign", "Adobe Photoshop"],
       description:
         "Ho progettato il portfolio in modo che potesse essere consultato sia digitalmente come PDF sia in formato cartaceo A5. Racchiude una selezione dei migliori scatti del cliente.",
@@ -466,7 +310,7 @@ export const state = () => ({
     {
       id: "post-evento-enogastronomico",
       title: "Post evento enogastronomico",
-      category: "Social",
+      categories: ["Social"],
       img: "images/post-enogastronomico.jpg",
       date: "2 agosto 2022",
       tag: "post / enogastronomia",
@@ -483,28 +327,7 @@ export const state = () => ({
           img: "../images/post-enogastronomico.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Azienda Agricola Milocco",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Enogastronomia",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "agriturismoMilocco",
       technologies: ["Canva"],
       description:
         "Ho creato il post su Canva utilizzando i loghi del cliente e dei collaboratori.",
@@ -512,7 +335,7 @@ export const state = () => ({
     {
       id: "volantino-agriturismo-giardinaggio",
       title: "Volantino agriturismo e giardinaggio",
-      category: "Grafica",
+      categories: ["Grafica"],
       img: "images/volantino-agriturismo-giardinaggio.jpg",
       date: "2 agosto 2022",
       tag: "volantini / enogastronomia / giardinaggio",
@@ -529,28 +352,7 @@ export const state = () => ({
           img: "../images/volantino-agriturismo-giardinaggio.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Azienda Agricola Milocco",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Enogastronomia / Giardinaggio",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "agriturismoMilocco",
       technologies: ["Canva", "Adobe Photoshop"],
       description:
         "Ho creato il volantino con Canva e Photoshop racchiudendo in un formato fronte e retro i servizi enogastronomici e di giardinaggio offerti dal cliente.",
@@ -558,7 +360,7 @@ export const state = () => ({
     {
       id: "sito-web-azienda-agricola",
       title: "Sito web azienda agricola",
-      category: "Web",
+      categories: ["Web"],
       img: "images/miloccowines/miloccowines.jpg",
       date: "2 agosto 2022",
       tag: "siti web / enogastronomia / giardinaggio",
@@ -580,28 +382,7 @@ export const state = () => ({
           img: "../images/miloccowines/website-preview.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Azienda Agricola Milocco",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Enogastronomia / Giardinaggio",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "agriturismoMilocco",
       technologies: ["WordPress"],
       description:
         "Il sito, creato con WordPress, è una vetrina dei vini, dei prodotti e dei servizi di giardinaggio offerti dall’azienda agricola, nonchè un catalogo aggiornato dei prodotti disponibili nello shop e per la consegna a domicilio.",
@@ -609,7 +390,7 @@ export const state = () => ({
     {
       id: "portale-gestione-volontari",
       title: "Portale gestione volontari",
-      category: "Web",
+      categories: ["Web"],
       img: "images/pgv/pgv-website-preview.jpg",
       date: "2 agosto 2022",
       tag: "app web / volontari / protezione civile",
@@ -626,28 +407,7 @@ export const state = () => ({
           img: "../images/pgv/pgv-website-preview.jpg",
         },
       ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Nome",
-          details: "Portezione Civile Buttrio",
-        },
-        {
-          id: uuidv4(),
-          title: "Settore",
-          details: "Volontariato",
-        },
-        {
-          id: uuidv4(),
-          title: "Sito web",
-          details: "-",
-        },
-        {
-          id: uuidv4(),
-          title: "Telefono",
-          details: "-",
-        },
-      ],
+      customer: "protezioneCivileButtrio",
       technologies: ["Python", "Flask", "UIkit 3"],
       description:
         "Ho realizzato questa applicazione web per la Protezione Civile del mio paese. Per lo sviluppo ho utilizzato il framework Python Flask e la libreria CSS UIkit 3. Permette la gestione dei membri e delle attività di volontariato sul territorio comunale e non.",

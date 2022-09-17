@@ -17,6 +17,9 @@ export default {
     project() {
       return this.$store.getters.getProjectById(this.$route.params.id);
     },
+    customers() {
+      return this.$store.state.customers;
+    },
   },
   mounted() {
     feather.replace();
@@ -48,6 +51,16 @@ export default {
             <span
               class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
               >{{ project.date }}</span
+            >
+          </div>
+          <div class="flex items-center mr-10">
+            <i
+              data-feather="folder"
+              class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
+            ></i>
+            <span
+              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              >{{ project.categories.join(", ") }}</span
             >
           </div>
           <div class="flex items-center">
@@ -102,24 +115,36 @@ export default {
             <p
               class="font-general-medium text-2xl text-secondary-dark dark:text-secondary-light mb-2"
             >
-              {{ project.clientTitle }}
+              Cliente
             </p>
             <ul class="leading-loose">
               <li
-                v-for="info in project.companyInfos"
-                :key="info.id"
                 class="font-general-regular text-ternary-dark dark:text-ternary-light"
               >
-                <span>{{ info.title }}: </span>
-                <a
-                  href="#"
-                  :class="
-                    info.title == 'Website' || info.title == 'Phone'
-                      ? 'hover:underline cursor-pointer'
-                      : ''
-                  "
-                  aria-label="Project website and phone"
-                  >{{ info.details }}</a
+                <span>Nome: {{ customers[project.customer].name || "-" }}</span>
+              </li>
+              <li
+                class="font-general-regular text-ternary-dark dark:text-ternary-light"
+              >
+                <span
+                  >Settore:
+                  {{ customers[project.customer].sector || "-" }}</span
+                >
+              </li>
+              <li
+                class="font-general-regular text-ternary-dark dark:text-ternary-light"
+              >
+                <span
+                  >Sito web:
+                  {{ customers[project.customer].website || "-" }}</span
+                >
+              </li>
+              <li
+                class="font-general-regular text-ternary-dark dark:text-ternary-light"
+              >
+                <span
+                  >Telefono:
+                  {{ customers[project.customer].phone || "-" }}</span
                 >
               </li>
             </ul>

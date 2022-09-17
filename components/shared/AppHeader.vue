@@ -1,17 +1,14 @@
 <script>
 import { mapState } from "vuex";
-// import HireMeModal from "../HireMeModal.vue";
 import AppNavigation from "./AppNavigation.vue";
 
 export default {
   components: {
-    // HireMeModal,
     AppNavigation,
   },
   data: () => {
     return {
       isOpen: false,
-      // modal: false,
     };
   },
 
@@ -23,20 +20,6 @@ export default {
       this.$colorMode.preference =
         this.$colorMode.value == "light" ? "dark" : "light";
     },
-    // showModal() {
-    //   if (this.modal) {
-    //     // Stop screen scrolling
-    //     document
-    //       .getElementsByTagName("html")[0]
-    //       .classList.remove("overflow-y-hidden");
-    //     this.modal = false;
-    //   } else {
-    //     document
-    //       .getElementsByTagName("html")[0]
-    //       .classList.add("overflow-y-hidden");
-    //     this.modal = true;
-    //   }
-    // },
   },
 };
 </script>
@@ -137,50 +120,16 @@ export default {
       </div>
 
       <!-- Header links -->
-      <!-- <AppNavigation
-        :isOpen="isOpen"
-        :showModal="showModal"
-        :categories="categories"
-      /> -->
-      <AppNavigation
-        :isOpen="isOpen"
-        :categories="categories"
-      />
-      <!-- <AppNavigation
-        :isOpen="isOpen"
-        :showModal="showModal"
-        :modal="modal"
-        :categories="categories"
-      /> -->
+      <AppNavigation :isOpen="isOpen" :categories="categories" />
 
       <!-- Header right section buttons -->
       <div
         class="hidden sm:flex justify-between items-center flex-col md:flex-row"
       >
-        <!-- Hire me button -->
-        <!-- <div class="font-general-medium hidden md:block">
-          <button
-            class="
-              text-md
-              bg-blue-800
-              hover:bg-blue-900
-              text-white
-              shadow-sm
-              rounded-md
-              px-5
-              py-2.5
-            "
-            @click="showModal()"
-            aria-label="Hire Me Button"
-          >
-            Hire Me
-          </button>
-        </div> -->
-
         <!-- CV button -->
         <div class="font-general-medium hidden md:block">
           <a
-            href="/Stoman-Resume.pdf"
+            href="/CV Alan Quaino 20210811.pdf"
             download
             class="text-md bg-my-blue hover:bg-my-blue-50 text-white shadow-sm rounded-md px-5 py-2.5"
             aria-label="Download Curriculum Vitae"
@@ -198,7 +147,7 @@ export default {
           <svg
             v-if="$colorMode.value == 'light'"
             xmlns="http://www.w3.org/2000/svg"
-            class="text-liText-ternary-dark hover:text-gray-400 dark:text-liText-ternary-light dark:hover:text-li  border-primary-light w-6 h-6"
+            class="text-liText-ternary-dark hover:text-gray-400 dark:text-liText-ternary-light dark:hover:text-li border-primary-light w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -229,13 +178,5 @@ export default {
         </button>
       </div>
     </div>
-
-    <!-- Hire me modal -->
-    <!-- <HireMeModal
-      :showModal="showModal"
-      :modal="modal"
-      :categories="categories"
-      aria-modal="Hire Me Modal"
-    /> -->
   </nav>
 </template>
