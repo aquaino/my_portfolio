@@ -1,11 +1,7 @@
 <script>
 import { mapState } from "vuex";
-import AppNavigation from "./AppNavigation.vue";
 
 export default {
-  components: {
-    AppNavigation,
-  },
   data: () => {
     return {
       isOpen: false,

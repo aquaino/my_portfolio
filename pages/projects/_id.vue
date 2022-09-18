@@ -1,6 +1,5 @@
 <script>
 import feather from "feather-icons";
-import ProjectRelatedProjects from "../../components/projects/ProjectRelatedProjects.vue";
 export default {
   scrollToTop: true,
   data: function () {

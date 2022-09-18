@@ -1,8 +1,5 @@
 <script>
-import Button from "../reusable/Button.vue";
-export default {
-  components: { Button },
-};
+export default {};
 </script>
 
 <template>
@@ -96,14 +93,13 @@ export default {
           ></textarea>
         </div>
 
-        <div class="mt-6">
-          <Button
-            title="Invia"
-            class="px-4 py-2.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-lg duration-500"
-            type="submit"
-            aria-label="Invia"
-          />
-        </div>
+        <button
+          class="mt-6 px-4 py-2.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-lg duration-500"
+          type="submit"
+          aria-label="Invia"
+        >
+          Invia
+        </button>
       </form>
     </div>
   </div>

@@ -1,15 +1,11 @@
 <script>
 import { mapState } from "vuex";
-
 import feather from "feather-icons";
-import FooterCopyright from "./FooterCopyright.vue";
 
 export default {
   computed: {
     ...mapState(["socialProfiles"]),
   },
-
-  components: { FooterCopyright },
 
   mounted() {
     feather.replace();

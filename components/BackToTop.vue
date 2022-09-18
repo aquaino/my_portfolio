@@ -2,7 +2,6 @@
 import feather from "feather-icons";
 
 export default {
-  components: {},
   data() {
     return {
       userScrollPosition: 0,
