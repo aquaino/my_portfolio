@@ -1,7 +1,0 @@
-const IG_USERNAME = "";
-const IG_WS_TOKEN = "";
-
-export default {
-    IG_USERNAME,
-    IG_WS_TOKEN,
-};

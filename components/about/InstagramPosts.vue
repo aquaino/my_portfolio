@@ -1,12 +1,11 @@
 <script>
 import axios from "axios";
-import constants from "@/constants.js"
 
 export default {
     data: function () {
         return {
-            username: constants.IG_USERNAME,
-            token: constants.IG_WS_TOKEN,
+            username: process.env.NUXT_ENV_IG_USERNAME,
+            token: process.env.NUXT_ENV_IG_WS_TOKEN,
             limit: 12,
             posts: null,
         };
