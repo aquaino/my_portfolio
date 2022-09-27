@@ -78,5 +78,14 @@ export default {
         <span v-else>{{ info.value }}</span></span
       >
     </div>
+    <div class="block md:hidden font-general-medium mt-8 text-center">
+      <button
+        class="px-4 py-2.5 text-white tracking-wider bg-my-red hover:bg-my-red-50 focus:ring-1 focus:ring-my-red rounded-lg duration-500"
+        onclick="window.open('/CV Alan Quaino 20210811.pdf')"
+        aria-label="Download Curriculum Vitae"
+      >
+        Download CV
+      </button>
+    </div>
   </div>
 </template>
