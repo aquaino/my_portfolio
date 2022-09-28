@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 export const state = () => ({
   copyrightDate: new Date().getFullYear(),
 
+  /* Contact info */
   contacts: [
     {
       id: "location",
@@ -24,6 +25,7 @@ export const state = () => ({
     },
   ],
 
+  /* Social profiles */
   socialProfiles: [
     // The first profile url is used in the copyright section
     {
@@ -49,6 +51,7 @@ export const state = () => ({
     },
   ],
 
+  /* Customers */
   customers: {
     empty: {
       name: null,
@@ -82,12 +85,13 @@ export const state = () => ({
     },
   },
 
+  /* Projects */
   projects: [
     {
       id: "biglietto-da-visita-fotografia",
       title: "Biglietto da visita - Fotografia",
       categories: ["Grafica"],
-      img: "images/biglietto-fotografa.jpg",
+      img: "/images/biglietto-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "biglietti-da-visita / fotografia",
       clientTitle: "Cliente",
@@ -100,7 +104,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Biglietto da visita fotografia",
-          img: "../images/biglietto-fotografa.jpg",
+          img: "/images/biglietto-fotografa.jpg",
         },
       ],
       customer: "gaurika",
@@ -112,7 +116,7 @@ export const state = () => ({
       id: "buono-natalizio-fotografia",
       title: "Buono natalizio - Fotografia",
       categories: ["Grafica"],
-      img: "images/buono-natale-fotografa.jpg",
+      img: "/images/buono-natale-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "buoni-natalizi / fotografia",
       clientTitle: "Cliente",
@@ -125,7 +129,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Buono natalizio in stile macchina fotografica",
-          img: "../images/buono-natale-fotografa.jpg",
+          img: "/images/buono-natale-fotografa.jpg",
         },
       ],
       customer: "gaurika",
@@ -137,7 +141,7 @@ export const state = () => ({
       id: "evento-gastronomico-musicale",
       title: "Evento gastronomico e musicale",
       categories: ["Grafica", "Social"],
-      img: "images/evento-gastronomico-musicale.jpg",
+      img: "/images/evento-gastronomico-musicale.jpg",
       date: "2 agosto 2022",
       tag: "eventi / musica / social",
       clientTitle: "Cliente",
@@ -150,7 +154,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Locandina e post evento musicale",
-          img: "../images/evento-gastronomico-musicale.jpg",
+          img: "/images/evento-gastronomico-musicale.jpg",
         },
       ],
       customer: "agriturismoMilocco",
@@ -162,7 +166,7 @@ export const state = () => ({
       id: "logo-fotografia",
       title: "Logo - Fotografia",
       categories: ["Grafica"],
-      img: "images/logo-fotografa.jpg",
+      img: "/images/logo-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "loghi / fotografia",
       clientTitle: "Cliente",
@@ -175,7 +179,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Logo fotografa",
-          img: "../images/logo-fotografa.jpg",
+          img: "/images/logo-fotografa.jpg",
         },
       ],
       customer: "gaurika",
@@ -187,7 +191,7 @@ export const state = () => ({
       id: "logo-giardinaggio",
       title: "Logo giardinaggio",
       categories: ["Grafica"],
-      img: "images/logo-giardinaggio.jpg",
+      img: "/images/logo-giardinaggio.jpg",
       date: "2 agosto 2022",
       tag: "loghi / giardinaggio",
       clientTitle: "Cliente",
@@ -200,7 +204,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Logo azienda giardinaggio",
-          img: "../images/logo-giardinaggio.jpg",
+          img: "/images/logo-giardinaggio.jpg",
         },
       ],
       customer: "giardinaggioMilocco",
@@ -212,7 +216,7 @@ export const state = () => ({
       id: "invito-matrimonio-elegante",
       title: "Invito matrimonio - Stile elegante",
       categories: ["Grafica"],
-      img: "images/matrimonio-elegante.jpg",
+      img: "/images/matrimonio-elegante.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
       clientTitle: "Cliente",
@@ -225,7 +229,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Invito matrimonio elegante",
-          img: "../images/matrimonio-elegante.jpg",
+          img: "/images/matrimonio-elegante.jpg",
         },
       ],
       customer: "empty",
@@ -237,7 +241,7 @@ export const state = () => ({
       id: "invito-matrimonio-limoni",
       title: "Invito matrimonio - Tema limoni",
       categories: ["Grafica"],
-      img: "images/matrimonio-limoni.jpg",
+      img: "/images/matrimonio-limoni.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
       clientTitle: "Cliente",
@@ -250,7 +254,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Invito matrimonio limoni",
-          img: "../images/matrimonio-limoni.jpg",
+          img: "/images/matrimonio-limoni.jpg",
         },
       ],
       customer: "empty",
@@ -262,7 +266,7 @@ export const state = () => ({
       id: "invito-matrimonio-porcellane",
       title: "Invito matrimonio - Tema porcellane",
       categories: ["Grafica"],
-      img: "images/matrimonio-porcellane.jpg",
+      img: "/images/matrimonio-porcellane.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
       clientTitle: "Cliente",
@@ -275,7 +279,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Invito matrimonio porcellane",
-          img: "../images/matrimonio-porcellane.jpg",
+          img: "/images/matrimonio-porcellane.jpg",
         },
       ],
       customer: "empty",
@@ -287,7 +291,7 @@ export const state = () => ({
       id: "portfolio-fotografia",
       title: "Portfolio - Fotografia",
       categories: ["Grafica"],
-      img: "images/portfolio-fotografa.jpg",
+      img: "/images/portfolio-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "portfolio / fotografia",
       clientTitle: "Cliente",
@@ -299,7 +303,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Portfolio fotografa",
-          img: "../images/portfolio-fotografa.jpg",
+          img: "/images/portfolio-fotografa.jpg",
         },
       ],
       customer: "gaurika",
@@ -311,7 +315,7 @@ export const state = () => ({
       id: "post-evento-enogastronomico",
       title: "Post evento enogastronomico",
       categories: ["Social"],
-      img: "images/post-enogastronomico.jpg",
+      img: "/images/post-enogastronomico.jpg",
       date: "2 agosto 2022",
       tag: "post / enogastronomia",
       clientTitle: "Cliente",
@@ -324,7 +328,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Post social enogastronomico",
-          img: "../images/post-enogastronomico.jpg",
+          img: "/images/post-enogastronomico.jpg",
         },
       ],
       customer: "agriturismoMilocco",
@@ -336,7 +340,7 @@ export const state = () => ({
       id: "volantino-agriturismo-giardinaggio",
       title: "Volantino agriturismo e giardinaggio",
       categories: ["Grafica"],
-      img: "images/volantino-agriturismo-giardinaggio.jpg",
+      img: "/images/volantino-agriturismo-giardinaggio.jpg",
       date: "2 agosto 2022",
       tag: "volantini / enogastronomia / giardinaggio",
       clientTitle: "Cliente",
@@ -349,7 +353,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Volantino gastronomia e giardinaggio",
-          img: "../images/volantino-agriturismo-giardinaggio.jpg",
+          img: "/images/volantino-agriturismo-giardinaggio.jpg",
         },
       ],
       customer: "agriturismoMilocco",
@@ -361,7 +365,7 @@ export const state = () => ({
       id: "sito-web-azienda-agricola",
       title: "Sito web azienda agricola",
       categories: ["Web"],
-      img: "images/miloccowines/miloccowines.jpg",
+      img: "/images/miloccowines/miloccowines.jpg",
       date: "2 agosto 2022",
       tag: "siti web / enogastronomia / giardinaggio",
       clientTitle: "Cliente",
@@ -374,12 +378,12 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Sito web azienda agricola",
-          img: "../images/miloccowines/miloccowines.jpg",
+          img: "/images/miloccowines/miloccowines.jpg",
         },
         {
           id: uuidv4(),
           title: "Preview del sito",
-          img: "../images/miloccowines/website-preview.jpg",
+          img: "/images/miloccowines/website-preview.jpg",
         },
       ],
       customer: "agriturismoMilocco",
@@ -391,7 +395,7 @@ export const state = () => ({
       id: "portale-gestione-volontari",
       title: "Portale gestione volontari",
       categories: ["Web"],
-      img: "images/pgv/pgv-website-preview.jpg",
+      img: "/images/pgv/pgv-website-preview.jpg",
       date: "2 agosto 2022",
       tag: "app web / volontari / protezione civile",
       clientTitle: "Cliente",
@@ -404,7 +408,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "Sito web azienda agricola",
-          img: "../images/pgv/pgv-website-preview.jpg",
+          img: "/images/pgv/pgv-website-preview.jpg",
         },
       ],
       customer: "protezioneCivileButtrio",
@@ -414,62 +418,7 @@ export const state = () => ({
     },
   ],
 
-  clientsHeading: "Some of the brands I worked with",
-  clients: [
-    {
-      id: uuidv4(),
-      title: "Amazon",
-      img: "../brands/amazon_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "Sony",
-      img: "../brands/sony_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "Adidas",
-      img: "../brands/adidas_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "FILA",
-      img: "../brands/fila_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "NB",
-      img: "../brands/nb_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "SAMSUNG",
-      img: "../brands/samsung_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "CANON",
-      img: "../brands/canon_gray.png",
-    },
-    {
-      id: uuidv4(),
-      title: "PUMA",
-      img: "../brands/puma_gray.png",
-    },
-  ],
-
-  aboutHeading: "Qualche parola su di me",
-  aboutMe: [
-    {
-      id: uuidv4(),
-      bio: "Ciao, sono Alan Quaino! Lavoro come sviluppatore Web in un'azienda \
-        che si occupa di ottimizzazione e gestione dei flussi logistici di \
-        magazzino. Sono un grande appassionato di auto, soprattutto di \
-        <i>youngtimer</i>, e nel tempo libero mi piace stare all'aperto e \
-        immergermi nella natura.",
-    },
-  ],
-
+  /* Project categories */
   categories: [
     {
       id: uuidv4(),

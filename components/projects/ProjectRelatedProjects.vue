@@ -1,33 +1,43 @@
 <script>
+import { mapState } from "vuex";
+
 export default {
   data: () => {
     return {
-      relatedProject: {
-        relatedProjectsHeading: "Progetti correlati",
-        relatedProjects: [
-          {
-            id: 1,
-            title: "Mobile UI",
-            img: require("@/static/images/biglietto-fotografa.jpg"),
-          },
-          {
-            id: 2,
-            title: "Web Application",
-            img: require("@/static/images/biglietto-fotografa.jpg"),
-          },
-          {
-            id: 3,
-            title: "UI Design",
-            img: require("@/static/images/biglietto-fotografa.jpg"),
-          },
-          {
-            id: 4,
-            title: "Kabul Mobile App UI",
-            img: require("@/static/images/biglietto-fotografa.jpg"),
-          },
-        ],
-      },
+      limit: 4,
+      relatedProjects: null,
     };
+  },
+
+  props: {
+    projectCategories: Array,
+  },
+
+  computed: {
+    ...mapState(["projects"]),
+  },
+
+  methods: {
+    getRelatedProjects() {
+      var count = 0;
+      return this.projects.filter((item) => {
+        // Limit to max 4 related projects
+        if (
+          count < this.limit &&
+          item.categories.includes(this.projectCategories[0])
+        ) {
+          count++;
+          return true;
+        } else {
+          return false;
+        }
+      }, count);
+    },
+  },
+
+  mounted() {
+    this.relatedProjects = this.getRelatedProjects();
+    console.log(this.relatedProjects);
   },
 };
 </script>
@@ -39,17 +49,23 @@ export default {
     <p
       class="font-general-regular text-primary-dark dark:text-primary-light text-3xl font-bold mb-10 sm:mb-14 text-left"
     >
-      {{ relatedProject.relatedProjectsHeading }}
+      Progetti correlati
     </p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-4 gap-10">
-      <div v-for="item in relatedProject.relatedProjects" :key="item.id">
-        <img
-          :src="item.img"
-          class="rounded-xl cursor-pointer"
-          :alt="item.title"
-        />
-      </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <a
+        v-for="item in relatedProjects"
+        :key="item.id"
+        :href="`/projects/${item.id}`"
+        target="__blank"
+      >
+        <div class="hover:shadow-xl p-1">
+          <img
+            :src="item.img"
+            class="rounded-xl cursor-pointer"
+            :alt="item.title"
+          />
+        </div>
+      </a>
     </div>
   </div>
 </template>

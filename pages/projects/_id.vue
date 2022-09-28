@@ -192,12 +192,12 @@ export default {
       </div>
 
       <!-- Project related projects -->
-      <ProjectRelatedProjects />
+      <ProjectRelatedProjects :projectCategories="project.categories" />
     </div>
 
     <!-- Load not found components if no project found -->
     <div v-else class="font-general-medium container mx-auto text-center">
-      <h1>No projects yet</h1>
+      <h1>Nessun progetto correlato</h1>
     </div>
   </div>
 </template>
