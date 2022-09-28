@@ -11,6 +11,7 @@ export default {
 
   props: {
     projectCategories: Array,
+    projectId: String,
   },
 
   computed: {
@@ -24,7 +25,8 @@ export default {
         // Limit to max 4 related projects
         if (
           count < this.limit &&
-          item.categories.includes(this.projectCategories[0])
+          item.categories.includes(this.projectCategories[0]) &&
+          item.id !== this.projectId
         ) {
           count++;
           return true;
@@ -56,7 +58,6 @@ export default {
         v-for="item in relatedProjects"
         :key="item.id"
         :href="`/projects/${item.id}`"
-        target="__blank"
       >
         <div class="hover:shadow-xl p-1">
           <img

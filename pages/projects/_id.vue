@@ -40,7 +40,7 @@ export default {
         >
           {{ project.title }}
         </p>
-        <div class="flex">
+        <div class="flex flex-wrap">
           <div class="flex items-center mr-10">
             <i
               data-feather="clock"
@@ -61,7 +61,7 @@ export default {
               >{{ project.categories.join(", ") }}</span
             >
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center mt-4 md:mt-0">
             <i
               data-feather="tag"
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
@@ -178,7 +178,7 @@ export default {
           </div>
           <div class="mb-7">
             <p
-              class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-2"
+              class="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-2"
             >
               {{ project.detailsTitle }}
             </p>
@@ -192,7 +192,10 @@ export default {
       </div>
 
       <!-- Project related projects -->
-      <ProjectRelatedProjects :projectCategories="project.categories" />
+      <ProjectRelatedProjects
+        :projectCategories="project.categories"
+        :projectId="project.id"
+      />
     </div>
 
     <!-- Load not found components if no project found -->

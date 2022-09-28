@@ -18,55 +18,45 @@ export default {
         Contattami
       </h2>
 
-      <div class="grid grid-cols-2 md:grid-cols-1">
-        <!-- Contacts -->
-        <div>
-          <ul class="font-general-regular">
-            <li class="flex" v-for="contact in contacts" :key="contact.id">
-              <i
-                :data-feather="contact.icon"
-                class="w-5 text-my-red dark:text-my-red-50 mr-4"
-              ></i>
-              <a
-                v-if="contact.url != ''"
-                :href="contact.url"
-                class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
-                aria-label="Website and Phone"
-              >
-                {{ contact.name }}
-              </a>
-              <span
-                v-else
-                class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
-              >
-                {{ contact.name }}
-              </span>
-            </li>
-          </ul>
-        </div>
-        <!-- Social profiles -->
-        <div>
-          <ul class="font-general-regular">
-            <li
-              class="flex"
-              v-for="profile in socialProfiles"
-              :key="profile.id"
-            >
-              <i
-                :data-feather="profile.icon"
-                class="w-5 text-my-red dark:text-my-red-50 mr-4"
-              ></i>
-              <a
-                :href="profile.url"
-                class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
-                aria-label="Website and Phone"
-              >
-                {{ profile.profile_name }}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!-- Contacts -->
+      <ul class="font-general-regular">
+        <li class="flex" v-for="contact in contacts" :key="contact.id">
+          <i
+            :data-feather="contact.icon"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4"
+          ></i>
+          <a
+            v-if="contact.url != ''"
+            :href="contact.url"
+            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
+            aria-label="Website and Phone"
+          >
+            {{ contact.name }}
+          </a>
+          <span
+            v-else
+            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
+          >
+            {{ contact.name }}
+          </span>
+        </li>
+      </ul>
+      <!-- Social profiles -->
+      <ul class="font-general-regular">
+        <li class="flex" v-for="profile in socialProfiles" :key="profile.id">
+          <i
+            :data-feather="profile.icon"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4"
+          ></i>
+          <a
+            :href="profile.url"
+            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
+            aria-label="Website and Phone"
+          >
+            {{ profile.profile_name }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
