@@ -54,10 +54,10 @@ export default {
       Progetti correlati
     </p>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-      <a
+      <NuxtLink
         v-for="item in relatedProjects"
         :key="item.id"
-        :href="`/projects/${item.id}`"
+        :to="`/projects/${item.id}`"
       >
         <div class="hover:shadow-xl p-1">
           <img
@@ -66,7 +66,7 @@ export default {
             :alt="item.title"
           />
         </div>
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>
