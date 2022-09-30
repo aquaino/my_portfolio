@@ -10,17 +10,26 @@ export default {
       posts: null,
     };
   },
+  methods: {
+    async getIgPosts() {
+      await axios
+        .get(
+          `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink&limit=${this.limit}&access_token=${this.token}`
+        )
+        .then((response) => {
+          this.posts = response.data.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+
+    openIgProfile() {
+      window.open(`https://www.instagram.com/${this.username}`, "_blank");
+    },
+  },
   async mounted() {
-    await axios
-      .get(
-        `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink&limit=${this.limit}&access_token=${this.token}`
-      )
-      .then((response) => {
-        this.posts = response.data.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    await this.getIgPosts();
   },
 };
 </script>
@@ -65,9 +74,7 @@ export default {
       <div class="mt-8 text-center">
         <button
           class="px-4 py-2.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-lg duration-500"
-          onclick="
-            window.open(`https://www.instagram.com/${this.username}`, '_blank')
-          "
+          @click="openIgProfile()"
           aria-label="Altre immagini"
         >
           Altro

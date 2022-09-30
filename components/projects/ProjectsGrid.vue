@@ -109,7 +109,7 @@ export default {
             </p>
             <span
               class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light"
-              >{{ project.category }}</span
+              >{{ project.categories.join(', ') }}</span
             >
           </div>
         </NuxtLink>
