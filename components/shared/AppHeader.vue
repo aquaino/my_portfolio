@@ -1,6 +1,4 @@
 <script>
-import { mapState } from "vuex";
-
 export default {
   data: () => {
     return {
@@ -8,20 +6,20 @@ export default {
     };
   },
 
-  computed: {
-    ...mapState(["categories"]),
-  },
   methods: {
     themeSwitcher() {
       this.$colorMode.preference =
         this.$colorMode.value == "light" ? "dark" : "light";
+    },
+    closeMenu() {
+      this.isOpen = false;
     },
   },
 };
 </script>
 
 <template>
-  <nav id="nav" class="sm:container sm:mx-auto">
+  <nav id="nav" class="sm:container sm:mx-auto" v-click-outside="closeMenu">
     <!-- Header -->
     <div
       class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6"
@@ -115,7 +113,7 @@ export default {
       </div>
 
       <!-- Header links -->
-      <AppNavigation :isOpen="isOpen" :categories="categories" />
+      <AppNavigation :isOpen="isOpen" />
 
       <!-- Header right section buttons -->
       <div
