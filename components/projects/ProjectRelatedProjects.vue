@@ -39,7 +39,6 @@ export default {
 
   mounted() {
     this.relatedProjects = this.getRelatedProjects();
-    console.log(this.relatedProjects);
   },
 };
 </script>

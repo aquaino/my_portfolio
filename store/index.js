@@ -57,31 +57,31 @@ export const state = () => ({
       name: null,
       sector: null,
       website: null,
-      phone: null,
     },
     gaurika: {
       name: "Gaurika Fratticci",
       sector: "Fotografia",
       website: null,
-      phone: null,
     },
     agriturismoMilocco: {
       name: "Azienda Agricola milocco",
       sector: "Enogastronomia",
-      website: null,
-      phone: null,
+      website: "https://miloccowines.com",
     },
     giardinaggioMilocco: {
       name: "Azienda Agricola milocco",
       sector: "Giardinaggio",
       website: null,
-      phone: null,
     },
     protezioneCivileButtrio: {
       name: "Protezione Civile Buttrio",
       sector: "Volontariato",
-      website: null,
-      phone: null,
+      website: "https://pgv-buttrio.herokuapp.com",
+    },
+    lindaSrl: {
+      name: "Linda srl",
+      sector: "Pulizie",
+      website: "https://lindasrl.it",
     },
   },
 
@@ -415,6 +415,31 @@ export const state = () => ({
       technologies: ["Python", "Flask", "UIkit 3"],
       description:
         "Ho realizzato questa applicazione web per la Protezione Civile del mio paese. Per lo sviluppo ho utilizzato il framework Python Flask e la libreria CSS UIkit 3. Permette la gestione dei membri e delle attività di volontariato sul territorio comunale e non.",
+    },
+    {
+      id: "sito-web-azienda-pulizie",
+      title: "Sito web azienda di pulizie",
+      categories: ["Web"],
+      img: "/images/lindasrl/lindasrl-website-preview.jpg",
+      date: "5 ottobre 2022",
+      tag: "siti web / pulizie ",
+      clientTitle: "Cliente",
+      objectivesTitle: "Obiettivo",
+      objectivesDetails:
+        "Restyling del sito web di un'azienda di pulizie locale",
+      techTitle: "Tecnologie",
+      detailsTitle: "Attività",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Sito web azienda di pulizie",
+          img: "/images/lindasrl/lindasrl-website-preview.jpg",
+        },
+      ],
+      customer: "lindaSrl",
+      technologies: ["WordPress"],
+      description:
+        "Il sito, creato con WordPress, illustra le caratteristiche e peculiarità dell'azienda nonchè i servizi di pulizia offerti. Vengono mostrati, inoltre, anche i prodotti in vendita, acquistabili direttamente in negozio.",
     },
   ],
 

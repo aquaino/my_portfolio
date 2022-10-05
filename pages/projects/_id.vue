@@ -132,18 +132,14 @@ export default {
               <li
                 class="font-general-regular text-ternary-dark dark:text-ternary-light"
               >
-                <span
-                  >Sito web:
-                  {{ customers[project.customer].website || "-" }}</span
+                <span>Sito web: </span>
+                <a
+                  v-if="customers[project.customer].website"
+                  :href="customers[project.customer].website"
+                  target="_blank"
+                  >{{ customers[project.customer].website.slice(8) }}</a
                 >
-              </li>
-              <li
-                class="font-general-regular text-ternary-dark dark:text-ternary-light"
-              >
-                <span
-                  >Telefono:
-                  {{ customers[project.customer].phone || "-" }}</span
-                >
+                <span v-else>-</span>
               </li>
             </ul>
           </div>
