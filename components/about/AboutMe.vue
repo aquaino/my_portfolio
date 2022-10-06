@@ -55,7 +55,13 @@ export default {
         si occupa di ottimizzazione e gestione dei flussi logistici di
         magazzino. Sono un grande appassionato di auto, soprattutto di
         <i>youngtimer</i>, e nel tempo libero mi piace stare all'aperto e
-        immergermi nella natura.
+        immergermi nella natura. Se vuoi saperne di più, consulta il mio
+        <a
+          class="font-medium italic"
+          href="/CV Alan Quaino 20210811.pdf"
+          target="_blank"
+          >curriculum vitae</a
+        > o i miei profili social.
       </p>
     </div>
     <!-- About me pills -->
@@ -70,15 +76,6 @@ export default {
         >
         <span v-else>{{ info.value }}</span></span
       >
-    </div>
-    <div class="block md:hidden mt-8 text-center">
-      <button
-        class="px-4 py-2.5 text-white tracking-wider bg-my-red hover:bg-my-red-50 focus:ring-1 focus:ring-my-red rounded-lg duration-500"
-        onclick="window.open('/CV Alan Quaino 20210811.pdf')"
-        aria-label="Download Curriculum Vitae"
-      >
-        Download CV
-      </button>
     </div>
   </div>
 </template>

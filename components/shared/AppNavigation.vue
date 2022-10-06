@@ -40,6 +40,5 @@ export default {
 <style>
 #nav .nuxt-link-exact-active {
   @apply text-my-blue;
-  font-weight: bold;
 }
 </style>

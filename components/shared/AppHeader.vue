@@ -120,18 +120,6 @@ export default {
       <div
         class="hidden sm:flex justify-between items-center flex-col md:flex-row"
       >
-        <!-- CV button -->
-        <div class="hidden md:block">
-          <a
-            href="/CV Alan Quaino 20210811.pdf"
-            download
-            class="text-md bg-my-blue hover:bg-my-blue-50 text-white shadow-sm rounded-md px-5 py-2.5"
-            aria-label="Download Curriculum Vitae"
-          >
-            <span>Download CV</span>
-          </a>
-        </div>
-
         <!-- Theme switcher large screen -->
         <button
           @click="themeSwitcher"

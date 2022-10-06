@@ -159,7 +159,7 @@ export default {
         </div>
 
         <button
-          class="mt-6 px-4 py-2.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-lg duration-500"
+          class="mt-6 px-4 py-2.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-md duration-500"
           type="submit"
           aria-label="Invia"
         >
