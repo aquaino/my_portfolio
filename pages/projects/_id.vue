@@ -83,8 +83,8 @@ export default {
       <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
         <div
           class="mb-10 sm:mb-0"
-          v-for="projectImage in project.projectImages"
-          :key="projectImage.id"
+          v-for="(projectImage, index) in project.projectImages"
+          :key="`image-${index}`"
         >
           <img
             :src="projectImage.img"

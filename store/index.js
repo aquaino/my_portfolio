@@ -1,24 +1,19 @@
-import { v4 as uuidv4 } from "uuid";
-
 export const state = () => ({
   copyrightDate: new Date().getFullYear(),
 
   /* Contact info */
   contacts: [
     {
-      id: "location",
       name: "Udine e dintorni",
       icon: "map-pin",
       url: "",
     },
     {
-      id: "email",
       name: "alanquaino@gmail.com",
       icon: "mail",
       url: "mailto:alanquaino@gmail.com",
     },
     {
-      id: "phone",
       name: "346 270 9363",
       icon: "phone",
       url: "tel:+393462709363",
@@ -29,21 +24,18 @@ export const state = () => ({
   socialProfiles: [
     // The first profile url is used in the copyright section
     {
-      id: uuidv4(),
       name: "LinkedIn",
       profile_name: "alanquaino",
       icon: "linkedin",
       url: "https://linkedin.com/in/alanquaino",
     },
     {
-      id: uuidv4(),
       name: "Instagram",
       profile_name: "alan_quaino",
       icon: "instagram",
       url: "https://instagram.com/alan_quaino",
     },
     {
-      id: uuidv4(),
       name: "Facebook",
       profile_name: "alan.quaino.7",
       icon: "facebook",
@@ -102,7 +94,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Biglietto da visita fotografia",
           img: "/images/biglietto-fotografa.jpg",
         },
@@ -127,7 +118,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Buono natalizio in stile macchina fotografica",
           img: "/images/buono-natale-fotografa.jpg",
         },
@@ -152,7 +142,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Locandina e post evento musicale",
           img: "/images/evento-gastronomico-musicale.jpg",
         },
@@ -177,7 +166,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Logo fotografa",
           img: "/images/logo-fotografa.jpg",
         },
@@ -202,7 +190,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Logo azienda giardinaggio",
           img: "/images/logo-giardinaggio.jpg",
         },
@@ -227,7 +214,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Invito matrimonio elegante",
           img: "/images/matrimonio-elegante.jpg",
         },
@@ -252,7 +238,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Invito matrimonio limoni",
           img: "/images/matrimonio-limoni.jpg",
         },
@@ -277,7 +262,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Invito matrimonio porcellane",
           img: "/images/matrimonio-porcellane.jpg",
         },
@@ -301,7 +285,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Portfolio fotografa",
           img: "/images/portfolio-fotografa.jpg",
         },
@@ -326,7 +309,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Post social enogastronomico",
           img: "/images/post-enogastronomico.jpg",
         },
@@ -351,7 +333,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Volantino gastronomia e giardinaggio",
           img: "/images/volantino-agriturismo-giardinaggio.jpg",
         },
@@ -376,12 +357,10 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Sito web azienda agricola",
           img: "/images/miloccowines/miloccowines.jpg",
         },
         {
-          id: uuidv4(),
           title: "Preview del sito",
           img: "/images/miloccowines/website-preview.jpg",
         },
@@ -406,7 +385,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Sito web azienda agricola",
           img: "/images/pgv/pgv-website-preview.jpg",
         },
@@ -431,7 +409,6 @@ export const state = () => ({
       detailsTitle: "Attività",
       projectImages: [
         {
-          id: uuidv4(),
           title: "Sito web azienda di pulizie",
           img: "/images/lindasrl/lindasrl-website-preview.jpg",
         },
@@ -446,17 +423,14 @@ export const state = () => ({
   /* Project categories */
   categories: [
     {
-      id: uuidv4(),
       value: "graphics",
       name: "Grafica",
     },
     {
-      id: uuidv4(),
       value: "social",
       name: "Social",
     },
     {
-      id: uuidv4(),
       value: "web",
       name: "Web",
     },

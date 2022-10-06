@@ -18,7 +18,11 @@ export default {
 
       <!-- Contacts -->
       <ul>
-        <li class="flex" v-for="contact in contacts" :key="contact.id">
+        <li
+          class="flex"
+          v-for="(contact, index) in contacts"
+          :key="`contact-${index}`"
+        >
           <i
             :data-feather="contact.icon"
             class="w-5 text-my-red dark:text-my-red-50 mr-4"
@@ -41,7 +45,11 @@ export default {
       </ul>
       <!-- Social profiles -->
       <ul>
-        <li class="flex" v-for="profile in socialProfiles" :key="profile.id">
+        <li
+          class="flex"
+          v-for="(profile, index) in socialProfiles"
+          :key="`social-${index}`"
+        >
           <i
             :data-feather="profile.icon"
             class="w-5 text-my-red dark:text-my-red-50 mr-4"

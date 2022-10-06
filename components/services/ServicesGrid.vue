@@ -1,26 +1,21 @@
 <script>
-import { v4 as uuidv4 } from "uuid";
-
 export default {
   data: function () {
     return {
       services: [
         {
-          id: uuidv4(),
           icon: "layout",
           title: "Sviluppo web",
           description:
             "Progettazione, sviluppo e messa in produzione di siti e applicazioni online",
         },
         {
-          id: uuidv4(),
           icon: "globe",
           title: "Gestione siti",
           description:
             "Gestione, aggiornamento e manutenzione di siti web già esistenti",
         },
         {
-          id: uuidv4(),
           icon: "edit-2",
           title: "Grafica 2D",
           description:
@@ -66,8 +61,8 @@ export default {
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 sm:gap-10"
       >
         <div
-          v-for="service in services"
-          :key="service.id"
+          v-for="(service, index) in services"
+          :key="`service-${index}`"
           class="rounded-xl shadow-lg mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
           aria-label="Single service"
         >

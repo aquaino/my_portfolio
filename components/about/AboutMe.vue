@@ -1,37 +1,31 @@
 <script>
-import { v4 as uuidv4 } from "uuid";
-
 export default {
   data: function () {
     return {
       informations: [
         {
-          id: uuidv4(),
           key: "Età",
           value: this.ccomputeAge(new Date(1996, 3, 14)),
           url: "",
         },
-        { id: uuidv4(), key: "Luogo", value: "Udine e dintorni", url: "" },
+        { key: "Luogo", value: "Udine e dintorni", url: "" },
         {
-          id: uuidv4(),
           key: "Interessi",
           value: "Auto, Natura, Sport, Storia, Tecnologia, Viaggi",
           url: "",
         },
         {
-          id: uuidv4(),
           key: "Istruzione",
           value: "Liceo Scientifico",
           url: "",
         },
         {
-          id: uuidv4(),
           key: "Titolo di studio",
           value: "Laurea breve in Informatica",
           url: "",
         },
-        { id: uuidv4(), key: "email", value: "alanquaino@gmail.com", url: "" },
-        { id: uuidv4(), key: "Telefono", value: "346 270 9363", url: "" },
+        { key: "email", value: "alanquaino@gmail.com", url: "" },
+        { key: "Telefono", value: "346 270 9363", url: "" },
       ],
     };
   },
@@ -67,8 +61,8 @@ export default {
     <!-- About me pills -->
     <div class="text-center mt-6">
       <span
-        v-for="info in informations"
-        :key="info.id"
+        v-for="(info, index) in informations"
+        :key="`info-${index}`"
         class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg"
         ><span class="font-semibold">{{ info.key }}</span> -
         <span v-if="info.url"
