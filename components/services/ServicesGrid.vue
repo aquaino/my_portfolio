@@ -10,13 +10,13 @@ export default {
             "Progettazione, sviluppo e messa in produzione di siti e applicazioni online",
         },
         {
-          icon: "globe",
+          icon: "monitor",
           title: "Gestione siti",
           description:
             "Gestione, aggiornamento e manutenzione di siti web già esistenti",
         },
         {
-          icon: "edit-2",
+          icon: "file",
           title: "Grafica 2D",
           description:
             "Design e creazione di loghi, locandine, banner e biglietti da visita",
@@ -68,9 +68,9 @@ export default {
         >
           <i
             :data-feather="service.icon"
-            class="mx-auto mt-7 text-gray-500 dark:text-gray-200"
-            width="40"
-            height="40"
+            class="mx-auto mt-7 text-gray-300 dark:text-gray-500"
+            width="50"
+            height="50"
           ></i>
           <div class="text-center px-4 pb-6 pt-4">
             <p
