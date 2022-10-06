@@ -1,6 +1,11 @@
 <script>
 export default {
   scrollToTop: true,
+  head: function () {
+    return {
+      title: "Progetti",
+    };
+  },
 };
 </script>
 

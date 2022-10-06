@@ -42,7 +42,7 @@ export default {
     <!-- Projects grid header -->
     <div class="text-center">
       <p
-        class="font-general-medium text-xl sm:text-4xl font-medium mb-3 text-ternary-dark dark:text-ternary-light heading-decoration"
+        class="text-xl sm:text-4xl font-medium mb-3 text-ternary-dark dark:text-ternary-light heading-decoration"
       >
         Alcuni dei miei progetti
       </p>
@@ -54,7 +54,7 @@ export default {
     <!-- Filter and search projects -->
     <div class="mt-6">
       <!-- <h3
-        class="font-general-regular text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl font-normal mb-4"
+        class="text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl font-normal mb-4"
       >
         Search projects by title or filter by category
       </h3> -->
@@ -72,7 +72,7 @@ export default {
           </span>
           <input
             v-model="searchProject"
-            class="font-general-medium pl-3 pr-1 sm:px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+            class="pl-3 pr-1 sm:px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
             id="name"
             name="name"
             type="search"
@@ -103,14 +103,13 @@ export default {
           </div>
           <div class="text-center px-4 py-6">
             <p
-              class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
+              class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
             >
               {{ project.title }}
             </p>
-            <span
-              class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light"
-              >{{ project.categories.join(', ') }}</span
-            >
+            <span class="text-lg text-ternary-dark dark:text-ternary-light">{{
+              project.categories.join(", ")
+            }}</span>
           </div>
         </NuxtLink>
       </div>

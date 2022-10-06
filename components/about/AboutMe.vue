@@ -8,7 +8,7 @@ export default {
         {
           id: uuidv4(),
           key: "Età",
-          value: this.calculateAge(new Date(1996, 3, 14)),
+          value: this.ccomputeAge(new Date(1996, 3, 14)),
           url: "",
         },
         { id: uuidv4(), key: "Luogo", value: "Udine e dintorni", url: "" },
@@ -38,7 +38,7 @@ export default {
 
   methods: {
     // Dynamically compute age
-    calculateAge(birthday) {
+    ccomputeAge(birthday) {
       var diff = (new Date().getTime() - birthday.getTime()) / 1000;
       diff /= 60 * 60 * 24;
       return Math.abs(Math.round(diff / 365.25));
@@ -50,27 +50,26 @@ export default {
 <template>
   <div class="block mt-10 sm:mt-20">
     <p
-      class="font-general-medium text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
+      class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
     >
       Qualche parola su di me
     </p>
-    <!-- About details -->
+    <!-- Details -->
     <div class="text-left mt-4 sm:mt-6">
-      <p
-        class="font-general-regular mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-      >
-        Ciao, sono Alan Quaino! Lavoro come sviluppatore Web in un'azienda che
+      <p class="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
+        Ciao, sono Alan Quaino! Lavoro come sviluppatore web in un'azienda che
         si occupa di ottimizzazione e gestione dei flussi logistici di
         magazzino. Sono un grande appassionato di auto, soprattutto di
         <i>youngtimer</i>, e nel tempo libero mi piace stare all'aperto e
         immergermi nella natura.
       </p>
     </div>
+    <!-- About me pills -->
     <div class="text-center mt-6">
       <span
         v-for="info in informations"
         :key="info.id"
-        class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2"
+        class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg"
         ><span class="font-semibold">{{ info.key }}</span> -
         <span v-if="info.url"
           ><a :href="info.url">{{ info.value }}</a></span
@@ -78,7 +77,7 @@ export default {
         <span v-else>{{ info.value }}</span></span
       >
     </div>
-    <div class="block md:hidden font-general-medium mt-8 text-center">
+    <div class="block md:hidden mt-8 text-center">
       <button
         class="px-4 py-2.5 text-white tracking-wider bg-my-red hover:bg-my-red-50 focus:ring-1 focus:ring-my-red rounded-lg duration-500"
         onclick="window.open('/CV Alan Quaino 20210811.pdf')"

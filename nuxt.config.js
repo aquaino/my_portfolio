@@ -7,9 +7,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Alan Quaino",
+    titleTemplate: "Alan Quaino | %s",
     htmlAttrs: {
-      lang: "en",
+      lang: "it",
     },
     meta: [
       { charset: "utf-8" },

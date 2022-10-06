@@ -17,7 +17,7 @@ export default {
           icon: "globe",
           title: "Gestione siti",
           description:
-            "Gestione, aggiornamento e manutenzione di siti Web già esistenti",
+            "Gestione, aggiornamento e manutenzione di siti web già esistenti",
         },
         {
           id: uuidv4(),
@@ -29,86 +29,23 @@ export default {
       ],
 
       technologies: [
-        {
-          id: uuidv4(),
-          key: "Wordpress",
-          value: 10,
-        },
-        {
-          id: uuidv4(),
-          key: "Moodle",
-          value: 10,
-        },
-        {
-          id: uuidv4(),
-          key: "HTML & CSS",
-          value: 10,
-        },
-        {
-          id: uuidv4(),
-          key: "JavaScript",
-          value: 9,
-        },
-        {
-          id: uuidv4(),
-          key: "VueJS",
-          value: 9,
-        },
-        {
-          id: uuidv4(),
-          key: "WooCommerce",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Python",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Flask",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Adobe Photoshop",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Adobe Illusstrator",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Adobe Premiere Pro",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Canva",
-          value: 8,
-        },
-        {
-          id: uuidv4(),
-          key: "Django",
-          value: 7,
-        },
-        {
-          id: uuidv4(),
-          key: "Adobe InDesign",
-          value: 7,
-        },
-        {
-          id: uuidv4(),
-          key: "PHP",
-          value: 6,
-        },
-        {
-          id: uuidv4(),
-          key: "Drupal",
-          value: 6,
-        },
+        "Wordpress",
+        "Moodle",
+        "HTML & CSS",
+        "JavaScript",
+        "Vue.js",
+        "Nuxt.js",
+        "WooCommerce",
+        "Python",
+        "Flask",
+        "Adobe Photoshop",
+        "Adobe Illusstrator",
+        "Adobe Premiere Pro",
+        "Canva",
+        "Django",
+        "Adobe InDesign",
+        "PHP",
+        "Drupal",
       ],
     };
   },
@@ -120,7 +57,7 @@ export default {
     <!-- Services grid -->
     <div class="mt-10 sm:mt-20">
       <p
-        class="font-general-medium text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
+        class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
       >
         Cosa mi piace fare
       </p>
@@ -142,14 +79,13 @@ export default {
           ></i>
           <div class="text-center px-4 pb-6 pt-4">
             <p
-              class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
+              class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
             >
               {{ service.title }}
             </p>
-            <span
-              class="font-general-regular text-lg text-ternary-dark dark:text-ternary-light"
-              >{{ service.description }}</span
-            >
+            <span class="text-lg text-ternary-dark dark:text-ternary-light">{{
+              service.description
+            }}</span>
           </div>
         </div>
       </div>
@@ -157,15 +93,13 @@ export default {
     <!-- Technologies list -->
     <div class="mt-10 sm:mt-20 text-center">
       <p
-        class="font-general-medium text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
+        class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
       >
-        Cosa utilizzo
+        Con quali strumenti
       </p>
       <!-- About details -->
       <div class="text-left mt-4 sm:mt-6">
-        <p
-          class="font-general-regular mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-        >
+        <p class="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
           Creo siti web con WordPress e WooCommerce, ma so sviluppare le mie
           applicazioni con framework frontend e backend come VueJS e Flask. Mi
           trovo a mio agio anche con strumenti di editing grafico e video, come
@@ -174,14 +108,10 @@ export default {
       </div>
       <div class="text-center mt-6">
         <span
-          v-for="tech in technologies"
-          :key="tech.id"
-          class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2"
-          ><span class="font-semibold">{{ tech.key }}</span> -
-          <span v-if="tech.url"
-            ><a :href="tech.url">{{ tech.value }}</a></span
-          >
-          <span v-else>{{ tech.value }}/10</span></span
+          v-for="(tech, index) in technologies"
+          :key="`tech-${index}`"
+          class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg font-semibold"
+          >{{ tech }}</span
         >
       </div>
     </div>

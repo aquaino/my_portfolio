@@ -12,14 +12,12 @@ export default {
   <!-- Contact details -->
   <div class="w-full md:w-1/2 lg:w-1/3">
     <div class="text-left max-w-xl px-6">
-      <h2
-        class="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-8 mb-8"
-      >
+      <h2 class="text-2xl text-primary-dark dark:text-primary-light mt-8 mb-8">
         Contattami
       </h2>
 
       <!-- Contacts -->
-      <ul class="font-general-regular">
+      <ul>
         <li class="flex" v-for="contact in contacts" :key="contact.id">
           <i
             :data-feather="contact.icon"
@@ -42,7 +40,7 @@ export default {
         </li>
       </ul>
       <!-- Social profiles -->
-      <ul class="font-general-regular">
+      <ul>
         <li class="flex" v-for="profile in socialProfiles" :key="profile.id">
           <i
             :data-feather="profile.icon"

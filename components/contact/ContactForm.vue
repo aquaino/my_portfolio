@@ -80,20 +80,13 @@ export default {
     <div
       class="leading-loose m-4 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
     >
-      <p
-        class="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-4"
-      >
+      <p class="text-primary-dark dark:text-primary-light text-2xl mb-4">
         Scrivimi
       </p>
-      <p
-        class="font-general-regular text-primary-dark dark:text-primary-light mb-8"
-      >
+      <p class="text-primary-dark dark:text-primary-light mb-8">
         Qualche idea? Scrivimi una email compilando il form sottostante.
       </p>
-      <form
-        @submit.prevent="sendEmail()"
-        class="font-general-regular space-y-7"
-      >
+      <form @submit.prevent="sendEmail()" class="space-y-7">
         <div class="">
           <!-- <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"

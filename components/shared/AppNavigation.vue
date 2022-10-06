@@ -8,7 +8,7 @@ export default {
   <!-- App header navigation links -->
   <div
     :class="isOpen ? 'block' : 'hidden'"
-    class="font-general-regular mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none"
+    class="mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none"
   >
     <NuxtLink
       to="/"

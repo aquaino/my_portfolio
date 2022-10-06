@@ -25,7 +25,7 @@ export default {
       <!-- Footer social links -->
       <div class="flex flex-col justify-center items-center mb-12 sm:mb-20">
         <p
-          class="font-general-medium text-2xl sm:text-3xl text-primary-dark dark:text-primary-light mb-6"
+          class="text-2xl sm:text-3xl text-primary-dark dark:text-primary-light mb-6"
         >
           Seguimi
         </p>

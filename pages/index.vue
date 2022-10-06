@@ -2,6 +2,11 @@
 import feather from "feather-icons";
 
 export default {
+  head: function () {
+    return {
+      title: "Chi sono",
+    };
+  },
   scrollToTop: true,
   mounted() {
     feather.replace();

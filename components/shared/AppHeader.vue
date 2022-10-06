@@ -120,7 +120,7 @@ export default {
         class="hidden sm:flex justify-between items-center flex-col md:flex-row"
       >
         <!-- CV button -->
-        <div class="font-general-medium hidden md:block">
+        <div class="hidden md:block">
           <a
             href="/CV Alan Quaino 20210811.pdf"
             download

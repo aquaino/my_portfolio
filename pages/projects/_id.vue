@@ -20,6 +20,11 @@ export default {
       return this.$store.state.customers;
     },
   },
+  head: function () {
+    return {
+      title: this.project.title,
+    };
+  },
   mounted() {
     feather.replace();
   },
@@ -36,7 +41,7 @@ export default {
       <!-- Project heading and meta info -->
       <div>
         <p
-          class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
+          class="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
         >
           {{ project.title }}
         </p>
@@ -47,7 +52,7 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              class="ml-2 leading-none text-primary-dark dark:text-primary-light"
               >{{ project.date }}</span
             >
           </div>
@@ -57,7 +62,7 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              class="ml-2 leading-none text-primary-dark dark:text-primary-light"
               >{{ project.categories.join(", ") }}</span
             >
           </div>
@@ -67,7 +72,7 @@ export default {
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
-              class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
+              class="ml-2 leading-none text-primary-dark dark:text-primary-light"
               >{{ project.tag }}</span
             >
           </div>
@@ -111,27 +116,21 @@ export default {
           <!-- Single project client details -->
           <div class="mb-7">
             <p
-              class="font-general-medium text-2xl text-secondary-dark dark:text-secondary-light mb-2"
+              class="text-2xl text-secondary-dark dark:text-secondary-light mb-2"
             >
               Cliente
             </p>
             <ul class="leading-loose">
-              <li
-                class="font-general-regular text-ternary-dark dark:text-ternary-light"
-              >
+              <li class="text-ternary-dark dark:text-ternary-light">
                 <span>Nome: {{ customers[project.customer].name || "-" }}</span>
               </li>
-              <li
-                class="font-general-regular text-ternary-dark dark:text-ternary-light"
-              >
+              <li class="text-ternary-dark dark:text-ternary-light">
                 <span
                   >Settore:
                   {{ customers[project.customer].sector || "-" }}</span
                 >
               </li>
-              <li
-                class="font-general-regular text-ternary-dark dark:text-ternary-light"
-              >
+              <li class="text-ternary-dark dark:text-ternary-light">
                 <span>Sito web: </span>
                 <a
                   v-if="customers[project.customer].website"
@@ -148,39 +147,27 @@ export default {
         <div class="w-full sm:w-2/3 text-left">
           <!-- Single project objectives -->
           <div class="mb-7">
-            <p
-              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
-            >
+            <p class="text-2xl text-ternary-dark dark:text-ternary-light mb-2">
               {{ project.objectivesTitle }}
             </p>
-            <p
-              class="font-general-regular text-primary-dark dark:text-ternary-light"
-            >
+            <p class="text-primary-dark dark:text-ternary-light">
               {{ project.objectivesDetails }}
             </p>
           </div>
           <!-- Single project technologies -->
           <div class="mb-7">
-            <p
-              class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
-            >
+            <p class="text-2xl text-ternary-dark dark:text-ternary-light mb-2">
               {{ project.techTitle }}
             </p>
-            <p
-              class="font-general-regular text-primary-dark dark:text-ternary-light"
-            >
+            <p class="text-primary-dark dark:text-ternary-light">
               {{ project.technologies.join(", ") }}
             </p>
           </div>
           <div class="mb-7">
-            <p
-              class="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-2"
-            >
+            <p class="text-primary-dark dark:text-primary-light text-2xl mb-2">
               {{ project.detailsTitle }}
             </p>
-            <p
-              class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-            >
+            <p class="mb-5 text-lg text-ternary-dark dark:text-ternary-light">
               {{ project.description }}
             </p>
           </div>
@@ -195,7 +182,7 @@ export default {
     </div>
 
     <!-- Load not found components if no project found -->
-    <div v-else class="font-general-medium container mx-auto text-center">
+    <div v-else class="container mx-auto text-center">
       <h1>Nessun progetto correlato</h1>
     </div>
   </div>
