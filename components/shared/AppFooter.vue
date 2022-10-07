@@ -6,12 +6,7 @@ export default {
   computed: {
     ...mapState(["socialProfiles"]),
   },
-
-  mounted() {
-    feather.replace();
-  },
-
-  updated() {
+  mounted: function () {
     feather.replace();
   },
 };
@@ -47,5 +42,3 @@ export default {
     </div>
   </div>
 </template>
-
-<style scoped></style>

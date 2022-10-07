@@ -70,7 +70,7 @@ export default {
         v-for="(info, index) in informations"
         :key="`info-${index}`"
         class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg"
-        ><span class="font-semibold">{{ info.key }}</span> -
+        ><span class="font-semibold">{{ info.key }}</span> •
         <span v-if="info.url"
           ><a :href="info.url">{{ info.value }}</a></span
         >

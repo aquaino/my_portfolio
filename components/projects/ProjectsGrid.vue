@@ -31,7 +31,7 @@ export default {
       return this.projects.filter((el) => el.title.match(project));
     },
   },
-  mounted() {
+  mounted: function () {
     feather.replace();
   },
 };
@@ -78,7 +78,6 @@ export default {
             type="search"
             required=""
             placeholder="Cerca tra i progetti"
-            aria-label="Name"
           />
         </div>
         <ProjectsFilter @change="selectedProject = $event" />
@@ -91,7 +90,6 @@ export default {
         v-for="project in filteredProjects"
         :key="project.id"
         class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
-        aria-label="Single Project"
       >
         <NuxtLink :to="`/projects/${project.id}`">
           <div>
@@ -103,11 +101,11 @@ export default {
           </div>
           <div class="text-center px-4 py-6">
             <p
-              class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2"
+              class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-1"
             >
               {{ project.title }}
             </p>
-            <span class="text-lg text-ternary-dark dark:text-ternary-light">{{
+            <span class="text-sm text-ternary-dark dark:text-ternary-light">{{
               project.categories.join(", ")
             }}</span>
           </div>

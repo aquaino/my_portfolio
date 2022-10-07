@@ -78,7 +78,7 @@ export default {
   <!-- Contact form -->
   <div class="w-full md:w-1/2 lg:w-2/3">
     <div
-      class="leading-loose m-4 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
+      class="m-4 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
     >
       <p class="text-primary-dark dark:text-primary-light text-2xl mb-4">
         Scrivimi
@@ -100,7 +100,6 @@ export default {
             type="text"
             required
             placeholder="Il tuo nome"
-            aria-label="Nome"
             v-model="form.name"
           />
         </div>
@@ -117,7 +116,6 @@ export default {
             type="email"
             required
             placeholder="La tua email"
-            aria-label="Email"
             v-model="form.email"
           />
         </div>
@@ -134,7 +132,6 @@ export default {
             type="text"
             required
             placeholder="La tua richiesta"
-            aria-label="Oggetto"
             v-model="form.subject"
           />
         </div>
@@ -151,20 +148,13 @@ export default {
             name="message"
             cols="14"
             rows="6"
-            aria-label="Messaggio"
             required
             placeholder="Il tuo messaggio"
             v-model="form.message"
           ></textarea>
         </div>
 
-        <button
-          class="mt-6 px-4 py-2.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-md duration-500"
-          type="submit"
-          aria-label="Invia"
-        >
-          Invia
-        </button>
+        <AppButton text="Invia" type="submit"/>
       </form>
     </div>
     <!-- Feedback alert -->

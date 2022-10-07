@@ -1,9 +1,13 @@
 <script>
 import { mapState } from "vuex";
+import feather from "feather-icons";
 
 export default {
   computed: {
     ...mapState(["contacts", "socialProfiles"]),
+  },
+  mounted: function () {
+    feather.replace();
   },
 };
 </script>
@@ -25,13 +29,12 @@ export default {
         >
           <i
             :data-feather="contact.icon"
-            class="w-5 text-my-red dark:text-my-red-50 mr-4"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-1"
           ></i>
           <a
             v-if="contact.url != ''"
             :href="contact.url"
             class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
-            aria-label="Website and Phone"
           >
             {{ contact.name }}
           </a>
@@ -52,12 +55,11 @@ export default {
         >
           <i
             :data-feather="profile.icon"
-            class="w-5 text-my-red dark:text-my-red-50 mr-4"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-1"
           ></i>
           <a
             :href="profile.url"
             class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
-            aria-label="Website and Phone"
           >
             {{ profile.profile_name }}
           </a>

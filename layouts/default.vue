@@ -5,28 +5,17 @@
     <!-- App header -->
     <AppHeader />
 
-    <!-- Render contents with transition -->
-    <transition name="fade" mode="out-in">
+    <!-- Render content with transition -->
+    <transition>
       <Nuxt />
     </transition>
 
     <!-- App footer -->
     <AppFooter />
 
-    <!-- Go back to top when scrolled down -->
+    <!-- Scroll to top button -->
     <div
-      class="
-        flex
-        space-x-2
-        mr-8
-        mb-6
-        right-0
-        bottom-0
-        z-50
-        fixed
-        items-center
-        sm:space-x-4
-      "
+      class="flex space-x-2 mr-8 mb-6 right-0 bottom-0 z-50 fixed items-center sm:space-x-4"
     >
       <BackToTop />
     </div>
@@ -34,15 +23,5 @@
 </template>
 
 <script>
-import feather from "feather-icons";
-export default {
-  data: () => {
-    return {
-      // Todo
-    };
-  },
-  mounted() {
-    feather.replace();
-  },
-};
+export default {};
 </script>

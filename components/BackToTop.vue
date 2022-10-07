@@ -1,6 +1,5 @@
 <script>
 import feather from "feather-icons";
-
 export default {
   data() {
     return {
@@ -13,11 +12,8 @@ export default {
     },
   },
   mounted() {
+    feather.replace();
     window.addEventListener("scroll", this.updateScrollPosition);
-    feather.replace();
-  },
-  updated() {
-    feather.replace();
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.updateScrollPosition);

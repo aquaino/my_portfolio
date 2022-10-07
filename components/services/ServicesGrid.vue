@@ -1,4 +1,6 @@
 <script>
+import feather from "feather-icons";
+
 export default {
   data: function () {
     return {
@@ -44,6 +46,9 @@ export default {
       ],
     };
   },
+  mounted: function () {
+    feather.replace();
+  },
 };
 </script>
 
@@ -64,7 +69,6 @@ export default {
           v-for="(service, index) in services"
           :key="`service-${index}`"
           class="rounded-xl shadow-lg mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
-          aria-label="Single service"
         >
           <i
             :data-feather="service.icon"

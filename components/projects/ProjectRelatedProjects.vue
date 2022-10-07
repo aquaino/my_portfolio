@@ -48,7 +48,7 @@ export default {
     class="mt-10 pt-10 sm:pt-14 sm:mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
   >
     <p
-      class="text-primary-dark dark:text-primary-light text-3xl font-bold mb-14 sm:mb-16 text-left"
+      class="text-primary-dark dark:text-primary-light text-3xl font-bold mb-14 sm:mb-10 text-left"
     >
       Progetti correlati
     </p>
@@ -58,8 +58,15 @@ export default {
         :key="item.id"
         :to="`/projects/${item.id}`"
       >
-        <div class="cursor-pointer rounded-xl hover:shadow-xl p-3">
+        <div
+          class="cursor-pointer text-center rounded-xl shadow-lg hover:shadow-xl p-3 h-full"
+        >
           <img :src="item.img" :alt="item.title" />
+          <p
+            class="text-md text-ternary-dark dark:text-ternary-light font-semibold mt-4"
+          >
+            {{ item.title }}
+          </p>
         </div>
       </NuxtLink>
     </div>

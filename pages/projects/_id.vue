@@ -1,5 +1,6 @@
 <script>
 import feather from "feather-icons";
+
 export default {
   scrollToTop: true,
   data: function () {
@@ -25,10 +26,7 @@ export default {
       title: this.project.title,
     };
   },
-  mounted() {
-    feather.replace();
-  },
-  updated() {
+  mounted: function () {
     feather.replace();
   },
 };
@@ -187,5 +185,3 @@ export default {
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>
