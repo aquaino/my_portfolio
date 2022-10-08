@@ -22,7 +22,6 @@ export default {
         :key="socialProfiles[0].id"
         :href="socialProfiles[0].url"
         target="__blank"
-        class="hover:underline hover:text-my-blue dark:hover:text-my-blue-50 duration-500"
         >{{ author }}</a
       >
     </div>

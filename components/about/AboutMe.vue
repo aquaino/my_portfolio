@@ -50,22 +50,22 @@ export default {
     </p>
     <!-- Details -->
     <div class="text-left mt-4 sm:mt-6">
-      <p class="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
+      <p
+        class="mb-4 text-ternary-dark dark:text-ternary-light text-lg text-justify"
+      >
         Ciao, sono Alan Quaino! Lavoro come sviluppatore web in un'azienda che
         si occupa di ottimizzazione e gestione dei flussi logistici di
         magazzino. Sono un grande appassionato di auto, soprattutto di
         <i>youngtimer</i>, e nel tempo libero mi piace stare all'aperto e
         immergermi nella natura. Se vuoi saperne di più, consulta il mio
-        <a
-          class="font-medium italic"
-          href="/CV Alan Quaino 20210811.pdf"
-          target="_blank"
+        <a class="italic" href="/CV Alan Quaino 20210811.pdf" target="_blank"
           >curriculum vitae</a
-        > o i miei profili social.
+        >
+        o i miei profili social.
       </p>
     </div>
     <!-- About me pills -->
-    <div class="text-center mt-6">
+    <div class="text-center mt-10">
       <span
         v-for="(info, index) in informations"
         :key="`info-${index}`"

@@ -1,8 +1,13 @@
 <script>
 export default {
   props: {
-    type: String,
+    submit: Boolean,
     text: String,
+  },
+  computed: {
+    type() {
+      return this.submit ? "submit" : "button";
+    },
   },
 };
 </script>
@@ -11,6 +16,7 @@ export default {
   <button
     :type="type"
     class="px-5 py-1.5 text-white tracking-wider bg-my-blue hover:bg-my-blue-50 focus:ring-1 focus:ring-my-blue rounded-md duration-500"
+    @click="$emit('buttonClicked')"
   >
     {{ text }}
   </button>

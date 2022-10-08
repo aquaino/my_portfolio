@@ -4,7 +4,7 @@
 */
 
 /* Fonts */
- @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 /* Heading decoration */
 .heading-decoration::after {
@@ -16,4 +16,30 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.66rem;
+}
+
+/* Page transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* Active page style */
+#nav .nuxt-link-exact-active {
+  @apply text-my-blue;
+}
+
+/* Link color */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  a {
+    @apply text-my-blue;
+    @apply font-medium;
+  }
 }

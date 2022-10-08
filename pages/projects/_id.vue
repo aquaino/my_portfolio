@@ -91,16 +91,17 @@ export default {
           />
           <!-- Image modal -->
           <div
-            class="fixed top-0 left-0 z-80 w-screen h-screen bg-my-blue flex justify-center items-center"
+            class="fixed top-0 left-0 z-80 flex justify-center items-center"
             v-show="showModal"
           >
+            <!-- The close button -->
             <a
-              class="fixed text-white cursor-pointer z-90 top-6 right-8 text-5xl"
-              @click="toggleModal()"
+              class="fixed z-90 top-6 right-8 text-white text-5xl w-100 h-100"
+              onclick="toggleModal()"
               ><i data-feather="x"></i
             ></a>
             <img
-              class="max-w-[800px] max-h-[600px] object-cover rounded-xl"
+              class="max-w-[600px] max-h-[300px] object-cover"
               :src="projectImage.img"
             />
           </div>
@@ -134,6 +135,7 @@ export default {
                   v-if="customers[project.customer].website"
                   :href="customers[project.customer].website"
                   target="_blank"
+                  class="whitespace-nowrap"
                   >{{ customers[project.customer].website.slice(8) }}</a
                 >
                 <span v-else>-</span>
@@ -142,7 +144,7 @@ export default {
           </div>
         </div>
 
-        <div class="w-full sm:w-2/3 text-left">
+        <div class="w-full sm:w-2/3 text-justify">
           <!-- Single project objectives -->
           <div class="mb-7">
             <p class="text-2xl text-ternary-dark dark:text-ternary-light mb-2">
@@ -165,7 +167,7 @@ export default {
             <p class="text-primary-dark dark:text-primary-light text-2xl mb-2">
               {{ project.detailsTitle }}
             </p>
-            <p class="mb-5 text-lg text-ternary-dark dark:text-ternary-light">
+            <p class="mb-5 text-ternary-dark dark:text-ternary-light">
               {{ project.description }}
             </p>
           </div>

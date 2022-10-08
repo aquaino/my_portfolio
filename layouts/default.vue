@@ -4,12 +4,8 @@
   >
     <!-- App header -->
     <AppHeader />
-
-    <!-- Render content with transition -->
-    <transition>
-      <Nuxt />
-    </transition>
-
+    <!-- Page content -->
+    <Nuxt />
     <!-- App footer -->
     <AppFooter />
 
@@ -23,5 +19,7 @@
 </template>
 
 <script>
-export default {};
+export default {
+  transition: "default",
+};
 </script>

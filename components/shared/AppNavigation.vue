@@ -29,9 +29,3 @@ export default {
     >
   </div>
 </template>
-
-<style scoped>
-#nav .nuxt-link-exact-active {
-  @apply text-my-blue;
-}
-</style>

@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <div class="block mt-10 sm:mt-20">
+  <div class="block mt-14 sm:mt-20">
     <!-- Instagram posts grid -->
     <div v-if="posts">
       <div
@@ -71,7 +71,7 @@ export default {
         </a>
       </div>
       <div class="mt-8 text-center">
-        <AppButton text="Altro" @click="openIgProfile()" />
+        <AppButton text="Altro" @buttonClicked="openIgProfile" />
       </div>
     </div>
     <!-- Loader -->

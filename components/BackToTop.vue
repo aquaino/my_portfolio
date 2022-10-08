@@ -44,5 +44,3 @@ export default {
     </div>
   </transition>
 </template>
-
-<style lang="scss" scoped></style>

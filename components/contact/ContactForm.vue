@@ -86,7 +86,7 @@ export default {
       <p class="text-primary-dark dark:text-primary-light mb-8">
         Qualche idea? Scrivimi una email compilando il form sottostante.
       </p>
-      <form @submit.prevent="sendEmail()" class="space-y-7">
+      <form class="space-y-7">
         <div class="">
           <!-- <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"
@@ -154,7 +154,7 @@ export default {
           ></textarea>
         </div>
 
-        <AppButton text="Invia" type="submit"/>
+        <AppButton text="Invia" submit @buttonClicked="sendEmail" />
       </form>
     </div>
     <!-- Feedback alert -->

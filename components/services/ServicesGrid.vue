@@ -90,7 +90,7 @@ export default {
       </div>
     </div>
     <!-- Technologies list -->
-    <div class="mt-10 sm:mt-20 text-center">
+    <div class="mt-14 sm:mt-20 text-center">
       <p
         class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
       >
@@ -98,14 +98,16 @@ export default {
       </p>
       <!-- About details -->
       <div class="text-left mt-4 sm:mt-6">
-        <p class="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
+        <p
+          class="mb-4 text-ternary-dark dark:text-ternary-light text-lg text-justify"
+        >
           Creo siti web con WordPress e WooCommerce, ma so sviluppare le mie
           applicazioni con framework frontend e backend come VueJS e Flask. Mi
           trovo a mio agio anche con strumenti di editing grafico e video, come
           Photoshop, Illustrator e Premiere.
         </p>
       </div>
-      <div class="text-center mt-6">
+      <div class="text-center mt-10">
         <span
           v-for="(tech, index) in technologies"
           :key="`tech-${index}`"

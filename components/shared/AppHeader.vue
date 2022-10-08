@@ -16,9 +16,9 @@ export default {
     toggleMenu() {
       this.isOpen = !this.isOpen;
     },
-    // closeMenu() {
-    //   this.isOpen = false;
-    // },
+    closeMenu() {
+      this.isOpen = false;
+    },
   },
 
   computed: {
@@ -36,8 +36,7 @@ export default {
 </script>
 
 <template>
-  <!-- <nav id="nav" class="sm:container sm:mx-auto" v-click-outside="closeMenu"> -->
-  <nav id="nav" class="sm:container sm:mx-auto">
+  <nav id="nav" class="sm:container sm:mx-auto" v-click-outside="closeMenu">
     <!-- Header -->
     <div
       class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6"
@@ -66,7 +65,7 @@ export default {
         <div class="sm:hidden">
           <!-- Theme switcher small screen -->
           <div
-            @click="themeSwitcher"
+            @click.stop="themeSwitcher"
             role="button"
             class="sm:hidden cursor-pointer inline-block mr-2 pb-0.5"
           >
@@ -76,7 +75,7 @@ export default {
               class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
             ></div>
           </div>
-          <div @click="toggleMenu" role="button" class="inline-block">
+          <div @click.stop="toggleMenu" role="button" class="inline-block">
             <!-- Open/close menu icon -->
             <div
               v-html="menuIcon"
@@ -96,7 +95,7 @@ export default {
         <!-- Theme switcher large screen -->
         <!-- Dark mode icon -->
         <div
-          @click="themeSwitcher"
+          @click.stop="themeSwitcher"
           role="button"
           v-html="colorModeIcon"
           class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
