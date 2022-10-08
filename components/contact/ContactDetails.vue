@@ -29,12 +29,12 @@ export default {
         >
           <i
             :data-feather="contact.icon"
-            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-1"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-0.5"
           ></i>
           <a
             v-if="contact.url != ''"
             :href="contact.url"
-            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
+            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
           >
             {{ contact.name }}
           </a>
@@ -55,11 +55,11 @@ export default {
         >
           <i
             :data-feather="profile.icon"
-            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-1"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-0.5"
           ></i>
           <a
             :href="profile.url"
-            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light hover:underline cursor-pointer"
+            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
           >
             {{ profile.profile_name }}
           </a>

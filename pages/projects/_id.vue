@@ -5,12 +5,12 @@ export default {
   scrollToTop: true,
   data: function () {
     return {
-      showModal: false,
+      showModal: true,
     };
   },
   methods: {
-    toggleModal() {
-      this.showModal = !this.showModal;
+    openImage(url) {
+      window.open(url, "_blank");
     },
   },
   computed: {
@@ -87,24 +87,8 @@ export default {
           <img
             :src="projectImage.img"
             class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-            @click="toggleModal()"
+            @click="openImage(projectImage.img)"
           />
-          <!-- Image modal -->
-          <div
-            class="fixed top-0 left-0 z-80 flex justify-center items-center"
-            v-show="showModal"
-          >
-            <!-- The close button -->
-            <a
-              class="fixed z-90 top-6 right-8 text-white text-5xl w-100 h-100"
-              onclick="toggleModal()"
-              ><i data-feather="x"></i
-            ></a>
-            <img
-              class="max-w-[600px] max-h-[300px] object-cover"
-              :src="projectImage.img"
-            />
-          </div>
         </div>
       </div>
 
