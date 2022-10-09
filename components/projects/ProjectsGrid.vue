@@ -51,16 +51,11 @@ export default {
       </p>
     </div>
 
-    <!-- Filter and search projects -->
     <div class="mt-6">
-      <!-- <h3
-        class="text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl font-normal mb-4"
-      >
-        Search projects by title or filter by category
-      </h3> -->
       <div
         class="flex justify-between border-b border-primary-light dark:border-secondary-dark pb-3 gap-2"
       >
+        <!-- Search -->
         <div class="flex justify-between gap-2">
           <input
             v-model="searchProject"
@@ -72,25 +67,31 @@ export default {
             placeholder="Cerca tra i progetti"
           />
         </div>
+        <!-- Filter -->
         <ProjectsFilter @change="selectedProject = $event" />
       </div>
     </div>
 
     <!-- Projects grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-      <div
+    <transition-group
+      name="scale"
+      mode="out-in"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10"
+    >
+      <NuxtLink
         v-for="project in filteredProjects"
         :key="project.id"
-        class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
+        :to="`/projects/${project.id}`"
       >
-        <NuxtLink :to="`/projects/${project.id}`">
-          <div>
-            <img
-              :src="project.img"
-              :alt="project.title"
-              class="rounded-t-xl border-none"
-            />
-          </div>
+        <div
+          class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark h-full"
+        >
+          <img
+            :src="project.img"
+            :alt="project.title"
+            class="rounded-t-xl border-none"
+          />
           <div class="text-center px-4 py-6">
             <p
               class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-1"
@@ -101,8 +102,20 @@ export default {
               project.categories.join(", ")
             }}</span>
           </div>
-        </NuxtLink>
-      </div>
-    </div>
+        </div>
+      </NuxtLink>
+    </transition-group>
   </div>
 </template>
+
+<style scoped>
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.5s ease;
+}
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+</style>
