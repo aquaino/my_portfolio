@@ -22,7 +22,7 @@ export default {
         <p
           class="text-2xl sm:text-3xl text-primary-dark dark:text-primary-light mb-6"
         >
-          Seguimi
+          {{ $t("components.AppFooter.title") }}
         </p>
         <ul class="flex gap-4 sm:gap-8">
           <a

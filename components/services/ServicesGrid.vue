@@ -4,27 +4,6 @@ import feather from "feather-icons";
 export default {
   data: function () {
     return {
-      services: [
-        {
-          icon: "layout",
-          title: "Sviluppo web",
-          description:
-            "Progettazione, sviluppo e messa in produzione di siti e applicazioni online",
-        },
-        {
-          icon: "monitor",
-          title: "Gestione siti",
-          description:
-            "Gestione, aggiornamento e manutenzione di siti web già esistenti",
-        },
-        {
-          icon: "file",
-          title: "Grafica 2D",
-          description:
-            "Design e creazione di loghi, locandine, banner e biglietti da visita",
-        },
-      ],
-
       technologies: [
         "Wordpress",
         "Moodle",
@@ -46,6 +25,27 @@ export default {
       ],
     };
   },
+  computed: {
+    services: function () {
+      return [
+        {
+          icon: "layout",
+          title: this.$t("pages.services.servicesGrid.development.title"),
+          descr: this.$t("pages.services.servicesGrid.development.descr"),
+        },
+        {
+          icon: "monitor",
+          title: this.$t("pages.services.servicesGrid.websites.title"),
+          descr: this.$t("pages.services.servicesGrid.websites.descr"),
+        },
+        {
+          icon: "file",
+          title: this.$t("pages.services.servicesGrid.graphics.title"),
+          descr: this.$t("pages.services.servicesGrid.graphics.descr"),
+        },
+      ];
+    },
+  },
   mounted: function () {
     feather.replace();
   },
@@ -59,7 +59,7 @@ export default {
       <p
         class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
       >
-        Cosa mi piace fare
+        {{ $t("pages.services.servicesGridTitle") }}
       </p>
 
       <div
@@ -83,7 +83,7 @@ export default {
               {{ service.title }}
             </p>
             <span class="text-lg text-ternary-dark dark:text-ternary-light">{{
-              service.description
+              service.descr
             }}</span>
           </div>
         </div>
@@ -94,17 +94,12 @@ export default {
       <p
         class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration"
       >
-        Con quali strumenti
+        {{ $t("pages.services.toolsTitle") }}
       </p>
       <!-- About details -->
       <div class="text-left mt-4 sm:mt-6">
-        <p
-          class="mb-4 text-ternary-dark dark:text-ternary-light text-lg text-justify"
-        >
-          Creo siti web con WordPress e WooCommerce, ma so sviluppare le mie
-          applicazioni con framework frontend e backend come VueJS e Flask. Mi
-          trovo a mio agio anche con strumenti di editing grafico e video, come
-          Photoshop, Illustrator e Premiere.
+        <p class="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
+          {{ $t("pages.services.toolsDescr") }}
         </p>
       </div>
       <div class="text-center mt-10">

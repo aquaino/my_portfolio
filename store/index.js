@@ -2,23 +2,24 @@ export const state = () => ({
   copyrightDate: new Date().getFullYear(),
 
   /* Contact info */
-  contacts: [
-    {
-      name: "Udine e dintorni",
+  contacts: {
+    place: {
+      // Translated from lang files
+      value: null,
       icon: "map-pin",
       url: "",
     },
-    {
-      name: "alanquaino@gmail.com",
+    email: {
+      value: "alanquaino@gmail.com",
       icon: "mail",
       url: "mailto:alanquaino@gmail.com",
     },
-    {
-      name: "346 270 9363",
+    phone: {
+      value: "346 270 9363",
       icon: "phone",
       url: "tel:+393462709363",
     },
-  ],
+  },
 
   /* Social profiles */
   socialProfiles: [
@@ -82,7 +83,7 @@ export const state = () => ({
     {
       id: "biglietto-da-visita-fotografia",
       title: "Biglietto da visita - Fotografia",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/biglietto-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "biglietti-da-visita / fotografia",
@@ -106,7 +107,7 @@ export const state = () => ({
     {
       id: "buono-natalizio-fotografia",
       title: "Buono natalizio - Fotografia",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/buono-natale-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "buoni-natalizi / fotografia",
@@ -130,7 +131,7 @@ export const state = () => ({
     {
       id: "evento-gastronomico-musicale",
       title: "Evento gastronomico e musicale",
-      categories: ["Grafica", "Social"],
+      categories: ["graphics", "social"],
       img: "/images/evento-gastronomico-musicale.jpg",
       date: "2 agosto 2022",
       tag: "eventi / musica / social",
@@ -154,7 +155,7 @@ export const state = () => ({
     {
       id: "logo-fotografia",
       title: "Logo - Fotografia",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/logo-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "loghi / fotografia",
@@ -178,7 +179,7 @@ export const state = () => ({
     {
       id: "logo-giardinaggio",
       title: "Logo giardinaggio",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/logo-giardinaggio.jpg",
       date: "2 agosto 2022",
       tag: "loghi / giardinaggio",
@@ -202,7 +203,7 @@ export const state = () => ({
     {
       id: "invito-matrimonio-elegante",
       title: "Invito matrimonio - Stile elegante",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/matrimonio-elegante.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
@@ -226,7 +227,7 @@ export const state = () => ({
     {
       id: "invito-matrimonio-limoni",
       title: "Invito matrimonio - Tema limoni",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/matrimonio-limoni.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
@@ -250,7 +251,7 @@ export const state = () => ({
     {
       id: "invito-matrimonio-porcellane",
       title: "Invito matrimonio - Tema porcellane",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/matrimonio-porcellane.jpg",
       date: "2 agosto 2022",
       tag: "inviti / matrimoni",
@@ -274,7 +275,7 @@ export const state = () => ({
     {
       id: "portfolio-fotografia",
       title: "Portfolio - Fotografia",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/portfolio-fotografa.jpg",
       date: "2 agosto 2022",
       tag: "portfolio / fotografia",
@@ -297,7 +298,7 @@ export const state = () => ({
     {
       id: "post-evento-enogastronomico",
       title: "Post evento enogastronomico",
-      categories: ["Social"],
+      categories: ["social"],
       img: "/images/post-enogastronomico.jpg",
       date: "2 agosto 2022",
       tag: "post / enogastronomia",
@@ -321,7 +322,7 @@ export const state = () => ({
     {
       id: "volantino-agriturismo-giardinaggio",
       title: "Volantino agriturismo e giardinaggio",
-      categories: ["Grafica"],
+      categories: ["graphics"],
       img: "/images/volantino-agriturismo-giardinaggio.jpg",
       date: "2 agosto 2022",
       tag: "volantini / enogastronomia / giardinaggio",
@@ -345,7 +346,7 @@ export const state = () => ({
     {
       id: "sito-web-azienda-agricola",
       title: "Sito web azienda agricola",
-      categories: ["Web"],
+      categories: ["web"],
       img: "/images/miloccowines/miloccowines.jpg",
       date: "2 agosto 2022",
       tag: "siti web / enogastronomia / giardinaggio",
@@ -373,7 +374,7 @@ export const state = () => ({
     {
       id: "portale-gestione-volontari",
       title: "Portale gestione volontari",
-      categories: ["Web"],
+      categories: ["web"],
       img: "/images/pgv/pgv-website-preview.jpg",
       date: "2 agosto 2022",
       tag: "app web / volontari / protezione civile",
@@ -397,7 +398,7 @@ export const state = () => ({
     {
       id: "sito-web-azienda-pulizie",
       title: "Sito web azienda di pulizie",
-      categories: ["Web"],
+      categories: ["web"],
       img: "/images/lindasrl/lindasrl-website-preview.jpg",
       date: "5 ottobre 2022",
       tag: "siti web / pulizie ",
@@ -421,20 +422,7 @@ export const state = () => ({
   ],
 
   /* Project categories */
-  categories: [
-    {
-      value: "graphics",
-      name: "Grafica",
-    },
-    {
-      value: "social",
-      name: "Social",
-    },
-    {
-      value: "web",
-      name: "Web",
-    },
-  ],
+  categories: ["graphics", "social", "web"],
 });
 
 export const getters = {

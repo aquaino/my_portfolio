@@ -26,7 +26,7 @@ export default {
       >
     </div>
     <div class="text-xs text-gray-400 dark:text-gray-500 mt-2">
-      Sviluppato con
+      {{ $t("components.FooterCopyright.madeWith") }}
       <a
         href="https://github.com/realstoman/nuxtjs-tailwindcss-portfolio"
         target="__blank"
@@ -35,8 +35,7 @@ export default {
       >
     </div>
     <div class="text-xs text-ternary-dark dark:text-ternary-light mt-2">
-      Questo sito non fa uso di cookie e non raccoglie dati sensibili di alcun
-      tipo
+      {{ $t("components.FooterCopyright.cookieNotice") }}
     </div>
   </div>
 </template>

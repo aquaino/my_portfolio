@@ -128,7 +128,7 @@ export default {
           </div>
         </div>
 
-        <div class="w-full sm:w-2/3 text-justify">
+        <div class="w-full sm:w-2/3">
           <!-- Single project objectives -->
           <div class="mb-7">
             <p class="text-2xl text-ternary-dark dark:text-ternary-light mb-2">

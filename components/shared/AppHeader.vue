@@ -24,9 +24,8 @@ export default {
   computed: {
     menuIcon: function () {
       var icon = this.isOpen ? "x" : "menu";
-      return feather.icons[icon].toSvg({ height: 28, width: 28 });
+      return feather.icons[icon].toSvg({ height: 26, width: 26 });
     },
-
     colorModeIcon: function () {
       var icon = this.$colorMode.value == "light" ? "moon" : "sun";
       return feather.icons[icon].toSvg({ height: 24, width: 24 });
@@ -62,21 +61,18 @@ export default {
         </div>
 
         <!-- Small screen hamburger menu -->
-        <div class="sm:hidden">
-          <!-- Theme switcher small screen -->
-          <div
-            @click.stop="themeSwitcher"
-            role="button"
-            class="sm:hidden cursor-pointer inline-block mr-2 pb-0.5"
-          >
-            <!-- Light/dark mode icon -->
+        <div class="sm:hidden flex items-center">
+          <!-- Lang switcher -->
+          <LangSwitcher class="mr-2" />
+          <!-- Small screen dark/mode icon -->
+          <div @click.stop="themeSwitcher" role="button" class="mr-2">
             <div
               v-html="colorModeIcon"
               class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
             ></div>
           </div>
-          <div @click.stop="toggleMenu" role="button" class="inline-block">
-            <!-- Open/close menu icon -->
+          <!-- Open/close menu icon -->
+          <div @click.stop="toggleMenu" role="button">
             <div
               v-html="menuIcon"
               class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
@@ -89,11 +85,10 @@ export default {
       <AppNavigation :isOpen="isOpen" />
 
       <!-- Header right section buttons -->
-      <div
-        class="hidden sm:flex justify-between items-center flex-col md:flex-row"
-      >
-        <!-- Theme switcher large screen -->
-        <!-- Dark mode icon -->
+      <div class="hidden sm:flex">
+        <!-- Lang switcher -->
+        <LangSwitcher class="mr-2" />
+        <!-- Light/dark mode icon -->
         <div
           @click.stop="themeSwitcher"
           role="button"

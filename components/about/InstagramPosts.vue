@@ -71,7 +71,10 @@ export default {
         </a>
       </div>
       <div class="mt-8 text-center">
-        <AppButton text="Altro" @buttonClicked="openIgProfile" />
+        <AppButton
+          :text="$t('pages.index.igButton')"
+          @buttonClicked="openIgProfile"
+        />
       </div>
     </div>
     <!-- Loader -->

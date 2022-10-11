@@ -44,10 +44,10 @@ export default {
       <p
         class="text-xl sm:text-4xl font-medium mb-3 text-ternary-dark dark:text-ternary-light heading-decoration"
       >
-        Alcuni dei miei progetti
+        {{ $t("pages.projects.projectsGridTitle") }}
       </p>
       <p class="text-md sm:text-lg text-gray-500 dark:text-ternary-light">
-        Una breve lista dei miei lavori più recenti
+        {{ $t("pages.projects.projectsGridDescr") }}
       </p>
     </div>
 
@@ -64,7 +64,7 @@ export default {
             name="name"
             type="search"
             required=""
-            placeholder="Cerca tra i progetti"
+            :placeholder="$t('pages.projects.searchPlaceholder')"
           />
         </div>
         <!-- Filter -->

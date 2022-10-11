@@ -2,7 +2,7 @@
 export default {
   head: function () {
     return {
-      title: "Chi sono",
+      title: this.$t("pages.index.title"),
     };
   },
   scrollToTop: true,

@@ -1,16 +1,16 @@
 <script>
 export default {
-  data: function () {
-    return {
-      navItems: [
-        { route: "/", text: "Chi sono" },
-        { route: "/services", text: "Servizi" },
-        { route: "/projects", text: "Progetti" },
-        { route: "/contact", text: "Contatti" },
-      ],
-    };
-  },
   props: { isOpen: Boolean },
+  computed: {
+    navItems: function () {
+      return [
+        { route: "/", text: this.$t("pages.index.title") },
+        { route: "/services", text: this.$t("pages.services.title") },
+        { route: "/projects", text: this.$t("pages.projects.title") },
+        { route: "/contact", text: this.$t("pages.contact.title") },
+      ];
+    },
+  },
 };
 </script>
 

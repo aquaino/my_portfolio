@@ -59,15 +59,14 @@ export default {
       })
         .then(() => {
           this.feedback.level = "success";
-          this.feedback.text =
-            "Grazie per avermi contattato! Risponderò al più presto.";
+          this.feedback.text = this.$t("pages.contact.feedbackSuccess");
 
           this.form = { name: null, email: null, subject: null, message: null };
         })
         .catch((error) => {
           console.log(error);
           this.feedback.level = "danger";
-          this.feedback.text = "Si è verificato un errore. Riprova più tardi.";
+          this.feedback.text = this.$t("pages.contact.feedbackError");
         });
     },
   },
@@ -81,67 +80,47 @@ export default {
       class="m-4 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
     >
       <p class="text-primary-dark dark:text-primary-light text-2xl mb-4">
-        Scrivimi
+        {{ $t("pages.contact.contactFormTitle") }}
       </p>
       <p class="text-primary-dark dark:text-primary-light mb-8">
-        Qualche idea? Scrivimi una email compilando il form sottostante.
+        {{ $t("pages.contact.contactFormDescr") }}
       </p>
       <form class="space-y-7">
-        <div class="">
-          <!-- <label
-            class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-            for="name"
-            >Il tuo nome</label
-          > -->
+        <div>
           <input
             class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
             id="name"
             name="name"
             type="text"
             required
-            placeholder="Il tuo nome"
+            :placeholder="$t('pages.contact.namePlaceholder')"
             v-model="form.name"
           />
         </div>
         <div class="mt-6">
-          <!-- <label
-            class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-            for="email"
-            >La tua e-mail</label
-          > -->
           <input
             class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
             id="email"
             name="email"
             type="email"
             required
-            placeholder="La tua email"
+            :placeholder="$t('pages.contact.emailPlaceholder')"
             v-model="form.email"
           />
         </div>
         <div class="mt-6">
-          <!-- <label
-            class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-            for="subject"
-            >Oggetto</label
-          > -->
           <input
             class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
             id="subject"
             name="subject"
             type="text"
             required
-            placeholder="La tua richiesta"
+            :placeholder="$t('pages.contact.subjectPlaceholder')"
             v-model="form.subject"
           />
         </div>
 
         <div class="mt-6">
-          <!-- <label
-            class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-            for="message"
-            >Messaggio</label
-          > -->
           <textarea
             class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
             id="message"
@@ -149,12 +128,16 @@ export default {
             cols="14"
             rows="6"
             required
-            placeholder="Il tuo messaggio"
+            :placeholder="$t('pages.contact.messagePlaceholder')"
             v-model="form.message"
           ></textarea>
         </div>
 
-        <AppButton text="Invia" submit @buttonClicked="sendEmail" />
+        <AppButton
+          :text="$t('pages.contact.sendButton')"
+          submit
+          @buttonClicked="sendEmail"
+        />
       </form>
     </div>
     <!-- Feedback alert -->

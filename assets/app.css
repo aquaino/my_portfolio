@@ -29,9 +29,9 @@
 }
 
 /* Active page style */
-#nav .nuxt-link-exact-active {
+/*#nav .nuxt-link-exact-active {
   @apply text-my-blue;
-}
+}*/
 
 /* Link color */
 @tailwind base;

@@ -1,3 +1,6 @@
+import it from "./lang/it.json";
+import en from "./lang/en.json";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -45,7 +48,28 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      "@nuxtjs/i18n",
+      {
+        locales: [
+          {
+            code: "it",
+            name: "Italiano",
+          },
+          {
+            code: "en",
+            name: "English",
+          },
+        ],
+        defaultLocale: "it",
+        vueI18n: {
+          fallbackLocale: "it",
+          messages: Object.assign({ it: it, en: en }),
+        },
+      },
+    ],
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

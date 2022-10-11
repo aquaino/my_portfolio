@@ -3,7 +3,7 @@ export default {
   scrollToTop: true,
   head: function () {
     return {
-      title: "Progetti",
+      title: this.$t("pages.projects.title"),
     };
   },
 };

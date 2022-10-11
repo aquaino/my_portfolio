@@ -1,14 +1,15 @@
 <script>
+import { mapState } from "vuex";
+
 export default {
   props: {
     select: {
       type: String,
       default: "projects",
     },
-    selectOptions: {
-      type: Array,
-      default: () => ["Grafica", "Social", "Web"],
-    },
+  },
+  computed: {
+    ...mapState(["categories"]),
   },
 };
 </script>
@@ -20,14 +21,16 @@ export default {
     :id="select"
     class="px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
   >
-    <option value class="text-sm sm:text-md">Tutti</option>
+    <option value class="text-sm sm:text-md">
+      {{ $t("pages.projects.filterAll") }}
+    </option>
     <option
-      v-for="option in selectOptions"
-      :key="option"
-      :value="option"
+      v-for="category in categories"
+      :key="category"
+      :value="category"
       class="sm:text-md"
     >
-      {{ option }}
+      {{ $t(`store.categories.${category}`) }}
     </option>
   </select>
 </template>
