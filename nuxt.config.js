@@ -30,6 +30,7 @@ export default {
   plugins: [
     // "~/plugins/back-to-top.js"
     "~/plugins/directives.js",
+    "~/plugins/functions.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

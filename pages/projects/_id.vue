@@ -61,7 +61,7 @@ export default {
             ></i>
             <span
               class="ml-2 leading-none text-primary-dark dark:text-primary-light"
-              >{{ project.categories.join(", ") }}</span
+              >{{ $translateCategories(project.categories) }}</span
             >
           </div>
           <div class="flex items-center mt-4 md:mt-0">

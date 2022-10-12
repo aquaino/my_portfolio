@@ -99,7 +99,7 @@ export default {
               {{ project.title }}
             </p>
             <span class="text-sm text-ternary-dark dark:text-ternary-light">{{
-              project.categories.join(", ")
+              $translateCategories(project.categories)
             }}</span>
           </div>
         </div>
