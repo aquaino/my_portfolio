@@ -53,6 +53,7 @@ export default {
     [
       "@nuxtjs/i18n",
       {
+        strategy: "no_prefix",
         locales: [
           {
             code: "it",

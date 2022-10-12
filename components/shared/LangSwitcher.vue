@@ -5,7 +5,7 @@ export default {
       if (process.client) {
         localStorage.setItem("lang", code);
       }
-      this.$router.replace(this.switchLocalePath(code));
+      this.$i18n.setLocale(code);
     },
   },
   updated() {

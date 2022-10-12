@@ -1,6 +1,5 @@
 /*==
  * Nuxt.js & TailwindCSS Portfolio Main CSS File
- * Powered by: @realstoman
 */
 
 /* Fonts */
@@ -28,10 +27,10 @@
   opacity: 0;
 }
 
-/* Active page style */
-/*#nav .nuxt-link-exact-active {
-  @apply text-my-blue;
-}*/
+/* Active page link style */
+.nuxt-link-active, .nuxt-link-exact-active {
+  @apply text-my-blue !important;
+}
 
 /* Link color */
 @tailwind base;
