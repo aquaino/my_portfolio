@@ -6,10 +6,15 @@ export default {
         localStorage.setItem("lang", code);
       }
       this.$i18n.setLocale(code);
+      this.$moment.locale(code);
     },
   },
-  updated() {
-    this.$i18n.setLocale(localStorage.getItem("lang"));
+  created() {
+    if (process.client) {
+      var lang = localStorage.getItem("lang");
+      this.$i18n.setLocale(lang);
+      this.$moment.locale(lang);
+    }
   },
 };
 </script>

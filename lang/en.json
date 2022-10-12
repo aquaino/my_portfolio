@@ -60,6 +60,17 @@
       "feedbackSuccess": "Thank you for contacting me! I'll reply as soon as possible.",
       "feedbackError": "There was an error sending the message. Try again later.",
       "contactsTitle": "Contact me"
+    },
+    "project": {
+      "client": "Client",
+      "name": "Name",
+      "sector": "Sector",
+      "website": "Website",
+      "target": "Target",
+      "technologies": "Technologies",
+      "activities": "Activities",
+      "relatedProjects": "Related projects",
+      "noRelProjects": "No related projects"
     }
   },
   "components": {
@@ -74,6 +85,13 @@
   "store": {
     "contacts": {
       "place": "Udine and surroundings"
+    },
+    "sectors": {
+      "photography": "Photography",
+      "foodAndWine": "Food and wine",
+      "gardening": "Gardening",
+      "volunteering": "Volunteering",
+      "cleaning": "Cleaning services"
     },
     "categories": {
       "graphics": "Graphics",

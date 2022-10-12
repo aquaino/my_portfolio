@@ -53,30 +53,39 @@ export const state = () => ({
     },
     gaurika: {
       name: "Gaurika Fratticci",
-      sector: "Fotografia",
+      sector: "photography",
       website: null,
     },
     agriturismoMilocco: {
       name: "Azienda Agricola milocco",
-      sector: "Enogastronomia",
+      sector: "foodAndWine",
       website: "https://miloccowines.com",
     },
     giardinaggioMilocco: {
       name: "Azienda Agricola milocco",
-      sector: "Giardinaggio",
+      sector: "gardening",
       website: null,
     },
     protezioneCivileButtrio: {
       name: "Protezione Civile Buttrio",
-      sector: "Volontariato",
+      sector: "volunteering",
       website: "https://pgv-buttrio.herokuapp.com",
     },
     lindaSrl: {
       name: "Linda srl",
-      sector: "Pulizie",
+      sector: "cleaning",
       website: "https://lindasrl.it",
     },
   },
+
+  /* Sectors */
+  sectors: [
+    "photography",
+    "foodAndWine",
+    "gardening",
+    "volunteering",
+    "cleaning",
+  ],
 
   /* Projects */
   projects: [
@@ -85,14 +94,10 @@ export const state = () => ({
       title: "Biglietto da visita - Fotografia",
       categories: ["graphics"],
       img: "/images/biglietto-fotografa.jpg",
-      date: "2 agosto 2022",
-      tag: "biglietti-da-visita / fotografia",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "biglietti-da-visita / fotografia", */
+      targetDetails:
         "Design di un biglietto da visita con informazioni di contatto e social",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Biglietto da visita fotografia",
@@ -109,14 +114,10 @@ export const state = () => ({
       title: "Buono natalizio - Fotografia",
       categories: ["graphics"],
       img: "/images/buono-natale-fotografa.jpg",
-      date: "2 agosto 2022",
-      tag: "buoni-natalizi / fotografia",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "buoni-natalizi / fotografia", */
+      targetDetails:
         "Design di un buono natalizio da donare digitalmente o in formato cartaceo ai clienti",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Buono natalizio in stile macchina fotografica",
@@ -133,14 +134,10 @@ export const state = () => ({
       title: "Evento gastronomico e musicale",
       categories: ["graphics", "social"],
       img: "/images/evento-gastronomico-musicale.jpg",
-      date: "2 agosto 2022",
-      tag: "eventi / musica / social",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "eventi / musica / social", */
+      targetDetails:
         "Design della locandina cartacea riguardante un evento gastronomico e musicale locale",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Locandina e post evento musicale",
@@ -157,14 +154,10 @@ export const state = () => ({
       title: "Logo - Fotografia",
       categories: ["graphics"],
       img: "/images/logo-fotografa.jpg",
-      date: "2 agosto 2022",
-      tag: "loghi / fotografia",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "loghi / fotografia", */
+      targetDetails:
         "Design di un logo per una fotografa professionista locale",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Logo fotografa",
@@ -181,14 +174,10 @@ export const state = () => ({
       title: "Logo giardinaggio",
       categories: ["graphics"],
       img: "/images/logo-giardinaggio.jpg",
-      date: "2 agosto 2022",
-      tag: "loghi / giardinaggio",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "loghi / giardinaggio", */
+      targetDetails:
         "Design di un logo per un'agriturismo che offre anche servizi di giardinaggio",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Logo azienda giardinaggio",
@@ -205,14 +194,10 @@ export const state = () => ({
       title: "Invito matrimonio - Stile elegante",
       categories: ["graphics"],
       img: "/images/matrimonio-elegante.jpg",
-      date: "2 agosto 2022",
-      tag: "inviti / matrimoni",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "inviti / matrimoni", */
+      targetDetails:
         "Design di un invito per un matrimonio dallo stile semplice ma elegante",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Invito matrimonio elegante",
@@ -229,14 +214,10 @@ export const state = () => ({
       title: "Invito matrimonio - Tema limoni",
       categories: ["graphics"],
       img: "/images/matrimonio-limoni.jpg",
-      date: "2 agosto 2022",
-      tag: "inviti / matrimoni",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "inviti / matrimoni", */
+      targetDetails:
         "Design di un invito per un matrimonio dal tema estivo con decorazione limoni",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Invito matrimonio limoni",
@@ -253,14 +234,10 @@ export const state = () => ({
       title: "Invito matrimonio - Tema porcellane",
       categories: ["graphics"],
       img: "/images/matrimonio-porcellane.jpg",
-      date: "2 agosto 2022",
-      tag: "inviti / matrimoni",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "inviti / matrimoni", */
+      targetDetails:
         "Design di un invito per un matrimonio dal tema porcellane del Sud Italia",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Invito matrimonio porcellane",
@@ -277,13 +254,9 @@ export const state = () => ({
       title: "Portfolio - Fotografia",
       categories: ["graphics"],
       img: "/images/portfolio-fotografa.jpg",
-      date: "2 agosto 2022",
-      tag: "portfolio / fotografia",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails: "Design di un portfolio digitale e cartaceo",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
+      date: "2022/08/02",
+      /* tag: "portfolio / fotografia", */
+      targetDetails: "Design di un portfolio digitale e cartaceo",
       projectImages: [
         {
           title: "Portfolio fotografa",
@@ -300,14 +273,9 @@ export const state = () => ({
       title: "Post evento enogastronomico",
       categories: ["social"],
       img: "/images/post-enogastronomico.jpg",
-      date: "2 agosto 2022",
-      tag: "post / enogastronomia",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
-        "Design di un post per un evento enogastronomico locale",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
+      date: "2022/08/02",
+      /* tag: "post / enogastronomia", */
+      targetDetails: "Design di un post per un evento enogastronomico locale",
       projectImages: [
         {
           title: "Post social enogastronomico",
@@ -324,14 +292,10 @@ export const state = () => ({
       title: "Volantino agriturismo e giardinaggio",
       categories: ["graphics"],
       img: "/images/volantino-agriturismo-giardinaggio.jpg",
-      date: "2 agosto 2022",
-      tag: "volantini / enogastronomia / giardinaggio",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "volantini / enogastronomia / giardinaggio", */
+      targetDetails:
         "Design di un volantino stampabile sui servizi offerti da una piccola azienda locale",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Volantino gastronomia e giardinaggio",
@@ -348,14 +312,9 @@ export const state = () => ({
       title: "Sito web azienda agricola",
       categories: ["web"],
       img: "/images/miloccowines/miloccowines.jpg",
-      date: "2 agosto 2022",
-      tag: "siti web / enogastronomia / giardinaggio",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
-        "Sviluppo di un sito web per un'azienda agricola locale",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
+      date: "2022/08/02",
+      /* tag: "siti web / enogastronomia / giardinaggio", */
+      targetDetails: "Sviluppo di un sito web per un'azienda agricola locale",
       projectImages: [
         {
           title: "Sito web azienda agricola",
@@ -376,14 +335,10 @@ export const state = () => ({
       title: "Portale gestione volontari",
       categories: ["web"],
       img: "/images/pgv/pgv-website-preview.jpg",
-      date: "2 agosto 2022",
-      tag: "app web / volontari / protezione civile",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
+      date: "2022/08/02",
+      /* tag: "app web / volontari / protezione civile", */
+      targetDetails:
         "Sviluppo di un portale di gestione dei membri e delle attività di volontariato",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
       projectImages: [
         {
           title: "Sito web azienda agricola",
@@ -400,14 +355,9 @@ export const state = () => ({
       title: "Sito web azienda di pulizie",
       categories: ["web"],
       img: "/images/lindasrl/lindasrl-website-preview.jpg",
-      date: "5 ottobre 2022",
-      tag: "siti web / pulizie ",
-      clientTitle: "Cliente",
-      objectivesTitle: "Obiettivo",
-      objectivesDetails:
-        "Restyling del sito web di un'azienda di pulizie locale",
-      techTitle: "Tecnologie",
-      detailsTitle: "Attività",
+      date: "2022/10/05",
+      /* tag: "siti web / pulizie ", */
+      targetDetails: "Restyling del sito web di un'azienda di pulizie locale",
       projectImages: [
         {
           title: "Sito web azienda di pulizie",

@@ -35,7 +35,7 @@ export default {
 <template>
   <div class="container mx-auto">
     <!-- Check if there are projects and then load -->
-    <div v-if="project">
+    <div>
       <!-- Project heading and meta info -->
       <div>
         <p
@@ -44,17 +44,17 @@ export default {
           {{ project.title }}
         </p>
         <div class="flex flex-wrap">
-          <div class="flex items-center mr-10">
+          <div class="flex items-center mb-4 mr-4">
             <i
               data-feather="clock"
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
             ></i>
             <span
               class="ml-2 leading-none text-primary-dark dark:text-primary-light"
-              >{{ project.date }}</span
+              >{{ $moment(project.date, "YYYY/MM/DD").format("LL") }}</span
             >
           </div>
-          <div class="flex items-center mr-10">
+          <div class="flex items-center mb-4 mr-4">
             <i
               data-feather="folder"
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
@@ -64,7 +64,7 @@ export default {
               >{{ $translateCategories(project.categories) }}</span
             >
           </div>
-          <div class="flex items-center mt-4 md:mt-0">
+          <!-- <div class="flex items-center mb-4">
             <i
               data-feather="tag"
               class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
@@ -73,7 +73,7 @@ export default {
               class="ml-2 leading-none text-primary-dark dark:text-primary-light"
               >{{ project.tag }}</span
             >
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -101,26 +101,36 @@ export default {
             <p
               class="text-2xl text-secondary-dark dark:text-secondary-light mb-2"
             >
-              Cliente
+              {{ $t("pages.project.client") }}
             </p>
             <ul class="leading-loose">
               <li class="text-ternary-dark dark:text-ternary-light">
-                <span>Nome: {{ customers[project.customer].name || "-" }}</span>
-              </li>
-              <li class="text-ternary-dark dark:text-ternary-light">
                 <span
-                  >Settore:
-                  {{ customers[project.customer].sector || "-" }}</span
+                  >{{ $t("pages.project.name") }}:
+                  {{ customers[project.customer].name || "-" }}</span
                 >
               </li>
               <li class="text-ternary-dark dark:text-ternary-light">
-                <span>Sito web: </span>
+                <span
+                  >{{ $t("pages.project.sector") }}:
+                  {{
+                    $t(`store.sectors.${customers[project.customer].sector}`) ||
+                    "-"
+                  }}</span
+                >
+              </li>
+              <li class="text-ternary-dark dark:text-ternary-light">
+                <span>{{ $t("pages.project.website") }}: </span>
                 <a
                   v-if="customers[project.customer].website"
                   :href="customers[project.customer].website"
                   target="_blank"
                   class="whitespace-nowrap"
-                  >{{ customers[project.customer].website.slice(8) }}</a
+                  >{{
+                    customers[project.customer].website.includes("https")
+                      ? customers[project.customer].website.slice(8)
+                      : customers[project.customer].website.slice(7)
+                  }}</a
                 >
                 <span v-else>-</span>
               </li>
@@ -132,16 +142,16 @@ export default {
           <!-- Single project objectives -->
           <div class="mb-7">
             <p class="text-2xl text-ternary-dark dark:text-ternary-light mb-2">
-              {{ project.objectivesTitle }}
+              {{ $t("pages.project.target") }}
             </p>
             <p class="text-primary-dark dark:text-ternary-light">
-              {{ project.objectivesDetails }}
+              {{ project.targetDetails }}
             </p>
           </div>
           <!-- Single project technologies -->
           <div class="mb-7">
             <p class="text-2xl text-ternary-dark dark:text-ternary-light mb-2">
-              {{ project.techTitle }}
+              {{ $t("pages.project.technologies") }}
             </p>
             <p class="text-primary-dark dark:text-ternary-light">
               {{ project.technologies.join(", ") }}
@@ -149,7 +159,7 @@ export default {
           </div>
           <div class="mb-7">
             <p class="text-primary-dark dark:text-primary-light text-2xl mb-2">
-              {{ project.detailsTitle }}
+              {{ $t("pages.project.activities") }}
             </p>
             <p class="mb-5 text-ternary-dark dark:text-ternary-light">
               {{ project.description }}
@@ -163,11 +173,6 @@ export default {
         :projectCategories="project.categories"
         :projectId="project.id"
       />
-    </div>
-
-    <!-- Load not found components if no project found -->
-    <div v-else class="container mx-auto text-center">
-      <h1>Nessun progetto correlato</h1>
     </div>
   </div>
 </template>

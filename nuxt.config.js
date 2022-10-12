@@ -46,6 +46,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
+    ["@nuxtjs/moment", { defaultLocale: "it", locales: ["it"] }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "@vue/cli-plugin-eslint": "~4.5.13",
     "@vue/eslint-config-prettier": "^6.0.0",

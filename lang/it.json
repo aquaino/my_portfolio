@@ -60,6 +60,17 @@
       "feedbackSuccess": "Grazie per avermi contattato! Risponderò al più presto.",
       "feedbackError": "Si è verificato un errore. Riprova più tardi.",
       "contactsTitle": "Contattami"
+    },
+    "project": {
+      "client": "Cliente",
+      "name": "Nome",
+      "sector": "Settore",
+      "website": "Sito web",
+      "target": "Obiettivo",
+      "technologies": "Tecnologie",
+      "activities": "Attività",
+      "relatedProjects": "Progetti correlati",
+      "noRelProjects": "Nessun progetto correlato"
     }
   },
   "components": {
@@ -74,6 +85,13 @@
   "store": {
     "contacts": {
       "place": "Udine e dintorni"
+    },
+    "sectors": {
+      "photography": "Fotografia",
+      "foodAndWine": "Enogastronomia",
+      "gardening": "Giardinaggio",
+      "volunteering": "Volontariato",
+      "cleaning": "Pulizie"
     },
     "categories": {
       "graphics": "Grafica",

@@ -77,7 +77,7 @@ export default {
       name="scale"
       mode="out-in"
       tag="div"
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 gap-6"
     >
       <NuxtLink
         v-for="project in filteredProjects"

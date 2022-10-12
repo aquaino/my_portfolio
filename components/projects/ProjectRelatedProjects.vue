@@ -25,7 +25,9 @@ export default {
         // Limit to max 4 related projects
         if (
           count < this.limit &&
-          item.categories.includes(this.projectCategories[0]) &&
+          item.categories.some((item) =>
+            this.projectCategories.includes(item)
+          ) &&
           item.id !== this.projectId
         ) {
           count++;
@@ -50,9 +52,9 @@ export default {
     <p
       class="text-primary-dark dark:text-primary-light text-3xl font-bold mb-14 sm:mb-10 text-left"
     >
-      Progetti correlati
+      {{ $t("pages.project.relatedProjects") }}
     </p>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+    <div v-if="relatedProjects" class="grid grid-cols-2 sm:grid-cols-4 gap-6">
       <NuxtLink
         v-for="item in relatedProjects"
         :key="item.id"
@@ -70,5 +72,6 @@ export default {
         </div>
       </NuxtLink>
     </div>
+    <div v-else>{{ $t("pages.project.noRelProjects") }}</div>
   </div>
 </template>
