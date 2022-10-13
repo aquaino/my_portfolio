@@ -1,6 +1,3 @@
-import it from "./lang/it.json";
-import en from "./lang/en.json";
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -55,20 +52,23 @@ export default {
       "@nuxtjs/i18n",
       {
         strategy: "no_prefix",
+        lazy: true,
+        langDir: "lang/",
         locales: [
           {
             code: "it",
             name: "Italiano",
+            file: "it.js",
           },
           {
             code: "en",
             name: "English",
+            file: "en.js",
           },
         ],
         defaultLocale: "it",
         vueI18n: {
           fallbackLocale: "it",
-          messages: Object.assign({ it: it, en: en }),
         },
       },
     ],
