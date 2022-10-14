@@ -28,6 +28,7 @@
 .nuxt-link-active,
 .nuxt-link-exact-active {
   @apply text-my-blue !important;
+  @apply font-bold !important;
 }
 
 @tailwind base;

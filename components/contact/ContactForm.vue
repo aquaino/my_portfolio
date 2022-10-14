@@ -135,7 +135,6 @@ export default {
 
         <AppButton
           :text="$t('pages.contact.sendButton')"
-          submit
           @buttonClicked="sendEmail"
         />
       </form>

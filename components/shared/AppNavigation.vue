@@ -36,7 +36,7 @@ export default {
       v-for="(navItem, index) in navItems"
       :key="`nav-${index}`"
       :to="navItem.path"
-      class="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2 border-primary-light dark:border-secondary-dark"
+      class="block text-left text-lg font-normal text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2 border-primary-light dark:border-secondary-dark"
       :exact="navItem.exact"
       >{{ navItem.text }}</NuxtLink
     >

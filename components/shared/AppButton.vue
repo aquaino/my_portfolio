@@ -5,7 +5,7 @@ export default {
     text: String,
   },
   computed: {
-    type() {
+    type: function () {
       return this.submit ? "submit" : "button";
     },
   },
