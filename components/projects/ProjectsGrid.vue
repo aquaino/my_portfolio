@@ -89,14 +89,14 @@ export default {
         >
           <nuxt-img
             :src="project.img"
-            :alt="project.title"
+            :alt="$t(`pages.projects.${project.id}.title`)"
             class="rounded-t-xl border-none"
           />
           <div class="text-center px-4 py-6">
             <p
               class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-1"
             >
-              {{ project.title }}
+              {{ $t(`pages.projects.${project.id}.title`) }}
             </p>
             <span class="text-sm text-ternary-dark dark:text-ternary-light">{{
               $translateCategories(project.categories)

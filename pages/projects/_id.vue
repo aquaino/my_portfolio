@@ -23,7 +23,7 @@ export default {
   },
   head: function () {
     return {
-      title: this.project.title,
+      title: this.$t(`pages.projects.${this.project.id}.title`),
     };
   },
   mounted: function () {
@@ -41,7 +41,7 @@ export default {
         <p
           class="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
         >
-          {{ project.title }}
+          {{ $t(`pages.projects.${project.id}.title`) }}
         </p>
         <div class="flex flex-wrap">
           <div class="flex items-center mb-4 mr-4">
@@ -64,16 +64,6 @@ export default {
               >{{ $translateCategories(project.categories) }}</span
             >
           </div>
-          <!-- <div class="flex items-center mb-4">
-            <i
-              data-feather="tag"
-              class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
-            ></i>
-            <span
-              class="ml-2 leading-none text-primary-dark dark:text-primary-light"
-              >{{ project.tag }}</span
-            >
-          </div> -->
         </div>
       </div>
 
@@ -114,8 +104,11 @@ export default {
                 <span
                   >{{ $t("pages.project.sector") }}:
                   {{
-                    $t(`store.sectors.${customers[project.customer].sector}`) ||
-                    "-"
+                    customers[project.customer].sector
+                      ? $t(
+                          `store.sectors.${customers[project.customer].sector}`
+                        )
+                      : "-"
                   }}</span
                 >
               </li>
@@ -145,7 +138,7 @@ export default {
               {{ $t("pages.project.target") }}
             </p>
             <p class="text-primary-dark dark:text-ternary-light">
-              {{ project.targetDetails }}
+              {{ $t(`pages.projects.${project.id}.targetDetails`) }}
             </p>
           </div>
           <!-- Single project technologies -->
@@ -162,7 +155,7 @@ export default {
               {{ $t("pages.project.activities") }}
             </p>
             <p class="mb-5 text-ternary-dark dark:text-ternary-light">
-              {{ project.description }}
+              {{ $t(`pages.projects.${project.id}.description`) }}
             </p>
           </div>
         </div>

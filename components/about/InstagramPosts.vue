@@ -65,8 +65,8 @@ export default {
                 v-if="post.media_type === 'CAROUSEL_ALBUM'"
                 data-feather="copy"
                 class="absolute top-3 left-3"
-                width="24"
-                height="24"
+                width="18"
+                height="18"
                 color="white"
               ></i>
             </div>

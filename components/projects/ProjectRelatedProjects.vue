@@ -65,13 +65,13 @@ export default {
         >
           <nuxt-img
             :src="item.img"
-            :alt="item.title"
+            :alt="$t(`pages.projects.${item.id}.title`)"
             class="rounded-t-xl border-none"
           />
           <p
             class="text-sm text-ternary-dark dark:text-ternary-light font-semibold py-3 px-4"
           >
-            {{ item.title }}
+            {{ $t(`pages.projects.${item.id}.title`)}}
           </p>
         </div>
       </NuxtLink>

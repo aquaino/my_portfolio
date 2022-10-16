@@ -12,8 +12,8 @@ export default {
         message: null,
       },
       feedback: {
-        level: "danger",
-        text: "Un ennesimo test",
+        level: null,
+        text: null,
       },
     };
   },

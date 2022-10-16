@@ -52,6 +52,100 @@ export default {
       projectsGridDescr: "Una breve lista dei miei lavori più recenti",
       searchPlaceholder: "Cerca tra i progetti",
       filterAll: "Tutti",
+      "biglietto-da-visita-fotografia": {
+        title: "Biglietto da visita - Fotografia",
+        targetDetails:
+          "Design di un biglietto da visita con informazioni di contatto e social",
+        description:
+          "Partendo dai requisiti del cliente ho progettato il biglietto da visita su Canva per poi ultimarlo su Photoshop. Il QR code rimanda direttamente al profilo Facebook per visualizzare gli album e i lavori.",
+      },
+      "buono-natalizio-fotografia": {
+        title: "Buono natalizio - Fotografia",
+        targetDetails:
+          "Design di un buono natalizio da donare digitalmente o in formato cartaceo ai clienti",
+        description:
+          "Ho progettato il buono natalizio su Canva per poi ultimarlo su Photoshop. In particolare l'ho reso componibile con diverse fotografie fornite dal cliente, in modo che ogni buono sia unico e originale.",
+      },
+      "evento-gastronomico-musicale": {
+        title: "Evento gastronomico e musicale",
+        targetDetails:
+          "Design della locandina cartacea riguardante un evento gastronomico e musicale locale",
+        description:
+          "Ho progettato la locandina e l'immagine per il post su Canva per poi ultimarli su Photoshop. L'evento è stato sponsorizzato, con molto successo, su Facebook e Instagram.",
+      },
+      "logo-fotografia": {
+        title: "Logo - Fotografia",
+        targetDetails:
+          "Design di un logo per una fotografa professionista locale",
+        description:
+          "Ho progettato il logo su Illustrator a partire dall'idea del cliente. In particolare ho reso vettoriale un'immagine che ho ricavato con Photoshop da uno schizzo a matita.",
+      },
+      "logo-giardinaggio": {
+        title: "Logo - Giardinaggio",
+        targetDetails:
+          "Design di un logo per un'agriturismo che offre anche servizi di giardinaggio",
+        description:
+          "Ho progettato il logo a partire da quello dell'azienda agricola, mantenendone colori e stile. Il logo è stato sviluppato vettorialmente con Illustrator.",
+      },
+      "invito-matrimonio-elegante": {
+        title: "Invito matrimonio - Stile elegante",
+        targetDetails:
+          "Design di un invito per un matrimonio dallo stile semplice ma elegante",
+        description:
+          "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, dai toni chiari ed eleganti.",
+      },
+      "invito-matrimonio-limoni": {
+        title: "Invito matrimonio - Tema limoni",
+        targetDetails:
+          "Design di un invito per un matrimonio dal tema estivo con decorazione limoni",
+        description:
+          "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, dallo stile estivo e in particolare a tema limoni.",
+      },
+      "invito-matrimonio-porcellane": {
+        title: "Invito matrimonio - Tema porcellane",
+        targetDetails:
+          "Design di un invito per un matrimonio dal tema porcellane del Sud Italia",
+        description:
+          "Il biglietto è una delle tre bozze proposte alla coppia di sposi in base alle loro richieste, in particolare a tema porcellane del Sud Italia.",
+      },
+      "portfolio-fotografia": {
+        title: "Portfolio - Fotografia",
+        targetDetails: "Design di un portfolio digitale e cartaceo",
+        description:
+          "Ho progettato il portfolio in modo che potesse essere consultato sia digitalmente come PDF sia in formato cartaceo A5. Racchiude una selezione dei migliori scatti del cliente.",
+      },
+      "post-evento-enogastronomico": {
+        title: "Post evento enogastronomico",
+        targetDetails: "Design di un post per un evento enogastronomico locale",
+        description:
+          "Ho creato il post su Canva utilizzando i loghi del cliente e dei collaboratori.",
+      },
+      "volantino-agriturismo-giardinaggio": {
+        title: "Volantino agriturismo e giardinaggio",
+        targetDetails:
+          "Design di un volantino stampabile sui servizi offerti da una piccola azienda locale",
+        description:
+          "Ho creato il volantino con Canva e Photoshop racchiudendo in un formato fronte e retro i servizi enogastronomici e di giardinaggio offerti dal cliente.",
+      },
+      "sito-web-azienda-agricola": {
+        title: "Sito web azienda agricola",
+        targetDetails: "Sviluppo di un sito web per un'azienda agricola locale",
+        description:
+          "Il sito, creato con WordPress, è una vetrina dei vini, dei prodotti e dei servizi di giardinaggio offerti dall’azienda agricola, nonchè un catalogo aggiornato dei prodotti disponibili nello shop e per la consegna a domicilio.",
+      },
+      "portale-gestione-volontari": {
+        title: "Portale gestione volontari",
+        targetDetails:
+          "Sviluppo di un portale di gestione dei membri e delle attività di volontariato",
+        description:
+          "Ho realizzato questa applicazione web per la Protezione Civile del mio paese. Per lo sviluppo ho utilizzato il framework Python Flask e la libreria CSS UIkit 3. Permette la gestione dei membri e delle attività di volontariato sul territorio comunale e non.",
+      },
+      "sito-web-azienda-pulizie": {
+        title: "Cleaning company website",
+        targetDetails: "Restyling of the website of a local cleaning company",
+        description:
+          "The website, created with WordPress, shows the characteristics of the company as well as the provided cleaning services. Moreover, it is a catalogue of the products on sale in their shop, which can be purchased directly in the store.",
+      },
     },
     contact: {
       title: "Contatti",
