@@ -61,11 +61,15 @@ export default {
         :to="`/projects/${item.id}`"
       >
         <div
-          class="cursor-pointer text-center rounded-xl shadow-lg hover:shadow-xl p-3 h-full"
+          class="cursor-pointer text-center rounded-xl shadow-lg hover:shadow-xl bg-secondary-light dark:bg-ternary-dark h-full"
         >
-          <nuxt-img :src="item.img" :alt="item.title" />
+          <nuxt-img
+            :src="item.img"
+            :alt="item.title"
+            class="rounded-t-xl border-none"
+          />
           <p
-            class="text-md text-ternary-dark dark:text-ternary-light font-semibold mt-4"
+            class="text-sm text-ternary-dark dark:text-ternary-light font-semibold py-3 px-4"
           >
             {{ item.title }}
           </p>

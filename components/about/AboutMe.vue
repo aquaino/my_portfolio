@@ -68,7 +68,7 @@ export default {
       <span
         v-for="(info, index) in informations"
         :key="`info-${index}`"
-        class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg"
+        class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg dark:shadow-red-400"
         ><span class="font-semibold">{{ info.key }}</span> •
         <span>{{ info.value }}</span></span
       >

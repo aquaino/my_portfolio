@@ -5,23 +5,23 @@ export default {
   data: function () {
     return {
       technologies: [
-        "Wordpress",
-        "Moodle",
-        "HTML & CSS",
-        "JavaScript",
-        "Vue.js",
-        "Nuxt.js",
-        "WooCommerce",
-        "Python",
-        "Flask",
-        "Adobe Photoshop",
-        "Adobe Illusstrator",
-        "Adobe Premiere Pro",
-        "Canva",
-        "Django",
-        "Adobe InDesign",
-        "PHP",
-        "Drupal",
+        { logo: "/images/technologies/wp.png", name: "WordPress" },
+        { logo: "/images/technologies/moodle.png", name: "Moodle" },
+        { logo: "/images/technologies/html_css.png", name: "HTML & CSS" },
+        { logo: "/images/technologies/js.png", name: "JavaScript" },
+        { logo: "/images/technologies/vue.png", name: "Vue.js" },
+        { logo: "/images/technologies/nuxt.png", name: "Nuxt.js" },
+        { logo: "/images/technologies/woo.png", name: "WooCommerce" },
+        { logo: "/images/technologies/python.png", name: "Python" },
+        { logo: "/images/technologies/flask.png", name: "Flask" },
+        { logo: "/images/technologies/ps.png", name: "Adobe Photoshop" },
+        { logo: "/images/technologies/ai.png", name: "Adobe Illustrator" },
+        { logo: "/images/technologies/pr.png", name: "Adobe Premiere Pro" },
+        { logo: "/images/technologies/canva.png", name: "Canva" },
+        { logo: "/images/technologies/django.png", name: "Django" },
+        { logo: "/images/technologies/in.png", name: "Adobe InDesign" },
+        { logo: "/images/technologies/php.png", name: "PHP" },
+        { logo: "/images/technologies/drupal.png", name: "Drupal" },
       ],
     };
   },
@@ -107,7 +107,9 @@ export default {
           v-for="(tech, index) in technologies"
           :key="`tech-${index}`"
           class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg font-semibold"
-          >{{ tech }}</span
+          ><nuxt-img class="inline mr-1 mb-0.5 w-4 h-4" :src="tech.logo" />{{
+            tech.name
+          }}</span
         >
       </div>
     </div>

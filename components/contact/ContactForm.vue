@@ -12,8 +12,8 @@ export default {
         message: null,
       },
       feedback: {
-        level: null,
-        text: null,
+        level: "danger",
+        text: "Un ennesimo test",
       },
     };
   },
@@ -145,8 +145,8 @@ export default {
       class="px-4 py-3 mx-4 mt-6 rounded-xl"
       :class="
         this.feedback.level === 'success'
-          ? 'bg-green-100 text-green-700'
-          : 'bg-red-100 text-red-700'
+          ? 'bg-green-200 dark:bg-green-700 text-green-700 dark:text-green-200'
+          : 'bg-red-200 dark:bg-red-800 text-red-700 dark:text-red-200'
       "
       role="alert"
     >
