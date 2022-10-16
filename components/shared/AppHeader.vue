@@ -45,15 +45,15 @@ export default {
         <!-- Header logos -->
         <div>
           <NuxtLink to="/">
-            <img
+            <nuxt-img
               v-if="this.$colorMode.value == 'light'"
-              src="~/static/logo-dark.svg"
+              src="/logo-dark.svg"
               alt="Color Logo"
               class="w-16 md:w-20"
             />
-            <img
+            <nuxt-img
               v-else
-              src="~/static/logo-light.svg"
+              src="/logo-light.svg"
               class="w-16 md:w-20"
               alt="Light Logo"
             />

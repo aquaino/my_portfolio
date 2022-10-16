@@ -63,7 +63,7 @@ export default {
         <div
           class="cursor-pointer text-center rounded-xl shadow-lg hover:shadow-xl p-3 h-full"
         >
-          <img :src="item.img" :alt="item.title" />
+          <nuxt-img :src="item.img" :alt="item.title" />
           <p
             class="text-md text-ternary-dark dark:text-ternary-light font-semibold mt-4"
           >

@@ -87,7 +87,7 @@ export default {
         <div
           class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark h-full"
         >
-          <img
+          <nuxt-img
             :src="project.img"
             :alt="project.title"
             class="rounded-t-xl border-none"

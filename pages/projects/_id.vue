@@ -84,7 +84,7 @@ export default {
           v-for="(projectImage, index) in project.projectImages"
           :key="`image-${index}`"
         >
-          <img
+          <nuxt-img
             :src="projectImage.img"
             class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
             @click="openImage(projectImage.img)"

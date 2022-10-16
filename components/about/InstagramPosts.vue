@@ -55,18 +55,21 @@ export default {
           :href="post.permalink"
           target="__blank"
         >
-          <div
-            class="relative bg-cover bg-center rounded-xl shadow-lg hover:shadow-xl"
-            :style="`background-image: url('${post.media_url}'); padding-bottom: 100%;`"
-          >
-            <i
-              v-if="post.media_type === 'CAROUSEL_ALBUM'"
-              data-feather="copy"
-              class="absolute top-3 left-3"
-              width="24"
-              height="24"
-              color="white"
-            ></i>
+          <div class="relative" style="padding-bottom: 100%">
+            <div class="absolute inset-0 h-full w-full">
+              <nuxt-img
+                class="h-full w-full object-cover object-center rounded-xl shadow-lg hover:shadow-xl"
+                :src="post.media_url"
+              />
+              <i
+                v-if="post.media_type === 'CAROUSEL_ALBUM'"
+                data-feather="copy"
+                class="absolute top-3 left-3"
+                width="24"
+                height="24"
+                color="white"
+              ></i>
+            </div>
           </div>
         </a>
       </div>

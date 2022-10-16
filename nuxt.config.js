@@ -5,6 +5,11 @@ export default {
     classSuffix: "",
   },
 
+  // Nuxt image
+  image: {
+    domains: ["scontent-mxp2-1.cdninstagram.com"],
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "Alan Quaino | %s",
@@ -44,6 +49,7 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     ["@nuxtjs/moment", { defaultLocale: "it", locales: ["it"] }],
+    "@nuxt/image",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
