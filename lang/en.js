@@ -132,9 +132,16 @@ export default {
       },
       "portale-gestione-volontari": {
         title: "Volunteer management portal",
-        targetDetails: "Development of an online portal for volunteers and activities management",
+        targetDetails:
+          "Development of an online portal for volunteers and activities management",
         description:
           "I developed this web application for the Civil Protection of my country. I used the Python Flask framework and the CSS UIkit 3 library. It allows to manage members and volunteer activities in the municipal and non-municipal area.",
+      },
+      "sito-web-azienda-pulizie": {
+        title: "Cleaning company website",
+        targetDetails: "Restyling of the website of a local cleaning company",
+        description:
+          "The website, created with WordPress, shows the characteristics of the company as well as the provided cleaning services. Moreover, it is a catalogue of the products on sale in their shop, which can be purchased directly in the store.",
       },
     },
     contact: {

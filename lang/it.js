@@ -141,10 +141,10 @@ export default {
           "Ho realizzato questa applicazione web per la Protezione Civile del mio paese. Per lo sviluppo ho utilizzato il framework Python Flask e la libreria CSS UIkit 3. Permette la gestione dei membri e delle attività di volontariato sul territorio comunale e non.",
       },
       "sito-web-azienda-pulizie": {
-        title: "Cleaning company website",
-        targetDetails: "Restyling of the website of a local cleaning company",
+        title: "Sito web azienda pulizie",
+        targetDetails: "Restyling del sito web di un'azienda di pulizie locale",
         description:
-          "The website, created with WordPress, shows the characteristics of the company as well as the provided cleaning services. Moreover, it is a catalogue of the products on sale in their shop, which can be purchased directly in the store.",
+          "Il sito, sviluppato con WordPress, mostra le caratteristiche e i servizi di pulizie professionali offerte dall'azienda cliente. Racchiude inoltre il catalogo dei prodotti venduti, acquistabili direttamente in sede.",
       },
     },
     contact: {
