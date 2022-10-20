@@ -90,119 +90,38 @@ export const state = () => ({
   /* Projects */
   projects: [
     {
-      id: "biglietto-da-visita-fotografia",
-      categories: ["graphics"],
-      img: "/images/biglietto-fotografa.jpg",
-      date: "2022/08/02",
+      id: "sito-web-azienda-pulizie",
+      highlight: true,
+      categories: ["web"],
+      img: "/images/lindasrl/lindasrl-website-preview.jpg",
+      date: "2022/10/05",
       projectImages: [
         {
-          title: "Biglietto da visita fotografia",
-          img: "/images/biglietto-fotografa.jpg",
+          title: "Sito web azienda di pulizie",
+          img: "/images/lindasrl/lindasrl-website-preview.jpg",
         },
       ],
-      customer: "gaurika",
-      technologies: ["Canva", "Adobe Photoshop"],
+      customer: "lindaSrl",
+      technologies: ["WordPress"],
     },
     {
-      id: "buono-natalizio-fotografia",
-      categories: ["graphics"],
-      img: "/images/buono-natale-fotografa.jpg",
+      id: "portale-gestione-volontari",
+      highlight: false,
+      categories: ["web"],
+      img: "/images/pgv/pgv-website-preview.jpg",
       date: "2022/08/02",
       projectImages: [
         {
-          title: "Buono natalizio in stile macchina fotografica",
-          img: "/images/buono-natale-fotografa.jpg",
+          title: "Sito web azienda agricola",
+          img: "/images/pgv/pgv-website-preview.jpg",
         },
       ],
-      customer: "gaurika",
-      technologies: ["Canva", "Adobe Photoshop"],
-    },
-    {
-      id: "evento-gastronomico-musicale",
-      categories: ["graphics", "social"],
-      img: "/images/evento-gastronomico-musicale.jpg",
-      date: "2022/08/02",
-      projectImages: [
-        {
-          title: "Locandina e post evento musicale",
-          img: "/images/evento-gastronomico-musicale.jpg",
-        },
-      ],
-      customer: "agriturismoMilocco",
-      technologies: ["Canva", "Adobe Photoshop"],
-    },
-    {
-      id: "logo-fotografia",
-      categories: ["graphics"],
-      img: "/images/logo-fotografa.jpg",
-      date: "2022/08/02",
-      projectImages: [
-        {
-          title: "Logo fotografa",
-          img: "/images/logo-fotografa.jpg",
-        },
-      ],
-      customer: "gaurika",
-      technologies: ["Adobe Illustrator"],
-    },
-    {
-      id: "logo-giardinaggio",
-      categories: ["graphics"],
-      img: "/images/logo-giardinaggio.jpg",
-      date: "2022/08/02",
-      projectImages: [
-        {
-          title: "Logo azienda giardinaggio",
-          img: "/images/logo-giardinaggio.jpg",
-        },
-      ],
-      customer: "giardinaggioMilocco",
-      technologies: ["Adobe Illustrator"],
-    },
-    {
-      id: "invito-matrimonio-elegante",
-      categories: ["graphics"],
-      img: "/images/matrimonio-elegante.jpg",
-      date: "2022/08/02",
-      projectImages: [
-        {
-          title: "Invito matrimonio elegante",
-          img: "/images/matrimonio-elegante.jpg",
-        },
-      ],
-      customer: "empty",
-      technologies: ["Canva"],
-    },
-    {
-      id: "invito-matrimonio-limoni",
-      categories: ["graphics"],
-      img: "/images/matrimonio-limoni.jpg",
-      date: "2022/08/02",
-      projectImages: [
-        {
-          title: "Invito matrimonio limoni",
-          img: "/images/matrimonio-limoni.jpg",
-        },
-      ],
-      customer: "empty",
-      technologies: ["Canva"],
-    },
-    {
-      id: "invito-matrimonio-porcellane",
-      categories: ["graphics"],
-      img: "/images/matrimonio-porcellane.jpg",
-      date: "2022/08/02",
-      projectImages: [
-        {
-          title: "Invito matrimonio porcellane",
-          img: "/images/matrimonio-porcellane.jpg",
-        },
-      ],
-      customer: "empty",
-      technologies: ["Canva"],
+      customer: "protezioneCivileButtrio",
+      technologies: ["Python", "Flask", "UIkit 3"],
     },
     {
       id: "portfolio-fotografia",
+      highlight: false,
       categories: ["graphics"],
       img: "/images/portfolio-fotografa.jpg",
       date: "2022/08/02",
@@ -217,6 +136,7 @@ export const state = () => ({
     },
     {
       id: "post-evento-enogastronomico",
+      highlight: false,
       categories: ["social"],
       img: "/images/post-enogastronomico.jpg",
       date: "2022/08/02",
@@ -231,6 +151,7 @@ export const state = () => ({
     },
     {
       id: "volantino-agriturismo-giardinaggio",
+      highlight: false,
       categories: ["graphics"],
       img: "/images/volantino-agriturismo-giardinaggio.jpg",
       date: "2022/08/02",
@@ -245,6 +166,7 @@ export const state = () => ({
     },
     {
       id: "sito-web-azienda-agricola",
+      highlight: false,
       categories: ["web"],
       img: "/images/miloccowines/miloccowines.jpg",
       date: "2022/08/02",
@@ -262,32 +184,124 @@ export const state = () => ({
       technologies: ["WordPress"],
     },
     {
-      id: "portale-gestione-volontari",
-      categories: ["web"],
-      img: "/images/pgv/pgv-website-preview.jpg",
+      id: "biglietto-da-visita-fotografia",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/biglietto-fotografa.jpg",
       date: "2022/08/02",
       projectImages: [
         {
-          title: "Sito web azienda agricola",
-          img: "/images/pgv/pgv-website-preview.jpg",
+          title: "Biglietto da visita fotografia",
+          img: "/images/biglietto-fotografa.jpg",
         },
       ],
-      customer: "protezioneCivileButtrio",
-      technologies: ["Python", "Flask", "UIkit 3"],
+      customer: "gaurika",
+      technologies: ["Canva", "Adobe Photoshop"],
     },
     {
-      id: "sito-web-azienda-pulizie",
-      categories: ["web"],
-      img: "/images/lindasrl/lindasrl-website-preview.jpg",
-      date: "2022/10/05",
+      id: "buono-natalizio-fotografia",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/buono-natale-fotografa.jpg",
+      date: "2022/08/02",
       projectImages: [
         {
-          title: "Sito web azienda di pulizie",
-          img: "/images/lindasrl/lindasrl-website-preview.jpg",
+          title: "Buono natalizio in stile macchina fotografica",
+          img: "/images/buono-natale-fotografa.jpg",
         },
       ],
-      customer: "lindaSrl",
-      technologies: ["WordPress"],
+      customer: "gaurika",
+      technologies: ["Canva", "Adobe Photoshop"],
+    },
+    {
+      id: "evento-gastronomico-musicale",
+      highlight: false,
+      categories: ["graphics", "social"],
+      img: "/images/evento-gastronomico-musicale.jpg",
+      date: "2022/08/02",
+      projectImages: [
+        {
+          title: "Locandina e post evento musicale",
+          img: "/images/evento-gastronomico-musicale.jpg",
+        },
+      ],
+      customer: "agriturismoMilocco",
+      technologies: ["Canva", "Adobe Photoshop"],
+    },
+    {
+      id: "logo-fotografia",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/logo-fotografa.jpg",
+      date: "2022/08/02",
+      projectImages: [
+        {
+          title: "Logo fotografa",
+          img: "/images/logo-fotografa.jpg",
+        },
+      ],
+      customer: "gaurika",
+      technologies: ["Adobe Illustrator"],
+    },
+    {
+      id: "logo-giardinaggio",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/logo-giardinaggio.jpg",
+      date: "2022/08/02",
+      projectImages: [
+        {
+          title: "Logo azienda giardinaggio",
+          img: "/images/logo-giardinaggio.jpg",
+        },
+      ],
+      customer: "giardinaggioMilocco",
+      technologies: ["Adobe Illustrator"],
+    },
+    {
+      id: "invito-matrimonio-elegante",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/matrimonio-elegante.jpg",
+      date: "2022/08/02",
+      projectImages: [
+        {
+          title: "Invito matrimonio elegante",
+          img: "/images/matrimonio-elegante.jpg",
+        },
+      ],
+      customer: "empty",
+      technologies: ["Canva"],
+    },
+    {
+      id: "invito-matrimonio-limoni",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/matrimonio-limoni.jpg",
+      date: "2022/08/02",
+      projectImages: [
+        {
+          title: "Invito matrimonio limoni",
+          img: "/images/matrimonio-limoni.jpg",
+        },
+      ],
+      customer: "empty",
+      technologies: ["Canva"],
+    },
+    {
+      id: "invito-matrimonio-porcellane",
+      highlight: false,
+      categories: ["graphics"],
+      img: "/images/matrimonio-porcellane.jpg",
+      date: "2022/08/02",
+      projectImages: [
+        {
+          title: "Invito matrimonio porcellane",
+          img: "/images/matrimonio-porcellane.jpg",
+        },
+      ],
+      customer: "empty",
+      technologies: ["Canva"],
     },
   ],
 

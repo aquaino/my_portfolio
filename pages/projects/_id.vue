@@ -39,9 +39,15 @@ export default {
       <!-- Project heading and meta info -->
       <div>
         <p
-          class="text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
+          class="text-left flex items-center text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7"
         >
           {{ $t(`pages.projects.${project.id}.title`) }}
+          <!-- New project badge -->
+          <span
+            v-if="project.highlight"
+            class="font-semibold bg-my-blue dark:bg-my-blue-50 rounded-full px-2 py-1 text-xs text-white shadow-lg ml-2 mt-1"
+            >NEW</span
+          >
         </p>
         <div class="flex flex-wrap">
           <div class="flex items-center mb-4 mr-4">

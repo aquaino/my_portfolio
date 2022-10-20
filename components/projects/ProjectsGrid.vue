@@ -85,22 +85,31 @@ export default {
         :to="`/projects/${project.id}`"
       >
         <div
-          class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark h-full"
+          class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer bg-secondary-light dark:bg-ternary-dark h-auto sm:h-full"
         >
-          <nuxt-img
-            :src="project.img"
-            :alt="$t(`pages.projects.${project.id}.title`)"
-            class="rounded-t-xl border-none"
-          />
+          <div class="relative">
+            <nuxt-img
+              :src="project.img"
+              :alt="$t(`pages.projects.${project.id}.title`)"
+              class="rounded-t-xl border-none"
+            />
+            <!-- New project badge -->
+            <span
+              v-if="project.highlight"
+              class="absolute top-3 right-3 font-semibold bg-my-blue dark:bg-my-blue-50 rounded-full px-2 py-1 text-xs text-white shadow-lg dark:shadow-red-400"
+              >NEW</span
+            >
+          </div>
           <div class="text-center px-4 py-6">
             <p
               class="text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-1"
             >
               {{ $t(`pages.projects.${project.id}.title`) }}
             </p>
-            <span class="text-sm text-ternary-dark dark:text-ternary-light">{{
-              $translateCategories(project.categories)
-            }}</span>
+            <span class="text-sm text-gray-400"
+              >{{ $translateCategories(project.categories) }} •
+              {{ $moment(project.date, "YYYY/MM/DD").format("LL") }}</span
+            >
           </div>
         </div>
       </NuxtLink>
