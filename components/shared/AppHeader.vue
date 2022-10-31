@@ -48,14 +48,14 @@ export default {
             <nuxt-img
               v-if="this.$colorMode.value == 'light'"
               src="/logo-dark.svg"
-              alt="Color Logo"
               class="w-16 md:w-20"
+              :alt="$t('misc.logoAlt')"
             />
             <nuxt-img
               v-else
               src="/logo-light.svg"
               class="w-16 md:w-20"
-              alt="Light Logo"
+              :alt="$t('misc.logoAlt')"
             />
           </NuxtLink>
         </div>

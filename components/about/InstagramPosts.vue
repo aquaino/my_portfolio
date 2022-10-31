@@ -60,6 +60,7 @@ export default {
               <nuxt-img
                 class="h-full w-full object-cover object-center rounded-xl shadow-lg hover:shadow-xl"
                 :src="post.media_url"
+                :alt="$t('misc.igImageAlt')"
               />
               <i
                 v-if="post.media_type === 'CAROUSEL_ALBUM'"

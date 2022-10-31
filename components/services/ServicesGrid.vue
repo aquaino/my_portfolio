@@ -107,9 +107,11 @@ export default {
           v-for="(tech, index) in technologies"
           :key="`tech-${index}`"
           class="inline-block bg-my-blue dark:bg-my-blue-50 rounded-full px-4 py-2 text-sm text-white mr-3 mb-2 shadow-lg font-semibold"
-          ><nuxt-img class="inline mr-1 mb-0.5 w-4 h-4" :src="tech.logo" />{{
-            tech.name
-          }}</span
+          ><nuxt-img
+            class="inline mr-1 mb-0.5 w-4 h-4"
+            :alt="$t('misc.techAlt', { name: tech.name })"
+            :src="tech.logo"
+          />{{ tech.name }}</span
         >
       </div>
     </div>

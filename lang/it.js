@@ -201,4 +201,10 @@ export default {
       web: "Web",
     },
   },
+  misc: {
+    logoAlt: "Logo del sito",
+    igImageAlt: "Una immagine dal mio account instagram",
+    techAlt: "Logo {name}",
+    projectImageAlt: "Una immagine relativa al progetto",
+  },
 };

@@ -84,6 +84,7 @@ export default {
             :src="projectImage.img"
             class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
             @click="openImage(projectImage.img)"
+            :alt="$t('misc.projectImageAlt')"
           />
         </div>
       </div>
