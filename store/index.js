@@ -57,12 +57,12 @@ export const state = () => ({
       website: null,
     },
     agriturismoMilocco: {
-      name: "Azienda Agricola milocco",
+      name: "Azienda Agricola Milocco",
       sector: "foodAndWine",
       website: "https://miloccowines.com",
     },
     giardinaggioMilocco: {
-      name: "Azienda Agricola milocco",
+      name: "Azienda Agricola Milocco",
       sector: "gardening",
       website: null,
     },
