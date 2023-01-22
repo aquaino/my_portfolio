@@ -14,12 +14,14 @@ export default {
 
 <template>
   <!-- Contact details -->
-  <div class="w-full md:w-1/2 lg:w-1/3">
-    <div class="text-left max-w-xl px-6">
-      <h2 class="text-2xl text-primary-dark dark:text-primary-light mt-8 mb-8">
-        {{ $t("pages.contact.contactsTitle") }}
-      </h2>
+  <div class="mt-10 sm:mt-20">
+    <p
+      class="text-2xl text-center sm:text-3xl text-primary-dark dark:text-primary-light heading-decoration mb-10"
+    >
+      {{ $t("pages.contact.contactsTitle") }}
+    </p>
 
+    <div class="flex justify-center mt-14">
       <!-- Contacts -->
       <ul>
         <li
@@ -51,9 +53,27 @@ export default {
             {{ item[1].value }}
           </span>
         </li>
+        <!-- Social profiles -->
+        <!-- Mobile (unordered list) -->
+        <li
+          class="flex sm:hidden"
+          v-for="(profile, index) in socialProfiles"
+          :key="`social-${index}`"
+        >
+          <i
+            :data-feather="profile.icon"
+            class="w-5 text-my-red dark:text-my-red-50 mr-4 mt-0.5"
+          ></i>
+          <a
+            :href="profile.url"
+            class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
+          >
+            {{ profile.profile_name }}
+          </a>
+        </li>
       </ul>
-      <!-- Social profiles -->
-      <ul>
+      <!-- From tablet (two columns/lists) -->
+      <ul class="hidden sm:block ml-14">
         <li
           class="flex"
           v-for="(profile, index) in socialProfiles"

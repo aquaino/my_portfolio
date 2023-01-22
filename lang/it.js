@@ -149,9 +149,6 @@ export default {
     },
     contact: {
       title: "Contatti",
-      contactFormTitle: "Scrivimi",
-      contactFormDescr:
-        "Qualche idea? Scrivimi una email compilando il form sottostante",
       namePlaceholder: "Il tuo nome",
       emailPlaceholder: "La tua email",
       subjectPlaceholder: "La tua richiesta",
