@@ -9,6 +9,7 @@ export default {
       token: process.env.NUXT_ENV_IG_WS_TOKEN,
       limit: 12,
       posts: null,
+      error: false,
     };
   },
 
@@ -22,6 +23,7 @@ export default {
           this.posts = response.data.data;
         })
         .catch((error) => {
+          this.error = true;
           console.log(error);
         });
     },
@@ -43,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <div class="block mt-14 sm:mt-20">
+  <div v-if="!error" class="block mt-14 sm:mt-20">
     <!-- Instagram posts grid -->
     <div v-if="posts">
       <div
